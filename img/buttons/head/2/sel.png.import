@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ub74pis7rxrr"
-path.s3tc="res://.godot/imported/head2_NDS Texture.png-f7cdba832f465cffa0678c34a228061c.s3tc.ctex"
+uid="uid://durvamvwvr7u8"
+path="res://.godot/imported/sel.png-c8d7caf33613a54d31d3cfd3fc6e94bc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "8e1840f8427b1e317294a1fc0cdcf4f9"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/heads/head2_NDS Texture.png"
-dest_files=["res://.godot/imported/head2_NDS Texture.png-f7cdba832f465cffa0678c34a228061c.s3tc.ctex"]
+source_file="res://img/buttons/head/2/sel.png"
+dest_files=["res://.godot/imported/sel.png-c8d7caf33613a54d31d3cfd3fc6e94bc.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -41,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
