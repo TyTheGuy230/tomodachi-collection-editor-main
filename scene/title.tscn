@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://dmivnxo28i002"]
+
+[ext_resource type="Shader" uid="uid://f23qm6wbc4ow" path="res://other/scroll.gdshader" id="1_5tkpx"]
+[ext_resource type="Texture2D" uid="uid://bkbm8vbsvxd35" path="res://img/sprites/townhallbg.png" id="2_glyem"]
+[ext_resource type="Texture2D" uid="uid://bk3krxj0a2s3j" path="res://img/sprites/newmii.png" id="3_1oobv"]
+[ext_resource type="Script" uid="uid://daln2npvwqqci" path="res://code/color_rect.gd" id="3_6627o"]
+[ext_resource type="Texture2D" uid="uid://jpip33fnihxc" path="res://img/sprites/newmiibluebig.png" id="4_fh87k"]
+[ext_resource type="Script" uid="uid://2epxh4sjil5w" path="res://code/texture_button.gd" id="5_8xtvp"]
+[ext_resource type="AudioStream" uid="uid://bgiqdjy5vb6px" path="res://sounds/click.wav" id="6_kwewl"]
+[ext_resource type="AudioStream" uid="uid://cpoi040f7wcxa" path="res://sounds/click (1).wav" id="7_mtnbf"]
+[ext_resource type="Texture2D" uid="uid://d1sbqmxocxb2o" path="res://img/sprites/tdc mii maker logo.png" id="8_7jaon"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpexm"]
+shader = ExtResource("1_5tkpx")
+
+[sub_resource type="Animation" id="Animation_5tkpx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_glyem"]
+resource_name = "fade out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1oobv"]
+_data = {
+&"RESET": SubResource("Animation_5tkpx"),
+&"fade out": SubResource("Animation_glyem")
+}
+
+[node name="Node3D" type="Node3D" unique_id=358027893]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1397103010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0041942, 0, 120.60327)
+fov = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=334940137]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1652977540]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=663071559]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_kpexm")
+layout_mode = 0
+offset_right = 1728.0
+offset_bottom = 648.0
+texture = ExtResource("2_glyem")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=134154320]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_6627o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/ColorRect" unique_id=933336639]
+libraries/ = SubResource("AnimationLibrary_1oobv")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control" unique_id=386822119]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 398.0
+offset_right = 384.2
+offset_bottom = 592.0
+texture_normal = ExtResource("3_1oobv")
+texture_pressed = ExtResource("4_fh87k")
+stretch_mode = 0
+script = ExtResource("5_8xtvp")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/TextureButton" unique_id=1932421632]
+layout_mode = 0
+offset_right = 249.0
+offset_bottom = 194.0
+
+[node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton" unique_id=697315855]
+stream = ExtResource("6_kwewl")
+
+[node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton" unique_id=681475839]
+stream = ExtResource("7_mtnbf")
+
+[node name="TdcMiiMakerLogo" type="Sprite2D" parent="CanvasLayer/Control" unique_id=959316762]
+position = Vector2(583.99994, 216)
+scale = Vector2(1.2361963, 1.2361963)
+texture = ExtResource("8_7jaon")
+
+[connection signal="button_down" from="CanvasLayer/Control/TextureButton" to="CanvasLayer/Control/TextureButton" method="_on_button_down"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="CanvasLayer/Control/TextureButton" method="_on_pressed"]
