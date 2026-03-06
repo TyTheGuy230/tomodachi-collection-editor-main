@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cmqqdiwtpxf81" path="res://img/sprites/lr.png" id="2_dc348"]
 [ext_resource type="Texture2D" uid="uid://b66lkgxb7ib75" path="res://img/sprites/sideboxbarthingamajig.png" id="3_dc348"]
+[ext_resource type="Script" uid="uid://mfv5khwccwuv" path="res://code/button.gd" id="4_ef6gu"]
 [ext_resource type="FontFile" uid="uid://d1w7kscvqfum7" path="res://other/Nintendo-DS-BIOS.ttf" id="4_xhayd"]
 [ext_resource type="PackedScene" uid="uid://dypwfb0q521v7" path="res://scene/body.tscn" id="6_wbx7f"]
 [ext_resource type="Script" uid="uid://d0dxipleb7c8u" path="res://code/body.gd" id="7_wbx7f"]
@@ -42,11 +43,29 @@ theme_override_fonts/font = ExtResource("4_xhayd")
 theme_override_font_sizes/font_size = 40
 text = "Face Settings"
 
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=1507758793]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 99.0
+offset_right = 280.0
+offset_bottom = 211.0
+text = "head 1
+"
+script = ExtResource("4_ef6gu")
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control" unique_id=583287136]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 100.0
+offset_right = 455.0
+offset_bottom = 212.0
+text = "head 2
+
+"
+
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.1238163, -1.9516978, -5.220093)
 script = ExtResource("7_wbx7f")
-head_id = 2
-hair_id = 71
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264932483]
 transform = Transform3D(-3.309176e-08, 0, -1, 0, 0.7570512, 0, 0.7570512, 0, -4.371139e-08, 2.1986647, -0.5620644, -2.6342502)
@@ -57,3 +76,6 @@ texture = ExtResource("9_k8xax")
 transform = Transform3D(0.7570512, 0, -3.5527137e-15, 0, 0.7570512, 0, 0, 0, 1, 1.1574297, -0.5620644, -2.6342502)
 visible = false
 texture = ExtResource("8_brg8n")
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Button2" to="CanvasLayer/Control/Button" method="_on_button_2_pressed"]

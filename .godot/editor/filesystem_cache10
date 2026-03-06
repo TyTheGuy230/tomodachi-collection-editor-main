@@ -1,9 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1772763914
+::res://::1772804855
 icon.svg::CompressedTexture2D::1042040992816517582::1772755016::1772755022::1::::<><><>0<>0<>7c3c626b55e501e739eb8e40c32dac1b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://code/::1772759948
+::res://code/::1772767883
 bg.gd::GDScript::4409380143552631534::1772755016::0::1::::<>Sprite3D<><>0<>0<><>::
-body.gd::GDScript::8921587857504599886::1772759948::0::1::::<>Node3D<><>0<>0<><>::
+body.gd::GDScript::8921587857504599886::1772767883::0::1::::<>Node3D<><>0<>0<><>::
+button.gd::GDScript::853917180141419205::1772767883::0::1::::<>Button<><>0<>0<><>::
 color_rect.gd::GDScript::7182808450675165772::1772755016::0::1::::<>ColorRect<><>0<>0<><>::
 main_mii_maker.gd::GDScript::1662965266784999221::1772755016::0::1::::<>Node3D<><>0<>0<><>::
 pixel.gd::GDScript::1030118382475233334::1772755016::0::1::::<>Sprite2D<><>0<>0<><>::
@@ -45,9 +46,9 @@ head2_NDS Texture.png::CompressedTexture2D::6015361403390660983::1772755016::177
 main mii maker.gdshader::Shader::7970855473621712798::1772755016::0::1::::<><><>0<>0<><>::
 Nintendo-DS-BIOS.ttf::FontFile::9031550047450692816::1772755016::1772755022::1::::<><><>0<>0<>02c9858d3d4b974e3dd7017a0a1e2946<>res://.godot/imported/Nintendo-DS-BIOS.ttf-eec82a7d89df05f592d7faa78dd3db6b.fontdata::
 scroll.gdshader::Shader::408411745219882118::1772755016::0::1::::<><><>0<>0<><>::
-::res://scene/::1772759967
+::res://scene/::1772767883
 body.tscn::PackedScene::8876104759424973130::1772755016::0::1::::<><><>0<>0<><>::uid://dqtmwcmrkbqbr::::res://models/body/body.png<>uid://dgf4g6d7uwkha::::res://models/body/shadow.png
-main mii maker.tscn::PackedScene::1275264555793265986::1772759967::0::1::::<><><>0<>0<><>::uid://cmqqdiwtpxf81::::res://img/sprites/lr.png<>uid://b66lkgxb7ib75::::res://img/sprites/sideboxbarthingamajig.png<>uid://d1w7kscvqfum7::::res://other/Nintendo-DS-BIOS.ttf<>uid://dypwfb0q521v7::::res://scene/body.tscn<>uid://d0dxipleb7c8u::::res://code/body.gd<>uid://x13rcpmyctni::::res://img/sprites/Screenshot 2026-03-03 204434.png<>uid://baojwfdxgtram::::res://img/sprites/Screenshot 2026-03-03 203716.png
+main mii maker.tscn::PackedScene::1275264555793265986::1772767883::0::1::::<><><>0<>0<><>::uid://cmqqdiwtpxf81::::res://img/sprites/lr.png<>uid://b66lkgxb7ib75::::res://img/sprites/sideboxbarthingamajig.png<>uid://mfv5khwccwuv::::res://code/button.gd<>uid://d1w7kscvqfum7::::res://other/Nintendo-DS-BIOS.ttf<>uid://dypwfb0q521v7::::res://scene/body.tscn<>uid://d0dxipleb7c8u::::res://code/body.gd<>uid://x13rcpmyctni::::res://img/sprites/Screenshot 2026-03-03 204434.png<>uid://baojwfdxgtram::::res://img/sprites/Screenshot 2026-03-03 203716.png
 title.tscn::PackedScene::8019342699872544257::1772755016::0::1::::<><><>0<>0<><>::uid://f23qm6wbc4ow::::res://other/scroll.gdshader<>uid://bkbm8vbsvxd35::::res://img/sprites/townhallbg.png<>uid://bk3krxj0a2s3j::::res://img/sprites/newmii.png<>uid://daln2npvwqqci::::res://code/color_rect.gd<>uid://jpip33fnihxc::::res://img/sprites/newmiibluebig.png<>uid://2epxh4sjil5w::::res://code/texture_button.gd<>uid://bgiqdjy5vb6px::::res://sounds/click.wav<>uid://cpoi040f7wcxa::::res://sounds/click (1).wav<>uid://d1sbqmxocxb2o::::res://img/sprites/tdc mii maker logo.png
 ::res://scene/textures/::1772755022
 NDS Texture.001.png::CompressedTexture2D::4933663195012095076::1772755016::1772755022::1::::<><><>0<>0<>e6a73216b4ad6847468e92c5ce66aa6c<>res://.godot/imported/NDS Texture.001.png-bbef51b7288eada2d2a1613421501337.ctex::
