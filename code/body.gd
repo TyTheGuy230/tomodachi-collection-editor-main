@@ -5,6 +5,7 @@ extends Node3D
 @export var rotation_speed = 10
 var target_rotation: float = 0.0
 var current_head
+var current_hair
 var attachment = BoneAttachment3D.new()
 
 var head_paths = {
@@ -20,16 +21,11 @@ var hair_paths = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	attachment = BoneAttachment3D.new()
 	attachment.bone_name = "neck"
 	skeleton.add_child(attachment)
 	
-	var head_scene = load(head_paths[head_id])
-	var head = head_scene.instantiate()
-	var hair_scene = load(hair_paths[hair_id])
-	var hair = hair_scene.instantiate()
-	attachment.add_child(head)
-	attachment.add_child(hair)
+	load_head()
+	load_hair()
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -46,8 +42,22 @@ func load_head():
 	current_head = head_scene.instantiate()
 	
 	attachment.add_child(current_head)
+	
+func load_hair():
+
+	if current_hair:
+		current_hair.queue_free()
+
+	var hair_scene = load(hair_paths[hair_id])
+	current_hair = hair_scene.instantiate()
+	
+	attachment.add_child(current_hair)
 
 
 func set_head(id):
 	head_id = id
 	load_head()
+
+func set_hair(id):
+	hair_id = id
+	load_hair()

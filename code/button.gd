@@ -1,5 +1,5 @@
 extends Button
-@onready var head = $"../../../body2"
+@onready var parts = $"../../../body2"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,10 +13,20 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	head.set_head(1)
-	head.load_head()
+	parts.set_head(1)
+	parts.load_head()
 
 
 func _on_button_2_pressed() -> void:
-	head.set_head(2)
-	head.load_head()
+	parts.set_head(2)
+	parts.load_head()
+
+
+func _on_button_3_pressed() -> void:
+	parts.set_hair(1)
+	parts.load_hair()
+
+
+func _on_button_4_pressed() -> void:
+	parts.set_hair(71)
+	parts.load_hair()

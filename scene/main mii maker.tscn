@@ -63,6 +63,24 @@ text = "head 2
 
 "
 
+[node name="Button3" type="Button" parent="CanvasLayer/Control" unique_id=1757325743]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 245.0
+offset_right = 279.0
+offset_bottom = 357.0
+text = "hair 1
+"
+
+[node name="Button4" type="Button" parent="CanvasLayer/Control" unique_id=899514269]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 246.0
+offset_right = 460.0
+offset_bottom = 358.0
+text = "hair 71
+"
+
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.1238163, -1.9516978, -5.220093)
 script = ExtResource("7_wbx7f")
@@ -79,3 +97,5 @@ texture = ExtResource("8_brg8n")
 
 [connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Button2" to="CanvasLayer/Control/Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Button3" to="CanvasLayer/Control/Button" method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Button4" to="CanvasLayer/Control/Button" method="_on_button_4_pressed"]
