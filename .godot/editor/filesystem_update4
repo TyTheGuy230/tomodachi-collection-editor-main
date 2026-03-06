@@ -1,6 +1,3 @@
 res://scene/main mii maker.tscn
+res://code/body.gd
 res://code/button.gd
-res://models/heads/head1.glb
-res://models/heads/head1_NDS Texture.png
-res://models/heads/head2.glb
-res://models/heads/head2_NDS Texture.png

@@ -11,7 +11,9 @@
 [ext_resource type="Script" uid="uid://d0dxipleb7c8u" path="res://code/body.gd" id="7_wbx7f"]
 [ext_resource type="Texture2D" uid="uid://x13rcpmyctni" path="res://img/sprites/Screenshot 2026-03-03 204434.png" id="8_brg8n"]
 [ext_resource type="Texture2D" uid="uid://durvamvwvr7u8" path="res://img/buttons/head/2/sel.png" id="8_m7fwc"]
+[ext_resource type="Texture2D" uid="uid://dtfve1d1guoj8" path="res://img/buttons/head/3/non.png" id="9_jjdbl"]
 [ext_resource type="Texture2D" uid="uid://baojwfdxgtram" path="res://img/sprites/Screenshot 2026-03-03 203716.png" id="9_k8xax"]
+[ext_resource type="Texture2D" uid="uid://bpdepxhpgnim3" path="res://img/buttons/head/3/sel.png" id="10_5y400"]
 
 [node name="Node3D" type="Node3D" unique_id=965385247]
 
@@ -50,9 +52,9 @@ text = "Face Settings"
 [node name="head1" type="TextureButton" parent="CanvasLayer/Control" unique_id=969359174]
 layout_mode = 0
 offset_left = 201.0
-offset_top = 123.0
+offset_top = 83.0
 offset_right = 337.5
-offset_bottom = 240.0
+offset_bottom = 200.0
 toggle_mode = true
 texture_normal = ExtResource("4_h7hth")
 texture_pressed = ExtResource("5_3r70n")
@@ -67,6 +69,16 @@ offset_bottom = 117.0
 toggle_mode = true
 texture_normal = ExtResource("7_lxjtv")
 texture_pressed = ExtResource("8_m7fwc")
+stretch_mode = 0
+
+[node name="head3" type="TextureButton" parent="CanvasLayer/Control/head1" unique_id=720016688]
+layout_mode = 0
+offset_top = 122.0
+offset_right = 136.5
+offset_bottom = 239.0
+toggle_mode = true
+texture_normal = ExtResource("9_jjdbl")
+texture_pressed = ExtResource("10_5y400")
 stretch_mode = 0
 
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
@@ -85,3 +97,4 @@ texture = ExtResource("8_brg8n")
 
 [connection signal="pressed" from="CanvasLayer/Control/head1" to="CanvasLayer/Control/head1" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/head1/head2" to="CanvasLayer/Control/head1" method="_on_head_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/head1/head3" to="CanvasLayer/Control/head1" method="_on_head_3_pressed"]

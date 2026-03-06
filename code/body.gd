@@ -10,7 +10,8 @@ var attachment = BoneAttachment3D.new()
 
 var head_paths = {
 	1: "res://models/heads/head1.glb",
-	2: "res://models/heads/head2.glb"
+	2: "res://models/heads/head2.glb",
+	3: "res://models/heads/head3.glb"
 }
 
 var hair_paths = {
@@ -27,6 +28,10 @@ func _ready() -> void:
 	load_head()
 	load_hair()
 	
+	if head_id == 3:
+		current_hair.position.x += 0.10
+	else:
+		current_hair.position.x = 0.0
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
