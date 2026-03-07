@@ -2,6 +2,7 @@ extends TextureRect
 @onready var textbox = $"."
 @onready var colorrect = $"../ColorRect/AnimationPlayer"
 @onready var buttons = $"../headbuttons/head1"
+@onready var body = $"../../../body2"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,3 +31,4 @@ func _on_texture_button_pressed() -> void:
 	colorrect.play("fade out")
 	await get_tree().create_timer(0.45).timeout
 	buttons.visible = true
+	body.visible = true

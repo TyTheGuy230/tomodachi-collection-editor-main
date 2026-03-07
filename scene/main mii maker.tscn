@@ -267,6 +267,7 @@ stretch_mode = 4
 
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.1238163, -1.9516978, -5.220093)
+visible = false
 script = ExtResource("7_wbx7f")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264932483]
