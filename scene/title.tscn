@@ -75,6 +75,7 @@ offset_bottom = 648.0
 texture = ExtResource("2_glyem")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=134154320]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 15
