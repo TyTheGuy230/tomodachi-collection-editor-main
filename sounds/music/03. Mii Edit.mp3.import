@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://blccflo2ryq7j"
+path="res://.godot/imported/03. Mii Edit.mp3-0f03b4b00dfe9d9d7d78f83fca774ae3.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/03. Mii Edit.mp3"
+dest_files=["res://.godot/imported/03. Mii Edit.mp3-0f03b4b00dfe9d9d7d78f83fca774ae3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,3 +1,6 @@
 res://scene/main mii maker.tscn
 res://code/body.gd
 res://code/button.gd
+res://scene/title.tscn
+res://scene/editormusic.gd
+res://scene/editormusic.tscn

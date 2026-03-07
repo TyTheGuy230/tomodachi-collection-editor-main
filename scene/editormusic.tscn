@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://4bnqflh0d3mh"]
+
+[ext_resource type="AudioStream" uid="uid://blccflo2ryq7j" path="res://sounds/music/03. Mii Edit.mp3" id="1_xp1fd"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1901478337]
+
+[node name="03_MiiEdit" type="AudioStreamPlayer2D" parent="." unique_id=1604919159]
+position = Vector2(474, 155)
+stream = ExtResource("1_xp1fd")
+autoplay = true

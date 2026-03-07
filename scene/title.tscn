@@ -6,8 +6,8 @@
 [ext_resource type="Script" uid="uid://daln2npvwqqci" path="res://code/color_rect.gd" id="3_6627o"]
 [ext_resource type="Texture2D" uid="uid://jpip33fnihxc" path="res://img/sprites/newmiibluebig.png" id="4_fh87k"]
 [ext_resource type="Script" uid="uid://2epxh4sjil5w" path="res://code/texture_button.gd" id="5_8xtvp"]
-[ext_resource type="AudioStream" uid="uid://bgiqdjy5vb6px" path="res://sounds/click.wav" id="6_kwewl"]
-[ext_resource type="AudioStream" uid="uid://cpoi040f7wcxa" path="res://sounds/click (1).wav" id="7_mtnbf"]
+[ext_resource type="AudioStream" uid="uid://bgiqdjy5vb6px" path="res://sounds/sfx/click.wav" id="6_kwewl"]
+[ext_resource type="AudioStream" uid="uid://cpoi040f7wcxa" path="res://sounds/sfx/click (1).wav" id="7_mtnbf"]
 [ext_resource type="Texture2D" uid="uid://d1sbqmxocxb2o" path="res://img/sprites/tdc mii maker logo.png" id="8_7jaon"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kpexm"]

@@ -14,6 +14,22 @@
 [ext_resource type="Texture2D" uid="uid://dtfve1d1guoj8" path="res://img/buttons/head/3/non.png" id="9_jjdbl"]
 [ext_resource type="Texture2D" uid="uid://baojwfdxgtram" path="res://img/sprites/Screenshot 2026-03-03 203716.png" id="9_k8xax"]
 [ext_resource type="Texture2D" uid="uid://bpdepxhpgnim3" path="res://img/buttons/head/3/sel.png" id="10_5y400"]
+[ext_resource type="AudioStream" uid="uid://blccflo2ryq7j" path="res://sounds/music/03. Mii Edit.mp3" id="15_vt1mt"]
+[ext_resource type="PackedScene" uid="uid://4bnqflh0d3mh" path="res://scene/editormusic.tscn" id="16_vt1mt"]
+
+[sub_resource type="GDScript" id="GDScript_2d0sp"]
+script/source = "extends AudioStreamPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Node3D" type="Node3D" unique_id=965385247]
 
@@ -94,6 +110,13 @@ texture = ExtResource("9_k8xax")
 transform = Transform3D(0.7570512, 0, -3.5527137e-15, 0, 0.7570512, 0, 0, 0, 1, 1.1574297, -0.5620644, -2.6342502)
 visible = false
 texture = ExtResource("8_brg8n")
+
+[node name="03_MiiEdit" type="AudioStreamPlayer" parent="." unique_id=1238179608]
+stream = ExtResource("15_vt1mt")
+parameters/looping = false
+script = SubResource("GDScript_2d0sp")
+
+[node name="AudioStreamPlayer" parent="." unique_id=1901478337 instance=ExtResource("16_vt1mt")]
 
 [connection signal="pressed" from="CanvasLayer/Control/head1" to="CanvasLayer/Control/head1" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/head1/head2" to="CanvasLayer/Control/head1" method="_on_head_2_pressed"]
