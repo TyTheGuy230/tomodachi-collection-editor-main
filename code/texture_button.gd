@@ -1,4 +1,5 @@
 extends TextureButton
+@onready var fade = $AnimationPlayer
 
 
 # Called when the node enters the scene tree for the first time.
