@@ -1,5 +1,5 @@
 extends TextureButton
-@onready var parts = $"../../../body2"
+@onready var parts = $"../../../../body2"
 @onready var button1 = $"."
 @onready var button2 = $head2
 @onready var button3 = $head3
@@ -97,10 +97,10 @@ func _on_head_6_pressed() -> void:
 	
 func _on_head_7_pressed() -> void:
 	parts.head_id = 7
-	parts.current_hair.position.x = 0.09
+	parts.current_hair.position.x = 0.065
 	parts.load_head()
 
 func _on_head_8_pressed() -> void:
 	parts.head_id = 8
-	parts.current_hair.position.x = 0.09
+	parts.current_hair.position.x = 0.065
 	parts.load_head()

@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://sf0oktwpdw4i"]
 
+[ext_resource type="Texture2D" uid="uid://u5f5h8rbvpjq" path="res://img/sprites/cag.png" id="1_sht6d"]
 [ext_resource type="Texture2D" uid="uid://cmqqdiwtpxf81" path="res://img/sprites/lr.png" id="2_dc348"]
 [ext_resource type="Texture2D" uid="uid://b66lkgxb7ib75" path="res://img/sprites/sideboxbarthingamajig.png" id="3_dc348"]
 [ext_resource type="Script" uid="uid://mfv5khwccwuv" path="res://code/button.gd" id="4_ef6gu"]
 [ext_resource type="Texture2D" uid="uid://doee7onfpvr31" path="res://img/buttons/head/1/non.png" id="4_h7hth"]
 [ext_resource type="FontFile" uid="uid://d1w7kscvqfum7" path="res://other/Nintendo-DS-BIOS.ttf" id="4_xhayd"]
 [ext_resource type="Texture2D" uid="uid://0cy70ex8hyi6" path="res://img/buttons/head/1/sel.png" id="5_3r70n"]
+[ext_resource type="Script" uid="uid://btosffdaudgbp" path="res://code/color_rect (2).gd" id="5_d7pne"]
 [ext_resource type="PackedScene" uid="uid://dypwfb0q521v7" path="res://scene/body.tscn" id="6_wbx7f"]
 [ext_resource type="Texture2D" uid="uid://cvvo0uncr4rgy" path="res://img/buttons/head/2/non.png" id="7_lxjtv"]
 [ext_resource type="Script" uid="uid://d0dxipleb7c8u" path="res://code/body.gd" id="7_wbx7f"]
@@ -16,9 +18,50 @@
 [ext_resource type="Texture2D" uid="uid://bpdepxhpgnim3" path="res://img/buttons/head/3/sel.png" id="10_5y400"]
 [ext_resource type="Texture2D" uid="uid://b54cehc2g1hh6" path="res://img/buttons/head/4/non.png" id="11_pk360"]
 [ext_resource type="Texture2D" uid="uid://ddwufd5alqmig" path="res://img/buttons/head/4/sel.png" id="12_55iix"]
+[ext_resource type="Texture2D" uid="uid://dosarlgt3wclr" path="res://img/buttons/head/5/non.png" id="13_84s06"]
+[ext_resource type="Texture2D" uid="uid://j0coefe1pju8" path="res://img/buttons/head/5/sel.png" id="14_cs05c"]
 [ext_resource type="Texture2D" uid="uid://bq56t3hhll3xk" path="res://img/sprites/miibg.png" id="15_2d0sp"]
+[ext_resource type="Texture2D" uid="uid://dytovb0d7xqqi" path="res://img/buttons/head/6/non.png" id="15_spqrk"]
 [ext_resource type="AudioStream" uid="uid://blccflo2ryq7j" path="res://sounds/music/03. Mii Edit.mp3" id="15_vt1mt"]
+[ext_resource type="Texture2D" uid="uid://cbm6y2c6n267c" path="res://img/buttons/head/6/sel.png" id="16_sht6d"]
 [ext_resource type="PackedScene" uid="uid://4bnqflh0d3mh" path="res://scene/editormusic.tscn" id="16_vt1mt"]
+[ext_resource type="Script" uid="uid://bs26afjte6e2a" path="res://scene/textbox.gd" id="19_q8tej"]
+
+[sub_resource type="Animation" id="Animation_q8tej"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ynxeu"]
+resource_name = "fade in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333334, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.64705884)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uy706"]
+_data = {
+&"RESET": SubResource("Animation_q8tej"),
+&"fade in": SubResource("Animation_ynxeu")
+}
 
 [sub_resource type="GDScript" id="GDScript_2d0sp"]
 script/source = "extends AudioStreamPlayer
@@ -68,8 +111,26 @@ theme_override_fonts/font = ExtResource("4_xhayd")
 theme_override_font_sizes/font_size = 40
 text = "Face Settings"
 
-[node name="head1" type="TextureButton" parent="CanvasLayer/Control" unique_id=969359174]
-layout_mode = 0
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1613694094]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1120.0
+offset_bottom = 635.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("5_d7pne")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/ColorRect" unique_id=814767312]
+libraries/ = SubResource("AnimationLibrary_uy706")
+
+[node name="headbuttons" type="Node" parent="CanvasLayer/Control" unique_id=506148943]
+
+[node name="head1" type="TextureButton" parent="CanvasLayer/Control/headbuttons" unique_id=969359174]
 offset_left = 201.0
 offset_top = 83.0
 offset_right = 337.5
@@ -80,7 +141,7 @@ texture_pressed = ExtResource("5_3r70n")
 stretch_mode = 0
 script = ExtResource("4_ef6gu")
 
-[node name="head2" type="TextureButton" parent="CanvasLayer/Control/head1" unique_id=994757829]
+[node name="head2" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=994757829]
 layout_mode = 0
 offset_left = 141.0
 offset_right = 277.5
@@ -90,7 +151,7 @@ texture_normal = ExtResource("7_lxjtv")
 texture_pressed = ExtResource("8_m7fwc")
 stretch_mode = 0
 
-[node name="head3" type="TextureButton" parent="CanvasLayer/Control/head1" unique_id=720016688]
+[node name="head3" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=720016688]
 layout_mode = 0
 offset_top = 122.0
 offset_right = 136.5
@@ -100,7 +161,7 @@ texture_normal = ExtResource("9_jjdbl")
 texture_pressed = ExtResource("10_5y400")
 stretch_mode = 0
 
-[node name="head4" type="TextureButton" parent="CanvasLayer/Control/head1" unique_id=1294572615]
+[node name="head4" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=1294572615]
 layout_mode = 0
 offset_left = 142.0
 offset_top = 122.0
@@ -111,28 +172,28 @@ texture_normal = ExtResource("11_pk360")
 texture_pressed = ExtResource("12_55iix")
 stretch_mode = 0
 
-[node name="head5" type="TextureButton" parent="CanvasLayer/Control/head1" unique_id=1887949141]
+[node name="head5" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=1887949141]
 layout_mode = 0
 offset_top = 244.0
 offset_right = 136.5
 offset_bottom = 361.0
 toggle_mode = true
-texture_normal = ExtResource("11_pk360")
-texture_pressed = ExtResource("12_55iix")
+texture_normal = ExtResource("13_84s06")
+texture_pressed = ExtResource("14_cs05c")
 stretch_mode = 0
 
-[node name="head6" type="TextureButton" parent="CanvasLayer/Control/head1" unique_id=2094510408]
+[node name="head6" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=2094510408]
 layout_mode = 0
 offset_left = 142.0
 offset_top = 244.0
 offset_right = 278.5
 offset_bottom = 361.0
 toggle_mode = true
-texture_normal = ExtResource("11_pk360")
-texture_pressed = ExtResource("12_55iix")
+texture_normal = ExtResource("15_spqrk")
+texture_pressed = ExtResource("16_sht6d")
 stretch_mode = 0
 
-[node name="head7" type="TextureButton" parent="CanvasLayer/Control/head1" unique_id=2005969005]
+[node name="head7" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=2005969005]
 layout_mode = 0
 offset_top = 366.0
 offset_right = 136.5
@@ -142,7 +203,7 @@ texture_normal = ExtResource("11_pk360")
 texture_pressed = ExtResource("12_55iix")
 stretch_mode = 0
 
-[node name="head8" type="TextureButton" parent="CanvasLayer/Control/head1" unique_id=130479266]
+[node name="head8" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=130479266]
 layout_mode = 0
 offset_left = 142.0
 offset_top = 366.0
@@ -152,6 +213,28 @@ toggle_mode = true
 texture_normal = ExtResource("11_pk360")
 texture_pressed = ExtResource("12_55iix")
 stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=483478312]
+z_index = 1
+layout_mode = 0
+offset_left = 189.0
+offset_top = 51.0
+offset_right = 962.0526
+offset_bottom = 595.0
+texture = ExtResource("1_sht6d")
+script = ExtResource("19_q8tej")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/TextureRect" unique_id=20740582]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 114.0
+offset_right = 758.0
+offset_bottom = 534.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_xhayd")
+theme_override_font_sizes/font_size = 55
+text = "Please choose a gender."
+horizontal_alignment = 1
 
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.1238163, -1.9516978, -5.220093)
@@ -178,11 +261,11 @@ script = SubResource("GDScript_2d0sp")
 
 [node name="AudioStreamPlayer" parent="." unique_id=1901478337 instance=ExtResource("16_vt1mt")]
 
-[connection signal="pressed" from="CanvasLayer/Control/head1" to="CanvasLayer/Control/head1" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/head1/head2" to="CanvasLayer/Control/head1" method="_on_head_2_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/head1/head3" to="CanvasLayer/Control/head1" method="_on_head_3_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/head1/head4" to="CanvasLayer/Control/head1" method="_on_head_4_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/head1/head5" to="CanvasLayer/Control/head1" method="_on_head_5_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/head1/head6" to="CanvasLayer/Control/head1" method="_on_head_6_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/head1/head7" to="CanvasLayer/Control/head1" method="_on_head_7_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/head1/head8" to="CanvasLayer/Control/head1" method="_on_head_8_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1" to="CanvasLayer/Control/headbuttons/head1" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head2" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head3" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head4" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head5" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head6" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head7" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head8" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_8_pressed"]

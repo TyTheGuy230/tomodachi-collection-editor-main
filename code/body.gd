@@ -33,20 +33,6 @@ func _ready() -> void:
 	load_head()
 	load_hair()
 	
-	if head_id == 3:
-		current_hair.position.x += 0.09
-	else:
-		current_hair.position.x = 0.0
-	
-	if head_id == 7:
-		current_hair.position.x += 0.09
-	else:
-		current_hair.position.x = 0.0
-		
-	if head_id == 8:
-		current_hair.position.x += 0.09
-	else:
-		current_hair.position.x = 0.0
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

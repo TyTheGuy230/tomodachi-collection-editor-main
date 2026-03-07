@@ -1,4 +1,5 @@
 res://scene/main mii maker.tscn
-res://code/body.gd
 res://code/button.gd
-res://scene/body.tscn
+res://code/body.gd
+res://scene/color_rect.gd
+res://scene/textbox.gd

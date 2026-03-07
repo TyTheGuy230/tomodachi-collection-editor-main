@@ -1,7 +1,10 @@
+Label
+TextureRect
+AnimationPlayer
+ColorRect
+Node
 Sprite3D
 AudioStreamPlayer
-Node
 TextureButton
 Button
 Node3D
-AnimationPlayer
