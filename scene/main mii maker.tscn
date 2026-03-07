@@ -26,6 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://cbm6y2c6n267c" path="res://img/buttons/head/6/sel.png" id="16_sht6d"]
 [ext_resource type="PackedScene" uid="uid://4bnqflh0d3mh" path="res://scene/editormusic.tscn" id="16_vt1mt"]
 [ext_resource type="Script" uid="uid://bs26afjte6e2a" path="res://scene/textbox.gd" id="19_q8tej"]
+[ext_resource type="Texture2D" uid="uid://dhpe14mdtqpuw" path="res://img/sprites/boy.png" id="20_uy706"]
+[ext_resource type="Texture2D" uid="uid://c4dmptq71htqk" path="res://img/sprites/boyblue.png" id="21_uihqq"]
 
 [sub_resource type="Animation" id="Animation_q8tej"]
 length = 0.001
@@ -51,16 +53,32 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.13333334, 0.3),
+"times": PackedFloat32Array(0.1333, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.64705884)]
 }
 
+[sub_resource type="Animation" id="Animation_uy706"]
+resource_name = "fade out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.64705884), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uy706"]
 _data = {
 &"RESET": SubResource("Animation_q8tej"),
-&"fade in": SubResource("Animation_ynxeu")
+&"fade in": SubResource("Animation_ynxeu"),
+&"fade out": SubResource("Animation_uy706")
 }
 
 [sub_resource type="GDScript" id="GDScript_2d0sp"]
@@ -131,6 +149,7 @@ libraries/ = SubResource("AnimationLibrary_uy706")
 [node name="headbuttons" type="Node" parent="CanvasLayer/Control" unique_id=506148943]
 
 [node name="head1" type="TextureButton" parent="CanvasLayer/Control/headbuttons" unique_id=969359174]
+visible = false
 offset_left = 201.0
 offset_top = 83.0
 offset_right = 337.5
@@ -236,6 +255,16 @@ theme_override_font_sizes/font_size = 55
 text = "Please choose a gender."
 horizontal_alignment = 1
 
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/TextureRect" unique_id=357042621]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 220.0
+offset_right = 314.0
+offset_bottom = 409.0
+texture_normal = ExtResource("20_uy706")
+texture_pressed = ExtResource("21_uihqq")
+stretch_mode = 4
+
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.1238163, -1.9516978, -5.220093)
 script = ExtResource("7_wbx7f")
@@ -269,3 +298,4 @@ script = SubResource("GDScript_2d0sp")
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head6" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_6_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head7" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_7_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head8" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_8_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureRect/TextureButton" to="CanvasLayer/Control/TextureRect" method="_on_texture_button_pressed"]
