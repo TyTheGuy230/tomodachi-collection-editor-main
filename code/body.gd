@@ -12,7 +12,11 @@ var head_paths = {
 	1: "res://models/heads/head1.glb",
 	2: "res://models/heads/head2.glb",
 	3: "res://models/heads/head3.glb",
-	4: "res://models/heads/head4.glb"
+	4: "res://models/heads/head4.glb",
+	5: "res://models/heads/head5.glb",
+	6: "res://models/heads/head6.glb",
+	7: "res://models/heads/head7.glb",
+	8: "res://models/heads/head8.glb"
 }
 
 var hair_paths = {
@@ -30,6 +34,16 @@ func _ready() -> void:
 	load_hair()
 	
 	if head_id == 3:
+		current_hair.position.x += 0.09
+	else:
+		current_hair.position.x = 0.0
+	
+	if head_id == 7:
+		current_hair.position.x += 0.09
+	else:
+		current_hair.position.x = 0.0
+		
+	if head_id == 8:
 		current_hair.position.x += 0.09
 	else:
 		current_hair.position.x = 0.0

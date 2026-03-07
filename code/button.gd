@@ -4,6 +4,10 @@ extends TextureButton
 @onready var button2 = $head2
 @onready var button3 = $head3
 @onready var button4 = $head4
+@onready var button5 = $head5
+@onready var button6 = $head6
+@onready var button7 = $head7
+@onready var button8 = $head8
 
 
 # Called when the node enters the scene tree for the first time.
@@ -35,6 +39,26 @@ func _process(delta: float) -> void:
 	else:
 		button4.button_pressed = false
 
+	if parts.head_id == 5:
+		button5.button_pressed = true
+	else:
+		button5.button_pressed = false
+		
+	if parts.head_id == 6:
+		button6.button_pressed = true
+	else:
+		button6.button_pressed = false
+		
+	if parts.head_id == 7:
+		button7.button_pressed = true
+	else:
+		button7.button_pressed = false
+		
+	if parts.head_id == 8:
+		button8.button_pressed = true
+	else:
+		button8.button_pressed = false
+
 
 func _on_pressed() -> void:
 	parts.head_id = 1
@@ -56,4 +80,27 @@ func _on_head_3_pressed() -> void:
 func _on_head_4_pressed() -> void:
 	parts.head_id = 4
 	parts.current_hair.position.x = 0.0
+	parts.load_head()
+	
+
+func _on_head_5_pressed() -> void:
+	parts.head_id = 5
+	parts.current_hair.position.x = 0.0
+	parts.load_head()
+
+
+func _on_head_6_pressed() -> void:
+	parts.head_id = 6
+	parts.current_hair.position.x = 0.0
+	parts.load_head()
+	
+	
+func _on_head_7_pressed() -> void:
+	parts.head_id = 7
+	parts.current_hair.position.x = 0.09
+	parts.load_head()
+
+func _on_head_8_pressed() -> void:
+	parts.head_id = 8
+	parts.current_hair.position.x = 0.09
 	parts.load_head()
