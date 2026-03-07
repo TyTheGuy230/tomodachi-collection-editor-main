@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 [node name="Node3D" type="Node3D" unique_id=965385247]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1239835111]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.067732334, 0.029027581, 134.01367)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.067732334, 0.029027581, 132.14876)
 fov = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1664374418]
@@ -98,9 +98,21 @@ texture_normal = ExtResource("9_jjdbl")
 texture_pressed = ExtResource("10_5y400")
 stretch_mode = 0
 
+[node name="head4" type="TextureButton" parent="CanvasLayer/Control/head1" unique_id=1294572615]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 122.0
+offset_right = 278.5
+offset_bottom = 239.0
+toggle_mode = true
+texture_normal = ExtResource("9_jjdbl")
+texture_pressed = ExtResource("10_5y400")
+stretch_mode = 0
+
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.1238163, -1.9516978, -5.220093)
 script = ExtResource("7_wbx7f")
+head_id = 4
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264932483]
 transform = Transform3D(-3.309176e-08, 0, -1, 0, 0.7570512, 0, 0.7570512, 0, -4.371139e-08, 2.1986647, -0.5620644, -2.6342502)
@@ -126,3 +138,4 @@ script = SubResource("GDScript_2d0sp")
 [connection signal="pressed" from="CanvasLayer/Control/head1" to="CanvasLayer/Control/head1" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/head1/head2" to="CanvasLayer/Control/head1" method="_on_head_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/head1/head3" to="CanvasLayer/Control/head1" method="_on_head_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/head1/head4" to="CanvasLayer/Control/head1" method="_on_head_4_pressed"]

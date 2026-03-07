@@ -3,6 +3,7 @@ extends TextureButton
 @onready var button1 = $"."
 @onready var button2 = $head2
 @onready var button3 = $head3
+@onready var button4 = $head4
 
 
 # Called when the node enters the scene tree for the first time.
@@ -29,6 +30,11 @@ func _process(delta: float) -> void:
 	else:
 		button3.button_pressed = false
 
+	if parts.head_id == 4:
+		button4.button_pressed = true
+	else:
+		button4.button_pressed = false
+
 
 func _on_pressed() -> void:
 	parts.head_id = 1
@@ -43,5 +49,11 @@ func _on_head_2_pressed() -> void:
 
 func _on_head_3_pressed() -> void:
 	parts.head_id = 3
-	parts.current_hair.position.x += 0.10
+	parts.current_hair.position.x = 0.09
+	parts.load_head()
+
+
+func _on_head_4_pressed() -> void:
+	parts.head_id = 4
+	parts.current_hair.position.x = 0.0
 	parts.load_head()

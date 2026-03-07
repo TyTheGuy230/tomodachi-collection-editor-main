@@ -11,7 +11,8 @@ var attachment = BoneAttachment3D.new()
 var head_paths = {
 	1: "res://models/heads/head1.glb",
 	2: "res://models/heads/head2.glb",
-	3: "res://models/heads/head3.glb"
+	3: "res://models/heads/head3.glb",
+	4: "res://models/heads/head4.glb"
 }
 
 var hair_paths = {
@@ -29,7 +30,7 @@ func _ready() -> void:
 	load_hair()
 	
 	if head_id == 3:
-		current_hair.position.x += 0.10
+		current_hair.position.x += 0.09
 	else:
 		current_hair.position.x = 0.0
 	
