@@ -28,6 +28,7 @@ var hair_paths = {
 	1: "res://models/hair/hair1.glb",
 	2: "res://models/hair/hair2.glb",
 	3: "res://models/hair/hair3.glb",
+	4: "res://models/hair/hair4.glb",
 	22:"res://models/hair/hair22.glb",
 	71: "res://models/hair/hair71.glb"
 }
