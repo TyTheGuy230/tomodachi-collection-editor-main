@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://dpr44v7tdber2" path="res://img/buttons/head/8/sel.png" id="21_quh5e"]
 [ext_resource type="Texture2D" uid="uid://c4dmptq71htqk" path="res://img/sprites/boyblue.png" id="21_uihqq"]
 [ext_resource type="AudioStream" uid="uid://ctawwauccekov" path="res://sounds/sfx/click (4).wav" id="22_uihqq"]
+[ext_resource type="AudioStream" uid="uid://5ousac81mr7h" path="res://sounds/sfx/holddown.wav" id="27_g5d0j"]
 [ext_resource type="AudioStream" uid="uid://bcypkukdhk6km" path="res://sounds/sfx/start rotate.wav" id="28_uy706"]
 [ext_resource type="Shader" uid="uid://b5b4qo4e5nr3s" path="res://scene/miibgshader.gdshader" id="31_ytv4n"]
 
@@ -263,14 +264,19 @@ texture_normal = ExtResource("20_uy706")
 texture_pressed = ExtResource("21_uihqq")
 stretch_mode = 4
 
-[node name="Click(4)" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/TextureRect" unique_id=1601001635]
-position = Vector2(-368, 212)
+[node name="Click(4)" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/TextureRect/TextureButton" unique_id=1601001635]
+position = Vector2(-479, -8)
 stream = ExtResource("22_uihqq")
+
+[node name="Holddown" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/TextureRect/TextureButton" unique_id=1300146002]
+position = Vector2(-473, 23)
+stream = ExtResource("27_g5d0j")
 
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.0898316, -1.9347057, -5.220093)
 visible = false
 script = ExtResource("7_wbx7f")
+hair_id = 3
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264932483]
 transform = Transform3D(-3.309176e-08, 0, -1, 0, 0.7570512, 0, 0.7570512, 0, -4.371139e-08, 2.1986647, -0.5620644, -2.6342502)
@@ -304,4 +310,5 @@ stream = ExtResource("28_uy706")
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head6" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_6_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head7" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_7_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head8" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_8_pressed"]
+[connection signal="button_down" from="CanvasLayer/Control/TextureRect/TextureButton" to="CanvasLayer/Control/ColorRect" method="_on_texture_button_button_down"]
 [connection signal="pressed" from="CanvasLayer/Control/TextureRect/TextureButton" to="CanvasLayer/Control/TextureRect" method="_on_texture_button_pressed"]

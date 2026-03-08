@@ -1,8 +1,9 @@
-res://code/body.gd
+res://code/color_rect (2).gd
 res://scene/main mii maker.tscn
-res://scene/editormusic.tscn
-res://scene/textbox.gd
 res://other/scroll.gdshader
 res://models/body/body.gdshader
 res://scene/miibgshader.gdshader
+res://scene/textbox.gd
 res://scene/body.tscn
+res://code/body.gd
+res://models/hair/hair2_NDS Texture.png

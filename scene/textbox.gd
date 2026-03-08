@@ -27,7 +27,7 @@ func slide_down():
 		.set_ease(Tween.EASE_IN)
 
 func _on_texture_button_pressed() -> void:
-	$"Click(4)".play()
+	$"TextureButton/Click(4)".play()
 	slide_down()
 	await get_tree().create_timer(0.3).timeout
 	colorrect.play("fade out")
