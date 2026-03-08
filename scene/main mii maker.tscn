@@ -24,10 +24,16 @@
 [ext_resource type="Texture2D" uid="uid://dytovb0d7xqqi" path="res://img/buttons/head/6/non.png" id="15_spqrk"]
 [ext_resource type="AudioStream" uid="uid://blccflo2ryq7j" path="res://sounds/music/03. Mii Edit.mp3" id="15_vt1mt"]
 [ext_resource type="Texture2D" uid="uid://cbm6y2c6n267c" path="res://img/buttons/head/6/sel.png" id="16_sht6d"]
+[ext_resource type="Texture2D" uid="uid://ctgcqj65qf5o" path="res://img/buttons/head/7/non.png" id="18_egxde"]
 [ext_resource type="Script" uid="uid://bs26afjte6e2a" path="res://scene/textbox.gd" id="19_q8tej"]
+[ext_resource type="Texture2D" uid="uid://bcfropkm5pd35" path="res://img/buttons/head/7/sel.png" id="19_quh5e"]
 [ext_resource type="Texture2D" uid="uid://dhpe14mdtqpuw" path="res://img/sprites/boy.png" id="20_uy706"]
+[ext_resource type="Texture2D" uid="uid://cc1ocv21o06jf" path="res://img/buttons/head/8/non.png" id="20_ytv4n"]
+[ext_resource type="Texture2D" uid="uid://dpr44v7tdber2" path="res://img/buttons/head/8/sel.png" id="21_quh5e"]
 [ext_resource type="Texture2D" uid="uid://c4dmptq71htqk" path="res://img/sprites/boyblue.png" id="21_uihqq"]
+[ext_resource type="AudioStream" uid="uid://ctawwauccekov" path="res://sounds/sfx/click (4).wav" id="22_uihqq"]
 [ext_resource type="AudioStream" uid="uid://bcypkukdhk6km" path="res://sounds/sfx/start rotate.wav" id="28_uy706"]
+[ext_resource type="Shader" uid="uid://b5b4qo4e5nr3s" path="res://scene/miibgshader.gdshader" id="31_ytv4n"]
 
 [sub_resource type="Animation" id="Animation_q8tej"]
 length = 0.001
@@ -80,6 +86,11 @@ _data = {
 &"fade in": SubResource("Animation_ynxeu"),
 &"fade out": SubResource("Animation_uy706")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g5d0j"]
+render_priority = 0
+shader = ExtResource("31_ytv4n")
+shader_parameter/input_tex = ExtResource("15_2d0sp")
 
 [node name="Node3D" type="Node3D" unique_id=965385247]
 
@@ -205,8 +216,8 @@ offset_top = 366.0
 offset_right = 136.5
 offset_bottom = 483.0
 toggle_mode = true
-texture_normal = ExtResource("11_pk360")
-texture_pressed = ExtResource("12_55iix")
+texture_normal = ExtResource("18_egxde")
+texture_pressed = ExtResource("19_quh5e")
 stretch_mode = 0
 
 [node name="head8" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=130479266]
@@ -216,8 +227,8 @@ offset_top = 366.0
 offset_right = 278.5
 offset_bottom = 483.0
 toggle_mode = true
-texture_normal = ExtResource("11_pk360")
-texture_pressed = ExtResource("12_55iix")
+texture_normal = ExtResource("20_ytv4n")
+texture_pressed = ExtResource("21_quh5e")
 stretch_mode = 0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=483478312]
@@ -252,8 +263,13 @@ texture_normal = ExtResource("20_uy706")
 texture_pressed = ExtResource("21_uihqq")
 stretch_mode = 4
 
+[node name="Click(4)" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/TextureRect" unique_id=1601001635]
+position = Vector2(-368, 212)
+stream = ExtResource("22_uihqq")
+
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.0898316, -1.9347057, -5.220093)
+visible = false
 script = ExtResource("7_wbx7f")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264932483]
@@ -268,10 +284,12 @@ texture = ExtResource("8_brg8n")
 
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=1776573782]
 transform = Transform3D(1.4064981, 0, 0, 0, 1.4064981, 0, 0, 0, 1, 0, 0.1252718, -17.001131)
+material_override = SubResource("ShaderMaterial_g5d0j")
 texture = ExtResource("15_2d0sp")
 
 [node name="03_MiiEdit" type="AudioStreamPlayer" parent="." unique_id=1238179608]
 stream = ExtResource("15_vt1mt")
+volume_db = -7.255
 autoplay = true
 parameters/looping = false
 

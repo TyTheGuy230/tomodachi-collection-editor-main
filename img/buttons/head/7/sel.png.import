@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwm5jw2kvd1y8"
-path="res://.godot/imported/adran_custom_render_2026-03-07T15_43_45.155Z.png-da9f6d14c4fe3051e71f81595c1e986c.ctex"
+uid="uid://bcfropkm5pd35"
+path="res://.godot/imported/sel.png-bb019670ab5f9f1edceedbba1cfca6d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/sprites/adran_custom_render_2026-03-07T15_43_45.155Z.png"
-dest_files=["res://.godot/imported/adran_custom_render_2026-03-07T15_43_45.155Z.png-da9f6d14c4fe3051e71f81595c1e986c.ctex"]
+source_file="res://img/buttons/head/7/sel.png"
+dest_files=["res://.godot/imported/sel.png-bb019670ab5f9f1edceedbba1cfca6d7.ctex"]
 
 [params]
 

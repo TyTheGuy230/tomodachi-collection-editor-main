@@ -1,7 +1,15 @@
 [gd_scene format=4 uid="uid://dypwfb0q521v7"]
 
+[ext_resource type="Shader" uid="uid://cg1yifaqm2xy5" path="res://models/body/body.gdshader" id="1_k3nkw"]
 [ext_resource type="Texture2D" uid="uid://dqtmwcmrkbqbr" path="res://models/body/body.png" id="1_w6pjy"]
 [ext_resource type="Texture2D" uid="uid://dgf4g6d7uwkha" path="res://models/body/shadow.png" id="2_k3nkw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yw7q4"]
+render_priority = 0
+shader = ExtResource("1_k3nkw")
+shader_parameter/input_tex = ExtResource("1_w6pjy")
+shader_parameter/favorite_color = Vector3(0.51, 0, 0)
+shader_parameter/skin_color = Vector3(0.996, 0.738, 0.51)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhlna"]
 resource_name = "mt_body"
@@ -287,6 +295,7 @@ bones/14/rotation = Quaternion(0, 0, 0, 1)
 bones/14/scale = Vector3(1, 1, 1)
 
 [node name="body" type="MeshInstance3D" parent="body/Skeleton3D" unique_id=1419524045]
+material_override = SubResource("ShaderMaterial_yw7q4")
 mesh = SubResource("ArrayMesh_g3ffp")
 skin = SubResource("Skin_jjmuw")
 
