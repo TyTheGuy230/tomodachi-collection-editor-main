@@ -3,6 +3,7 @@ extends Node3D
 @export var head_id = 1
 @export var hair_id = 1
 @export var rotation_speed = 3
+@export var fliphair = false
 var target_rotation: float = 0.0
 var current_head
 var current_hair
@@ -56,6 +57,12 @@ func _process(delta: float) -> void:
 	if rotation.y >= target_rotation:
 		rotation.y = target_rotation
 		rotating = false
+		
+	if fliphair == true:
+		current_hair.scale.y = -1
+	else:
+		current_hair.scale.y = 1
+		
 		
 func load_head():
 

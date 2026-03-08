@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://c4dmptq71htqk" path="res://img/sprites/boyblue.png" id="21_uihqq"]
 [ext_resource type="AudioStream" uid="uid://ctawwauccekov" path="res://sounds/sfx/click (4).wav" id="22_uihqq"]
 [ext_resource type="AudioStream" uid="uid://5ousac81mr7h" path="res://sounds/sfx/holddown.wav" id="27_g5d0j"]
+[ext_resource type="Script" uid="uid://ce3lprgmii1qb" path="res://scene/fliphair.gd" id="28_ll1ax"]
 [ext_resource type="AudioStream" uid="uid://bcypkukdhk6km" path="res://sounds/sfx/start rotate.wav" id="28_uy706"]
 [ext_resource type="Shader" uid="uid://b5b4qo4e5nr3s" path="res://scene/miibgshader.gdshader" id="31_ytv4n"]
 
@@ -272,6 +273,15 @@ stream = ExtResource("22_uihqq")
 position = Vector2(-473, 23)
 stream = ExtResource("27_g5d0j")
 
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=487072783]
+layout_mode = 0
+offset_left = 993.0
+offset_top = 89.0
+offset_right = 1142.8918
+offset_bottom = 148.0
+text = "flip hair"
+script = ExtResource("28_ll1ax")
+
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.0898316, -1.9347057, -5.220093)
 visible = false
@@ -312,3 +322,4 @@ stream = ExtResource("28_uy706")
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head8" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_8_pressed"]
 [connection signal="button_down" from="CanvasLayer/Control/TextureRect/TextureButton" to="CanvasLayer/Control/ColorRect" method="_on_texture_button_button_down"]
 [connection signal="pressed" from="CanvasLayer/Control/TextureRect/TextureButton" to="CanvasLayer/Control/TextureRect" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control/Button" method="_on_pressed"]
