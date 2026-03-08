@@ -274,6 +274,7 @@ position = Vector2(-473, 23)
 stream = ExtResource("27_g5d0j")
 
 [node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=487072783]
+visible = false
 layout_mode = 0
 offset_left = 993.0
 offset_top = 89.0
@@ -286,7 +287,6 @@ script = ExtResource("28_ll1ax")
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.0898316, -1.9347057, -5.220093)
 visible = false
 script = ExtResource("7_wbx7f")
-hair_id = 22
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264932483]
 transform = Transform3D(-3.309176e-08, 0, -1, 0, 0.7570512, 0, 0.7570512, 0, -4.371139e-08, 2.1986647, -0.5620644, -2.6342502)

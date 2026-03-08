@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	fliphair.fliphair = true
+	fliphair.hairflip = true
