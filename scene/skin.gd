@@ -12,11 +12,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
+	
 func _on_pressed() -> void:
 	skintone.set_skin(1)
 
-
 func _on_skin_2_pressed() -> void:
 	skintone.set_skin(2)
+
+func _on_skin_3_pressed() -> void:
+	skintone.set_skin(3)

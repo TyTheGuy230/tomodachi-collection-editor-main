@@ -34,7 +34,11 @@ var hair_paths = {
 
 var skin_tones = {
 	1: Color("fcdbbaff"),
-	2: Color("f7bb7bff")
+	2: Color("f7bb7bff"),
+	3: Color("df8e55ff"),
+	4: Color("ffb696ff"),
+	5: Color("9e5534ff"),
+	6: Color("5d2c1cff"),
 }
 
 var face_material: ShaderMaterial

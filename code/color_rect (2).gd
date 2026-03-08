@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_texture_button_button_down() -> void:
-	$"../TextureRect/TextureButton/Holddown".play()
+	$"../textbox/TextureButton/Holddown".play()
