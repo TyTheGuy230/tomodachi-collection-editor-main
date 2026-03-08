@@ -35,7 +35,12 @@
 [ext_resource type="AudioStream" uid="uid://5ousac81mr7h" path="res://sounds/sfx/holddown.wav" id="27_g5d0j"]
 [ext_resource type="Script" uid="uid://ce3lprgmii1qb" path="res://scene/fliphair.gd" id="28_ll1ax"]
 [ext_resource type="AudioStream" uid="uid://bcypkukdhk6km" path="res://sounds/sfx/start rotate.wav" id="28_uy706"]
+[ext_resource type="Texture2D" uid="uid://do30ysahs5roo" path="res://img/buttons/skin/costume1.png" id="29_0vrmu"]
+[ext_resource type="Texture2D" uid="uid://s60x2i6vaiam" path="res://img/buttons/skin/costume2.png" id="30_i3wkj"]
+[ext_resource type="Script" uid="uid://cboixjff4f1gg" path="res://scene/skin.gd" id="31_nxbce"]
+[ext_resource type="Texture2D" uid="uid://xfeewiuanr23" path="res://img/buttons/skin/costume3.png" id="31_w3v4y"]
 [ext_resource type="Shader" uid="uid://b5b4qo4e5nr3s" path="res://scene/miibgshader.gdshader" id="31_ytv4n"]
+[ext_resource type="Texture2D" uid="uid://cmkn7rd2t1dyu" path="res://img/buttons/skin/costume4.png" id="32_nxbce"]
 
 [sub_resource type="Animation" id="Animation_q8tej"]
 length = 0.001
@@ -283,6 +288,27 @@ offset_bottom = 148.0
 text = "flip hair"
 script = ExtResource("28_ll1ax")
 
+[node name="skin1" type="TextureButton" parent="CanvasLayer/Control" unique_id=1174122721]
+visible = false
+layout_mode = 0
+offset_left = 518.0
+offset_top = 83.0
+offset_right = 571.0
+offset_bottom = 136.0
+texture_normal = ExtResource("29_0vrmu")
+texture_pressed = ExtResource("30_i3wkj")
+stretch_mode = 4
+script = ExtResource("31_nxbce")
+
+[node name="skin2" type="TextureButton" parent="CanvasLayer/Control/skin1" unique_id=1919795512]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 53.0
+offset_bottom = 113.0
+texture_normal = ExtResource("31_w3v4y")
+texture_pressed = ExtResource("32_nxbce")
+stretch_mode = 4
+
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.0898316, -1.9347057, -5.220093)
 visible = false
@@ -323,3 +349,5 @@ stream = ExtResource("28_uy706")
 [connection signal="button_down" from="CanvasLayer/Control/TextureRect/TextureButton" to="CanvasLayer/Control/ColorRect" method="_on_texture_button_button_down"]
 [connection signal="pressed" from="CanvasLayer/Control/TextureRect/TextureButton" to="CanvasLayer/Control/TextureRect" method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/skin1" to="CanvasLayer/Control/skin1" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/skin1/skin2" to="CanvasLayer/Control/skin1" method="_on_skin_2_pressed"]

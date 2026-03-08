@@ -2,10 +2,12 @@ extends Node3D
 @onready var skeleton = $body/Skeleton3D
 @export var head_id = 1
 @export var hair_id = 1
-@export var rotation_speed = 3
 @export var hairflip = false
+@export var skin_id = 1
+@export var rotation_speed = 3
 var target_rotation: float = 0.0
 var current_head
+var current_skin
 var current_hair
 var attachment = BoneAttachment3D.new()
 var rotating = false
@@ -30,6 +32,11 @@ var hair_paths = {
 	71: "res://models/hair/hair71.glb"
 }
 
+var skin_tones = {
+	1: Color("fcdbbaff"),
+	2: Color("f7bb7bff")
+}
+
 var face_material: ShaderMaterial
 var hair_material: ShaderMaterial
 
@@ -41,7 +48,7 @@ func _ready() -> void:
 	face_material = ShaderMaterial.new()
 	face_material.shader = load("res://other/basic.gdshader")
 	face_material.set_shader_parameter("use_texture", false)
-	face_material.set_shader_parameter("albedo", Color(.99,.86,.73))
+	face_material.set_shader_parameter("albedo", Color(0.988, 0.859, 0.729, 1.0))
 	hair_material = ShaderMaterial.new()
 	hair_material.shader = load("res://other/basic.gdshader")
 	hair_material.set_shader_parameter("use_texture", false)
@@ -50,6 +57,7 @@ func _ready() -> void:
 	
 	load_head()
 	load_hair()
+	set_skin(skin_id)
 	
 
 	
@@ -170,6 +178,7 @@ func load_head():
 	attachment.add_child(current_head)
 	apply_shader(current_head, 0, 0, true)
 	
+	
 func load_hair():
 
 	if current_hair:
@@ -185,12 +194,18 @@ func load_hair():
 		current_hair.scale.y = -1
 	else:
 		current_hair.scale.y = 1
+		
+func set_skin(id):
+	skin_id = id
+	if skin_tones.has(skin_id):
+		face_material.set_shader_parameter("albedo", skin_tones[skin_id])
 
 
 func set_head(id):
 	head_id = id
 	load_head()
-
+	
+	
 func set_hair(id):
 	hair_id = id
 	load_hair()

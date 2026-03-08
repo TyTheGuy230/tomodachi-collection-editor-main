@@ -4,6 +4,7 @@ extends TextureRect
 @onready var buttons = $"../headbuttons/head1"
 @onready var body = $"../../../body2"
 @onready var bartext = $"../Label"
+@onready var skinbuttons = $"../skin1"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -35,3 +36,4 @@ func _on_texture_button_pressed() -> void:
 	buttons.visible = true
 	body.visible = true
 	bartext.visible = true
+	skinbuttons.visible = true

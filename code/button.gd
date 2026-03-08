@@ -73,7 +73,7 @@ func _on_head_2_pressed() -> void:
 
 func _on_head_3_pressed() -> void:
 	parts.head_id = 3
-	parts.current_hair.position.x = 0.09
+	parts.current_hair.position.x = 0.065
 	parts.load_head()
 
 
