@@ -2,11 +2,13 @@ extends Node3D
 @onready var skeleton = $body/Skeleton3D
 @export var head_id = 1
 @export var hair_id = 1
-@export var rotation_speed = 10
+@export var rotation_speed = 3
 var target_rotation: float = 0.0
 var current_head
 var current_hair
 var attachment = BoneAttachment3D.new()
+var rotating = false
+var start_rotation = 0.0
 
 var head_paths = {
 	1: "res://models/heads/head1.glb",
@@ -33,12 +35,25 @@ func _ready() -> void:
 	load_head()
 	load_hair()
 	
+
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	$AnimationPlayer.play("Ewait00")
 	
-	
+	if Input.is_action_just_pressed("mii spin") and !rotating:
+		$"../StartRotate".play()
+		rotating = true
+		start_rotation = rotation.y
+		target_rotation = start_rotation + TAU
+		
+	if rotating:
+		rotation.y += rotation_speed * delta
+		
+	if rotation.y >= target_rotation:
+		rotation.y = target_rotation
+		rotating = false
+		
 func load_head():
 
 	if current_head:

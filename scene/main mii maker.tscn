@@ -24,10 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://dytovb0d7xqqi" path="res://img/buttons/head/6/non.png" id="15_spqrk"]
 [ext_resource type="AudioStream" uid="uid://blccflo2ryq7j" path="res://sounds/music/03. Mii Edit.mp3" id="15_vt1mt"]
 [ext_resource type="Texture2D" uid="uid://cbm6y2c6n267c" path="res://img/buttons/head/6/sel.png" id="16_sht6d"]
-[ext_resource type="PackedScene" uid="uid://4bnqflh0d3mh" path="res://scene/editormusic.tscn" id="16_vt1mt"]
 [ext_resource type="Script" uid="uid://bs26afjte6e2a" path="res://scene/textbox.gd" id="19_q8tej"]
 [ext_resource type="Texture2D" uid="uid://dhpe14mdtqpuw" path="res://img/sprites/boy.png" id="20_uy706"]
 [ext_resource type="Texture2D" uid="uid://c4dmptq71htqk" path="res://img/sprites/boyblue.png" id="21_uihqq"]
+[ext_resource type="AudioStream" uid="uid://bcypkukdhk6km" path="res://sounds/sfx/start rotate.wav" id="28_uy706"]
 
 [sub_resource type="Animation" id="Animation_q8tej"]
 length = 0.001
@@ -81,20 +81,6 @@ _data = {
 &"fade out": SubResource("Animation_uy706")
 }
 
-[sub_resource type="GDScript" id="GDScript_2d0sp"]
-script/source = "extends AudioStreamPlayer
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
 [node name="Node3D" type="Node3D" unique_id=965385247]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1239835111]
@@ -119,6 +105,7 @@ position = Vector2(576, 324)
 texture = ExtResource("3_dc348")
 
 [node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1880613906]
+visible = false
 layout_mode = 0
 offset_left = 806.0
 offset_top = 30.0
@@ -266,8 +253,7 @@ texture_pressed = ExtResource("21_uihqq")
 stretch_mode = 4
 
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
-transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.1238163, -1.9516978, -5.220093)
-visible = false
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.0898316, -1.9347057, -5.220093)
 script = ExtResource("7_wbx7f")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264932483]
@@ -286,10 +272,11 @@ texture = ExtResource("15_2d0sp")
 
 [node name="03_MiiEdit" type="AudioStreamPlayer" parent="." unique_id=1238179608]
 stream = ExtResource("15_vt1mt")
+autoplay = true
 parameters/looping = false
-script = SubResource("GDScript_2d0sp")
 
-[node name="AudioStreamPlayer" parent="." unique_id=1901478337 instance=ExtResource("16_vt1mt")]
+[node name="StartRotate" type="AudioStreamPlayer" parent="." unique_id=1186160226]
+stream = ExtResource("28_uy706")
 
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1" to="CanvasLayer/Control/headbuttons/head1" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head2" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_2_pressed"]

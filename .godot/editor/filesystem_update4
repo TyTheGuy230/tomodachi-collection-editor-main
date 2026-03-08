@@ -1,3 +1,4 @@
-res://scene/textbox.gd
+res://code/body.gd
 res://scene/main mii maker.tscn
-res://scene/body.tscn
+res://scene/editormusic.tscn
+res://scene/textbox.gd
