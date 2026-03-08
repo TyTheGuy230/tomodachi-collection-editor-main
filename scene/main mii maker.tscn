@@ -43,6 +43,12 @@
 [ext_resource type="Texture2D" uid="uid://cmkn7rd2t1dyu" path="res://img/buttons/skin/costume4.png" id="32_nxbce"]
 [ext_resource type="Texture2D" uid="uid://cw5tyirpfjpse" path="res://img/buttons/skin/costume5.png" id="34_isfvf"]
 [ext_resource type="Texture2D" uid="uid://dbp3623gbadxq" path="res://img/buttons/skin/costume6.png" id="35_2dhwp"]
+[ext_resource type="Texture2D" uid="uid://fn1fegqh1546" path="res://img/buttons/skin/costume7.png" id="36_tf5x7"]
+[ext_resource type="Texture2D" uid="uid://bxylq7u51ptt" path="res://img/buttons/skin/costume8.png" id="37_2ylo7"]
+[ext_resource type="Texture2D" uid="uid://ckf8jxvr2qbkr" path="res://img/buttons/skin/costume9.png" id="38_b716q"]
+[ext_resource type="Texture2D" uid="uid://bhtxumgvhpspx" path="res://img/buttons/skin/costume10.png" id="39_02vuw"]
+[ext_resource type="Texture2D" uid="uid://m15fe7ye7e4i" path="res://img/buttons/skin/costume11.png" id="40_dtd5b"]
+[ext_resource type="Texture2D" uid="uid://ccyfnjyc4aq75" path="res://img/buttons/skin/costume12.png" id="41_ygtbx"]
 
 [sub_resource type="Animation" id="Animation_q8tej"]
 length = 0.001
@@ -319,13 +325,42 @@ offset_bottom = 173.0
 texture_normal = ExtResource("34_isfvf")
 texture_pressed = ExtResource("35_2dhwp")
 stretch_mode = 4
-script = ExtResource("31_nxbce")
+
+[node name="skin6" type="TextureButton" parent="CanvasLayer/Control/skin1" unique_id=193900278]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 181.0
+offset_right = 52.0
+offset_bottom = 234.0
+texture_normal = ExtResource("36_tf5x7")
+texture_pressed = ExtResource("37_2ylo7")
+stretch_mode = 4
+
+[node name="skin4" type="TextureButton" parent="CanvasLayer/Control/skin1" unique_id=1831160779]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 241.0
+offset_right = 52.0
+offset_bottom = 294.0
+texture_normal = ExtResource("38_b716q")
+texture_pressed = ExtResource("39_02vuw")
+stretch_mode = 4
+
+[node name="skin5" type="TextureButton" parent="CanvasLayer/Control/skin1" unique_id=222376719]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 301.0
+offset_right = 52.0
+offset_bottom = 354.0
+texture_normal = ExtResource("40_dtd5b")
+texture_pressed = ExtResource("41_ygtbx")
+stretch_mode = 4
 
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.0898316, -1.9347057, -5.220093)
 visible = false
 script = ExtResource("7_wbx7f")
-hair_id = 4
+hair_id = 6
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264932483]
 transform = Transform3D(-3.309176e-08, 0, -1, 0, 0.7570512, 0, 0.7570512, 0, -4.371139e-08, 2.1986647, -0.5620644, -2.6342502)
@@ -365,3 +400,6 @@ stream = ExtResource("28_uy706")
 [connection signal="pressed" from="CanvasLayer/Control/skin1" to="CanvasLayer/Control/skin1" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/skin1/skin2" to="CanvasLayer/Control/skin1" method="_on_skin_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/skin1/skin3" to="CanvasLayer/Control/skin1" method="_on_skin_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/skin1/skin6" to="CanvasLayer/Control/skin1" method="_on_skin_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/skin1/skin4" to="CanvasLayer/Control/skin1" method="_on_skin_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/skin1/skin5" to="CanvasLayer/Control/skin1" method="_on_skin_5_pressed"]

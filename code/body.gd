@@ -29,7 +29,9 @@ var hair_paths = {
 	2: "res://models/hair/hair2.glb",
 	3: "res://models/hair/hair3.glb",
 	4: "res://models/hair/hair4.glb",
+	6: "res://models/hair/hair6.glb",
 	22:"res://models/hair/hair22.glb",
+	36: "res://models/hair/hat2.glb",
 	71: "res://models/hair/hair71.glb"
 }
 
@@ -93,11 +95,15 @@ func apply_shader(node: Node, material_type: int, mesh_count: int = 0, should_fi
 				var effective_type = material_type
 				if material_type == 1:
 					effective_type = 1 if mesh_count == 0 else 0
+				if material_type == 2:
+					effective_type = 2 if mesh_count == 0 else 0
 				match effective_type:
 					0:
 						child.set_surface_override_material(i, face_material)
 					_:
 						child.set_surface_override_material(i, hair_material)
+					2:
+						child.set_surface_override_material(i, face_material)
 			mesh_count += 1
 		mesh_count = apply_shader(child, material_type, mesh_count, should_fix_mesh)
 	return mesh_count

@@ -21,3 +21,12 @@ func _on_skin_2_pressed() -> void:
 
 func _on_skin_3_pressed() -> void:
 	skintone.set_skin(3)
+
+func _on_skin_6_pressed() -> void:
+	skintone.set_skin(4)
+
+func _on_skin_4_pressed() -> void:
+	skintone.set_skin(5)
+
+func _on_skin_5_pressed() -> void:
+	skintone.set_skin(6)
