@@ -63,44 +63,60 @@ func _process(delta: float) -> void:
 func _on_pressed() -> void:
 	parts.head_id = 1
 	parts.current_hair.position.x = 0.0
+	parts.current_hat.position.x = 0.0
 	parts.load_head()
+	$"../../../../Featureselect".play()
 
 func _on_head_2_pressed() -> void:
 	parts.head_id = 2
 	parts.current_hair.position.x = 0.0
+	parts.current_hat.position.x = 0.0
 	parts.load_head()
+	$"../../../../Featureselect".play()
 
 
 func _on_head_3_pressed() -> void:
 	parts.head_id = 3
 	parts.current_hair.position.x = 0.065
+	parts.current_hat.position.x = 0.065
 	parts.load_head()
+	$"../../../../Featureselect".play()
 
 
 func _on_head_4_pressed() -> void:
 	parts.head_id = 4
 	parts.current_hair.position.x = 0.0
+	parts.current_hat.position.x = 0.0
 	parts.load_head()
+	$"../../../../Featureselect".play()
 	
 
 func _on_head_5_pressed() -> void:
 	parts.head_id = 5
 	parts.current_hair.position.x = 0.0
+	parts.current_hat.position.x = 0.0
 	parts.load_head()
+	$"../../../../Featureselect".play()
 
 
 func _on_head_6_pressed() -> void:
 	parts.head_id = 6
 	parts.current_hair.position.x = 0.0
+	parts.current_hat.position.x = 0.0
 	parts.load_head()
+	$"../../../../Featureselect".play()
 	
 	
 func _on_head_7_pressed() -> void:
 	parts.head_id = 7
 	parts.current_hair.position.x = 0.065
+	parts.current_hat.position.x = 0.065
 	parts.load_head()
+	$"../../../../Featureselect".play()
 
 func _on_head_8_pressed() -> void:
 	parts.head_id = 8
 	parts.current_hair.position.x = 0.065
+	parts.current_hat.position.x = 0.065
 	parts.load_head()
+	$"../../../../Featureselect".play()

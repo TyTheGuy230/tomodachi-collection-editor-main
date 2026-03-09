@@ -15,18 +15,24 @@ func _process(delta: float) -> void:
 	
 func _on_pressed() -> void:
 	skintone.set_skin(1)
-
+	$"../../../SeMiiEditColor".play()
+	
 func _on_skin_2_pressed() -> void:
 	skintone.set_skin(2)
+	$"../../../SeMiiEditColor".play()
 
 func _on_skin_3_pressed() -> void:
 	skintone.set_skin(3)
+	$"../../../SeMiiEditColor".play()
 
 func _on_skin_6_pressed() -> void:
 	skintone.set_skin(4)
+	$"../../../SeMiiEditColor".play()
 
 func _on_skin_4_pressed() -> void:
 	skintone.set_skin(5)
+	$"../../../SeMiiEditColor".play()
 
 func _on_skin_5_pressed() -> void:
 	skintone.set_skin(6)
+	$"../../../SeMiiEditColor".play()

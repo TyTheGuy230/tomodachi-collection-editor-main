@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0mn0p46ccmfj"
-path.s3tc="res://.godot/imported/hat2_NDS Texture_1.png-15a3b0d8f22a8b3717208ce756ba9fdf.s3tc.ctex"
+uid="uid://cyipvrgyj1d07"
+path.s3tc="res://.godot/imported/hair35_NDS Texture.png-0ffcf5862ecac37c49d1508aa232ef43.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "36c0b754da661df4e6a9ef77f6f8cefc"
+"md5": "33bf5fd1e33c7bf7126d67f7c9bef4f7"
 }
 
 [deps]
 
-source_file="res://models/hair/hat2_NDS Texture_1.png"
-dest_files=["res://.godot/imported/hat2_NDS Texture_1.png-15a3b0d8f22a8b3717208ce756ba9fdf.s3tc.ctex"]
+source_file="res://models/hair/hair35_NDS Texture.png"
+dest_files=["res://.godot/imported/hair35_NDS Texture.png-0ffcf5862ecac37c49d1508aa232ef43.s3tc.ctex"]
 
 [params]
 

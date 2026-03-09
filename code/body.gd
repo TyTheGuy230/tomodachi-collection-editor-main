@@ -1,14 +1,16 @@
 extends Node3D
 @onready var skeleton = $body/Skeleton3D
 @export var head_id = 1
-@export var hair_id = 1
-@export var hairflip = false
 @export var skin_id = 1
+@export var hair_id = 1
+@export var hat_id = 1
+@export var hairflip = false
 @export var rotation_speed = 3
 var target_rotation: float = 0.0
 var current_head
 var current_skin
 var current_hair
+var current_hat
 var attachment = BoneAttachment3D.new()
 var rotating = false
 var start_rotation = 0.0
@@ -30,9 +32,15 @@ var hair_paths = {
 	3: "res://models/hair/hair3.glb",
 	4: "res://models/hair/hair4.glb",
 	6: "res://models/hair/hair6.glb",
-	22:"res://models/hair/hair22.glb",
-	36: "res://models/hair/hat2.glb",
+	22: "res://models/hair/hair22.glb",
+	35: "res://models/hair/hair35.glb",
+	36: "res://models/hair/hair36.glb",
 	71: "res://models/hair/hair71.glb",
+}
+
+var hat_paths = {
+	1: "res://models/hats/hat1.glb",
+	2: "res://models/hats/hat2.glb"
 }
 
 var skin_tones = {
@@ -46,6 +54,7 @@ var skin_tones = {
 
 var face_material: ShaderMaterial
 var hair_material: ShaderMaterial
+var hat_material: ShaderMaterial
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -65,6 +74,7 @@ func _ready() -> void:
 	load_head()
 	load_hair()
 	set_skin(skin_id)
+	load_hat()
 	
 
 	
@@ -95,15 +105,11 @@ func apply_shader(node: Node, material_type: int, mesh_count: int = 0, should_fi
 				var effective_type = material_type
 				if material_type == 1:
 					effective_type = 1 if mesh_count == 0 else 0
-				if material_type == 2:
-					effective_type = 2 if mesh_count == 0 else 0
 				match effective_type:
 					0:
 						child.set_surface_override_material(i, face_material)
 					_:
 						child.set_surface_override_material(i, hair_material)
-					2:
-						child.set_surface_override_material(i, face_material)
 			mesh_count += 1
 		mesh_count = apply_shader(child, material_type, mesh_count, should_fix_mesh)
 	return mesh_count
@@ -206,6 +212,26 @@ func load_hair():
 	else:
 		current_hair.scale.y = 1
 		
+func load_hat():
+
+	if current_hat:
+		current_hat.queue_free()
+		
+
+	var hat_scene = load(hat_paths[hat_id])
+	current_hat = hat_scene.instantiate()
+	
+	attachment.add_child(current_hat)
+	
+	if hair_id == 35:
+		current_hat.visible = true
+		hat_id = 2
+	elif hair_id == 36:
+		current_hat.visible = true
+		hat_id = 1
+	else:
+		current_hat.visible = false
+		
 func set_skin(id):
 	skin_id = id
 	if skin_tones.has(skin_id):
@@ -220,3 +246,4 @@ func set_head(id):
 func set_hair(id):
 	hair_id = id
 	load_hair()
+	load_hat()

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://uysr7bquy7no"
-path="res://.godot/imported/hat2.glb-852ed661a5d5c2a0f6e5e860f720edd8.scn"
+uid="uid://5kxsmmywue76"
+path="res://.godot/imported/hair35.glb-3eec4163008a1a0df5c23f1f5c798e37.scn"
 
 [deps]
 
-source_file="res://models/hair/hat2.glb"
-dest_files=["res://.godot/imported/hat2.glb-852ed661a5d5c2a0f6e5e860f720edd8.scn"]
+source_file="res://models/hair/hair35.glb"
+dest_files=["res://.godot/imported/hair35.glb-3eec4163008a1a0df5c23f1f5c798e37.scn"]
 
 [params]
 

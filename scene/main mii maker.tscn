@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://sf0oktwpdw4i"]
 
-[ext_resource type="Script" uid="uid://dfhsy4mgyg7bm" path="res://scene/camera_3d.gd" id="1_2ylo7"]
 [ext_resource type="Texture2D" uid="uid://u5f5h8rbvpjq" path="res://img/sprites/cag.png" id="1_sht6d"]
 [ext_resource type="Texture2D" uid="uid://cmqqdiwtpxf81" path="res://img/sprites/lr.png" id="2_dc348"]
 [ext_resource type="Texture2D" uid="uid://b66lkgxb7ib75" path="res://img/sprites/sideboxbarthingamajig.png" id="3_dc348"]
@@ -50,6 +49,8 @@
 [ext_resource type="Texture2D" uid="uid://bhtxumgvhpspx" path="res://img/buttons/skin/costume10.png" id="39_02vuw"]
 [ext_resource type="Texture2D" uid="uid://m15fe7ye7e4i" path="res://img/buttons/skin/costume11.png" id="40_dtd5b"]
 [ext_resource type="Texture2D" uid="uid://ccyfnjyc4aq75" path="res://img/buttons/skin/costume12.png" id="41_ygtbx"]
+[ext_resource type="AudioStream" uid="uid://dbtyru30l6fnd" path="res://img/buttons/skin/SE_MII_EDIT_COLOR.wav" id="51_02vuw"]
+[ext_resource type="AudioStream" uid="uid://74a00ht1ji7" path="res://sounds/sfx/featureselect.wav" id="51_b716q"]
 
 [sub_resource type="Animation" id="Animation_q8tej"]
 length = 0.001
@@ -113,7 +114,6 @@ shader_parameter/input_tex = ExtResource("15_2d0sp")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1239835111]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.067732334, 0.029027581, 132.14876)
 fov = 1.0
-script = ExtResource("1_2ylo7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1664374418]
 
@@ -133,7 +133,6 @@ position = Vector2(576, 324)
 texture = ExtResource("3_dc348")
 
 [node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1880613906]
-visible = false
 layout_mode = 0
 offset_left = 806.0
 offset_top = 30.0
@@ -389,7 +388,7 @@ visible = false
 texture = ExtResource("8_brg8n")
 
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=1776573782]
-transform = Transform3D(1.4064981, 0, 0, 0, 1.4064981, 0, 0, 0, 1, 0, 0.1252718, -17.001131)
+transform = Transform3D(1.3015953, 0, 0, 0, 1.3015953, 0, 0, 0, 1, 0, 0.1252718, -17.001131)
 material_override = SubResource("ShaderMaterial_g5d0j")
 texture = ExtResource("15_2d0sp")
 
@@ -401,6 +400,15 @@ parameters/looping = false
 
 [node name="StartRotate" type="AudioStreamPlayer" parent="." unique_id=1186160226]
 stream = ExtResource("28_uy706")
+
+[node name="Featureselect" type="AudioStreamPlayer2D" parent="." unique_id=564615277]
+position = Vector2(-230, 280)
+stream = ExtResource("51_b716q")
+
+[node name="SeMiiEditColor" type="AudioStreamPlayer2D" parent="." unique_id=494977301]
+position = Vector2(-250, 253)
+stream = ExtResource("51_02vuw")
+volume_db = 11.101
 
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1" to="CanvasLayer/Control/headbuttons/head1" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head2" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_2_pressed"]
