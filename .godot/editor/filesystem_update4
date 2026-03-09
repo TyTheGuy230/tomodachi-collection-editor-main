@@ -2,8 +2,4 @@ res://scene/main mii maker.tscn
 res://other/scroll.gdshader
 res://models/body/body.gdshader
 res://scene/miibgshader.gdshader
-res://code/body.gd
-res://scene/body.tscn
 res://other/hatshader.gdshader
-res://code/color_rect (2).gd
-res://scene/skin.gd

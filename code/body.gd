@@ -32,7 +32,7 @@ var hair_paths = {
 	6: "res://models/hair/hair6.glb",
 	22:"res://models/hair/hair22.glb",
 	36: "res://models/hair/hat2.glb",
-	71: "res://models/hair/hair71.glb"
+	71: "res://models/hair/hair71.glb",
 }
 
 var skin_tones = {
