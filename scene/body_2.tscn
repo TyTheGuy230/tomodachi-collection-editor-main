@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ch2lcm50mtest"]
+
+[ext_resource type="PackedScene" uid="uid://bpawcevob5u8d" path="res://models/body/female/body2.glb" id="1_1t2b8"]
+[ext_resource type="Shader" uid="uid://cg1yifaqm2xy5" path="res://models/body/body.gdshader" id="2_77wcq"]
+[ext_resource type="Texture2D" uid="uid://djmdyha0n7t3s" path="res://models/body/female/body2_body.png" id="3_snvu3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p2v8k"]
+render_priority = 0
+shader = ExtResource("2_77wcq")
+shader_parameter/input_tex = ExtResource("3_snvu3")
+shader_parameter/favorite_color = Vector3(0.51, 0, 0)
+shader_parameter/skin_color = Vector3(0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ghxm"]
+render_priority = 0
+shader = ExtResource("2_77wcq")
+shader_parameter/input_tex = ExtResource("3_snvu3")
+shader_parameter/favorite_color = Vector3(0, 0, 0)
+shader_parameter/skin_color = Vector3(0, 0, 0)
+
+[node name="body2" unique_id=1247999464 instance=ExtResource("1_1t2b8")]
+
+[node name="body_001" parent="body/Skeleton3D" parent_id_path=PackedInt32Array(1502882954) index="0" unique_id=1120875555]
+material_override = SubResource("ShaderMaterial_p2v8k")
+surface_material_override/0 = SubResource("ShaderMaterial_1ghxm")

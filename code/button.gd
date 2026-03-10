@@ -1,5 +1,5 @@
 extends TextureButton
-@onready var parts = $"../../../../body2"
+@onready var parts = $"../../../../body"
 @onready var button1 = $"."
 @onready var button2 = $head2
 @onready var button3 = $head3

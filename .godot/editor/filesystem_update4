@@ -7,5 +7,6 @@ res://scene/miibgshader.gdshader
 res://other/hatshader.gdshader
 res://other/basic.gdshader
 res://other/main mii maker.gdshader
-res://scene/backbutton.gd
+res://code/button.gd
 res://scene/textbox.gd
+res://scene/skin.gd

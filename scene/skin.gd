@@ -1,5 +1,5 @@
 extends TextureButton
-@onready var skintone = $"../../../body2"
+@onready var skintone = $"../../../body"
 @onready var button1 = $"."
 @onready var button2 = $skin2
 

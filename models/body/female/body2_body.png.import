@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgf4g6d7uwkha"
-path.s3tc="res://.godot/imported/shadow.png-79413f3b05e213fc000c7fe5849496d0.s3tc.ctex"
+uid="uid://djmdyha0n7t3s"
+path.s3tc="res://.godot/imported/body2_body.png-db2ed36af34d0a2509c6793759a41a44.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "b723040788fd2907ef11fd30dc7f815f"
+}
 
 [deps]
 
-source_file="res://models/body/shadow.png"
-dest_files=["res://.godot/imported/shadow.png-79413f3b05e213fc000c7fe5849496d0.s3tc.ctex"]
+source_file="res://models/body/female/body2_body.png"
+dest_files=["res://.godot/imported/body2_body.png-db2ed36af34d0a2509c6793759a41a44.s3tc.ctex"]
 
 [params]
 

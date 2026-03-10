@@ -2,8 +2,8 @@
 
 [ext_resource type="Shader" uid="uid://kxxow05qu4tr" path="res://other/body.gdshader" id="1_jfl4r"]
 [ext_resource type="Shader" uid="uid://cg1yifaqm2xy5" path="res://models/body/body.gdshader" id="1_k3nkw"]
-[ext_resource type="Texture2D" uid="uid://dqtmwcmrkbqbr" path="res://models/body/body.png" id="1_w6pjy"]
-[ext_resource type="Texture2D" uid="uid://dgf4g6d7uwkha" path="res://models/body/shadow.png" id="2_k3nkw"]
+[ext_resource type="Texture2D" uid="uid://dqtmwcmrkbqbr" path="res://models/body/male/body.png" id="1_w6pjy"]
+[ext_resource type="Texture2D" uid="uid://dgf4g6d7uwkha" path="res://models/body/male/shadow.png" id="2_k3nkw"]
 [ext_resource type="Shader" uid="uid://c2inywcrc0w17" path="res://models/body/shadow.gdshader" id="4_yw7q4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yi2pk"]

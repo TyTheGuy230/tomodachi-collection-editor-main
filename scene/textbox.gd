@@ -5,7 +5,7 @@ extends TextureRect
 @onready var genderbutton = $TextureButton
 @onready var textboxtext = $Label
 @onready var buttons = $"../headbuttons/head1"
-@onready var body = $"../../../body2"
+@onready var body = $"../../../body"
 @onready var bartext = $"../Label"
 @onready var skinbuttons = $"../skin1"
 @onready var yes = $backyes
@@ -55,6 +55,7 @@ func _on_backbutton_pressed() -> void:
 		.set_ease(Tween.EASE_OUT)
 	genderbutton.visible = false
 	textboxtext.text = "Are you sure you want to quit?"
+	textboxtext.vertical_alignment = 1
 	buttons.visible = false
 	body.visible = false
 	bartext.visible = false
@@ -69,7 +70,7 @@ func _on_backbutton_button_down() -> void:
 
 
 func _on_backno_pressed() -> void:
-	$"TextureButton/Click(4)".play()
+	$"../Click(2)".play()
 	slide_down()
 	await get_tree().create_timer(0.2).timeout
 	colorrect.play("fade out")
@@ -80,3 +81,7 @@ func _on_backno_pressed() -> void:
 	skinbuttons.visible = true
 	back.visible = true
 	
+
+
+func _on_backno_button_down() -> void:
+	$"../backbutton/Holddown".play()

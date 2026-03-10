@@ -6,7 +6,9 @@ extends Node3D
 @export var hat_id = 1
 @export var hairflip = false
 @export var rotation_speed = 3
+@export var gender_id = 1
 var target_rotation: float = 0.0
+var current_gender
 var current_head
 var current_skin
 var current_hair
@@ -41,6 +43,11 @@ var hair_paths = {
 var hat_paths = {
 	1: "res://models/hats/hat1.glb",
 	2: "res://models/hats/hat2.glb"
+}
+
+var gender_paths = {
+	1: "res://scene/body.tscn",
+	2: "res://scene/body2.tscn"
 }
 
 
@@ -234,6 +241,17 @@ func load_hat():
 	else:
 		current_hat.visible = false
 		
+func load_gender():
+
+	if current_gender:
+		current_gender.queue_free()
+
+	var gender_scene = load(gender_paths[gender_id])
+	current_gender = gender_scene.instantiate()
+	
+	attachment.add_child(current_gender)
+	apply_shader(current_gender, 1, 0, true)
+	
 func set_skin(id):
 	skin_id = id
 	if skin_tones.has(skin_id):

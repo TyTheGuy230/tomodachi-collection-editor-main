@@ -33,11 +33,13 @@
 [ext_resource type="Texture2D" uid="uid://c4dmptq71htqk" path="res://img/sprites/boyblue.png" id="21_uihqq"]
 [ext_resource type="AudioStream" uid="uid://ctawwauccekov" path="res://sounds/sfx/click (4).wav" id="22_uihqq"]
 [ext_resource type="AudioStream" uid="uid://5ousac81mr7h" path="res://sounds/sfx/holddown.wav" id="27_g5d0j"]
+[ext_resource type="Texture2D" uid="uid://b3ghe2ymp6cb3" path="res://img/sprites/gender2.png" id="28_2f1ux"]
 [ext_resource type="Texture2D" uid="uid://drbumxvhhifsp" path="res://img/sprites/button.png" id="28_358o8"]
 [ext_resource type="Script" uid="uid://ce3lprgmii1qb" path="res://scene/fliphair.gd" id="28_ll1ax"]
 [ext_resource type="AudioStream" uid="uid://bcypkukdhk6km" path="res://sounds/sfx/start rotate.wav" id="28_uy706"]
 [ext_resource type="Texture2D" uid="uid://do30ysahs5roo" path="res://img/buttons/skin/costume1.png" id="29_0vrmu"]
 [ext_resource type="Texture2D" uid="uid://ctaw52jioewjh" path="res://img/sprites/buttonblue.png" id="29_2f1ux"]
+[ext_resource type="Texture2D" uid="uid://dphmdjmfbapb5" path="res://img/sprites/gender2blue.png" id="29_pewo3"]
 [ext_resource type="Texture2D" uid="uid://s60x2i6vaiam" path="res://img/buttons/skin/costume2.png" id="30_i3wkj"]
 [ext_resource type="Script" uid="uid://cboixjff4f1gg" path="res://scene/skin.gd" id="31_nxbce"]
 [ext_resource type="Texture2D" uid="uid://xfeewiuanr23" path="res://img/buttons/skin/costume3.png" id="31_w3v4y"]
@@ -276,7 +278,7 @@ layout_mode = 0
 offset_left = 16.0
 offset_top = 114.0
 offset_right = 758.0
-offset_bottom = 534.0
+offset_bottom = 318.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_xhayd")
 theme_override_font_sizes/font_size = 55
@@ -302,22 +304,40 @@ stream = ExtResource("22_uihqq")
 position = Vector2(-473, 23)
 stream = ExtResource("27_g5d0j")
 
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/textbox/TextureButton" unique_id=138025569]
+layout_mode = 0
+offset_left = 335.0
+offset_right = 538.0
+offset_bottom = 189.0
+focus_mode = 0
+texture_normal = ExtResource("28_2f1ux")
+texture_pressed = ExtResource("29_pewo3")
+stretch_mode = 4
+
+[node name="Click(4)" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/textbox/TextureButton/TextureButton" unique_id=1923357484]
+position = Vector2(-479, -8)
+stream = ExtResource("22_uihqq")
+
+[node name="Holddown" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/textbox/TextureButton/TextureButton" unique_id=1274909598]
+position = Vector2(-473, 23)
+stream = ExtResource("27_g5d0j")
+
 [node name="backyes" type="TextureButton" parent="CanvasLayer/Control/textbox" unique_id=1130158974]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 354.0
-offset_right = 329.99997
-offset_bottom = 474.0
+offset_left = 40.0
+offset_top = 406.0
+offset_right = 359.19995
+offset_bottom = 539.0
 texture_normal = ExtResource("28_358o8")
 texture_pressed = ExtResource("29_2f1ux")
 stretch_mode = 4
 
 [node name="backno" type="TextureButton" parent="CanvasLayer/Control/textbox" unique_id=1919413562]
 layout_mode = 0
-offset_left = 436.0
-offset_top = 354.0
-offset_right = 724.0
-offset_bottom = 474.0
+offset_left = 419.0
+offset_top = 406.0
+offset_right = 738.2
+offset_bottom = 539.0
 texture_normal = ExtResource("28_358o8")
 texture_pressed = ExtResource("29_2f1ux")
 stretch_mode = 4
@@ -417,7 +437,7 @@ stream = ExtResource("27_g5d0j")
 position = Vector2(-227, 218)
 stream = ExtResource("45_bdmbq")
 
-[node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
+[node name="body" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.0898316, -1.9347057, -5.220093)
 visible = false
 script = ExtResource("7_wbx7f")
@@ -465,6 +485,7 @@ volume_db = 11.101
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head8" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_8_pressed"]
 [connection signal="button_down" from="CanvasLayer/Control/textbox/TextureButton" to="CanvasLayer/Control/ColorRect" method="_on_texture_button_button_down"]
 [connection signal="pressed" from="CanvasLayer/Control/textbox/TextureButton" to="CanvasLayer/Control/textbox" method="_on_texture_button_pressed"]
+[connection signal="button_down" from="CanvasLayer/Control/textbox/backno" to="CanvasLayer/Control/textbox" method="_on_backno_button_down"]
 [connection signal="pressed" from="CanvasLayer/Control/textbox/backno" to="CanvasLayer/Control/textbox" method="_on_backno_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/skin1" to="CanvasLayer/Control/skin1" method="_on_pressed"]
