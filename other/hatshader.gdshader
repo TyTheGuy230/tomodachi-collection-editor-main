@@ -1,4 +1,5 @@
 shader_type spatial;
+render_mode cull_disabled;
 
 void vertex() {
 	// Called for every vertex the material is visible on.
@@ -6,7 +7,6 @@ void vertex() {
 
 uniform sampler2D input_tex: filter_nearest;
 uniform vec3 favorite_color;
-uniform vec3 favorite_color2;
 
 void fragment() {
 	// mirror wrapping
@@ -18,14 +18,12 @@ void fragment() {
 	
 	// color replace
 	vec3 shirt = vec3(0.0, 1.0, 1.0);
-	vec3 fav2 = vec3(1.0, 1.0, 0.0);
 	float eps = 0.1;
 	float is_shirt = 1.0 - step(eps, distance(col.rgb, shirt));
-	float is_fav2 = 1.0 - step(eps, distance(col.rgb, fav2));
 	col.rgb = mix(col.rgb, favorite_color, is_shirt);
-	col.rgb = mix(col.rgb, favorite_color2, is_fav2);
 	
 	ALBEDO = col;
+	ROUGHNESS = 0.8;
 	
 	}
 

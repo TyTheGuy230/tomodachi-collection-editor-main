@@ -43,6 +43,8 @@ var hat_paths = {
 	2: "res://models/hats/hat2.glb"
 }
 
+
+
 var skin_tones = {
 	1: Color("fcdbbaff"),
 	2: Color("f7bb7bff"),
@@ -54,7 +56,6 @@ var skin_tones = {
 
 var face_material: ShaderMaterial
 var hair_material: ShaderMaterial
-var hat_material: ShaderMaterial
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -65,6 +66,7 @@ func _ready() -> void:
 	face_material.shader = load("res://other/basic.gdshader")
 	face_material.set_shader_parameter("use_texture", false)
 	face_material.set_shader_parameter("albedo", Color(0.988, 0.859, 0.729, 1.0))
+	
 	hair_material = ShaderMaterial.new()
 	hair_material.shader = load("res://other/basic.gdshader")
 	hair_material.set_shader_parameter("use_texture", false)

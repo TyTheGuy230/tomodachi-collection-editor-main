@@ -18,8 +18,9 @@ config/name="tomodachi collection mii maker"
 run/main_scene="uid://dmivnxo28i002"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/show_image=false
 boot_splash/image="uid://b8rds0v4aynd1"
-config/icon="res://icon.svg"
+config/icon="uid://c2q46alb2yjqy"
 
 [display]
 

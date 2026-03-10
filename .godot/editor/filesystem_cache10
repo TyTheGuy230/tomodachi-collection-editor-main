@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773083466
+::res://::1773112855
 icon.svg::CompressedTexture2D::1042040992816517582::1772755016::1772755022::1::::<><><>0<>0<>7c3c626b55e501e739eb8e40c32dac1b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://code/::1773087948
+::res://code/::1773105082
 bg.gd::GDScript::4409380143552631534::1772755016::0::1::::<>Sprite3D<><>0<>0<><>::
-body.gd::GDScript::8921587857504599886::1773087948::0::1::::<>Node3D<><>0<>0<><>::
+body.gd::GDScript::8921587857504599886::1773105082::0::1::::<>Node3D<><>0<>0<><>::
 button.gd::GDScript::853917180141419205::1773083788::0::1::::<>TextureButton<><>0<>0<><>::
 cag.gd::GDScript::1786725815292026467::1772895375::0::1::::<>Sprite2D<><>0<>0<><>::
 color_rect (2).gd::GDScript::3750012103489889633::1773007448::0::1::::<>ColorRect<><>0<>0<><>::
@@ -11,8 +11,12 @@ color_rect.gd::GDScript::7182808450675165772::1772755016::0::1::::<>ColorRect<><
 main_mii_maker.gd::GDScript::1662965266784999221::1772755016::0::1::::<>Node3D<><>0<>0<><>::
 pixel.gd::GDScript::1030118382475233334::1772755016::0::1::::<>Sprite2D<><>0<>0<><>::
 texture_button.gd::GDScript::1904308530687394958::1772905093::0::1::::<>TextureButton<><>0<>0<><>::
-::res://img/::1772898998
-::res://img/buttons/::1772988140
+::res://img/::1773107112
+costume1 (5).svg::CompressedTexture2D::6702786359154631468::1773107095::1773107112::1::::<><><>0<>0<>dd01337a522ba1debd7a957c6df682ff<>res://.godot/imported/costume1 (5).svg-4d99531298cf5bd1ed0c31957ef42fd6.ctex::
+::res://img/buttons/::1773113697
+::res://img/buttons/back/::1773113705
+nor.png::CompressedTexture2D::6453529479781684738::1773113704::1773113705::1::::<><><>0<>0<>bbc9b44bac4351b06a8cf5a72ee6328d<>res://.godot/imported/nor.png-fccef4fc524de6c03d0f4ef1cc0168be.ctex::
+sel.png::CompressedTexture2D::4809832196541712381::1773113704::1773113705::1::::<><><>0<>0<>8a40a73e5506347dc4d3ccd188ba1478<>res://.godot/imported/sel.png-21eb11683c3ca0db0422d64ed747061d.ctex::
 ::res://img/buttons/head/::1772983944
 ::res://img/buttons/head/1/::1772837215
 bluebig.png::CompressedTexture2D::932792949228788463::1772829498::1772829554::1::::<><><>0<>0<>b4e05d5c70360fecdb9b99f7f5b86a17<>res://.godot/imported/bluebig.png-1a05678b96d840088510741799fbbf9b.ctex::
@@ -58,11 +62,11 @@ costume10.png::CompressedTexture2D::2918398613711327461::1773007105::1773007106:
 costume11.png::CompressedTexture2D::897770644638661938::1773007105::1773007106::1::::<><><>0<>0<>45dc008a0c537af2edc0bd03edcaef6d<>res://.godot/imported/costume11.png-abe10a2aebcb827d88819b57e5767bc5.ctex::
 costume12.png::CompressedTexture2D::4963091430959398958::1773007105::1773007106::1::::<><><>0<>0<>db4eedcec0591f48f6f35029285077d1<>res://.godot/imported/costume12.png-8c5ff648220f5546164b90c32d1c0951.ctex::
 SE_MII_EDIT_COLOR.wav::AudioStreamWAV::7270162733240586137::1773088585::1773088585::1::::<><><>0<>0<>7af77500fdfe0b7ed2251f16dd449189<>res://.godot/imported/SE_MII_EDIT_COLOR.wav-9fc28a03e5ca1e640f8997ef521e9184.sample::
-::res://img/sprites/::1772932772
+::res://img/sprites/::1773115712
 boy.png::CompressedTexture2D::7681840463346170378::1772899288::1772899289::1::::<><><>0<>0<>5a08653385ea96333a3072fbf94a4204<>res://.godot/imported/boy.png-e48269c5f8e848e50966a369d102b608.ctex::
 boyblue.png::CompressedTexture2D::6815267381122590926::1772898910::1772898998::1::::<><><>0<>0<>959d9d60fa90271bc22f95807b2ea3bf<>res://.godot/imported/boyblue.png-f4bc8adbf2aa03a6cbae755865b02dc2.ctex::
 button.png::CompressedTexture2D::8355773780867770711::1772755016::1772755022::1::::<><><>0<>0<>144ae4686ffc005d5cb213367b5d82e9<>res://.godot/imported/button.png-cfbf82adeff5529bda540160df1131f0.ctex::
-buttonblue.png::CompressedTexture2D::6107820176582895185::1772755016::1772755022::1::::<><><>0<>0<>46f441f2a7cd215dcd20905bbe11f489<>res://.godot/imported/buttonblue.png-2510caaae7acd3d71c0fe8b85e997b3a.ctex::
+buttonblue.png::CompressedTexture2D::6107820176582895185::1773115712::1773115716::1::::<><><>0<>0<>46f441f2a7cd215dcd20905bbe11f489<>res://.godot/imported/buttonblue.png-2510caaae7acd3d71c0fe8b85e997b3a.ctex::
 cag.png::CompressedTexture2D::1466065783579998486::1772893842::1772893842::1::::<><><>0<>0<>3f2aa323a1a2c8bdd51e61cc76aa843c<>res://.godot/imported/cag.png-b6d55510df3ad7bd0a98da21ba97225c.ctex::
 for tyler.png::CompressedTexture2D::3848073628120579436::1772932751::1772932772::1::::<><><>0<>0<>05afef5568b86c8563a8aa77180a434f<>res://.godot/imported/for tyler.png-77b722c3e4b1fbbf6fdca42f17cbe454.ctex::
 lr.png::CompressedTexture2D::5649114819430252568::1772755016::1772755022::1::::<><><>0<>0<>0566dac7df17736c2fada001da4d1ca5<>res://.godot/imported/lr.png-7b8ac92354685a587a76b7c5ab4cdf1a.s3tc.ctex::
@@ -78,13 +82,13 @@ townhallbg.png::CompressedTexture2D::3091162138321510378::1772755016::1772755022
 ::res://img/textures/::1772755022
 head1_NDS Texture.png::CompressedTexture2D::3205299190619726630::1772755016::1772755022::1::::<><><>0<>0<>2b43d44d50b0c174c6fe4b96f8959401<>res://.godot/imported/head1_NDS Texture.png-ee8e6a96bb6ecbb038afa2e9b3b2a164.s3tc.ctex::
 Untitled_NDS Texture.png::CompressedTexture2D::7418788200605893064::1772755016::1772755022::1::::<><><>0<>0<>3fe638b6a56041526944d7d6804601f3<>res://.godot/imported/Untitled_NDS Texture.png-0826f4b0e060c2c2e3be730f1f747f4d.s3tc.ctex::
-::res://models/::1773025843
-::res://models/body/::1773086836
-body.gdshader::Shader::5249120008358427074::1773086836::0::1::::<><><>0<>0<><>::
+::res://models/::1773107112
+::res://models/body/::1773112989
+body.gdshader::Shader::5249120008358427074::1773112989::0::1::::<><><>0<>0<><>::
 body.glb::PackedScene::3378308873253613108::1772944753::1772944756::1::::<><><>0<>0<>59f232dc91778d959c0211419e1beb09<>res://.godot/imported/body.glb-7ef3c615f6072756ffd034adb6ac0958.scn::uid://b2la2oqh3l86t::::res://models/body/body_body.png
 body.png::CompressedTexture2D::8322274742364239035::1772755016::1772944755::1::::<><><>0<>0<>dff49cf483f60afca270d2c624bda0ad<>res://.godot/imported/body.png-fb7ab642b0f8743c67b5da0ebef80bb3.s3tc.ctex::
 holddown.wav::AudioStreamWAV::8932263550896784702::1772944276::1772944276::1::::<><><>0<>0<>4c8b3a36888c545920432191b4c593be<>res://.godot/imported/holddown.wav-e6327ccf861d695354b0c251755e230b.sample::
-shadow.gdshader::Shader::6685288506984632052::1772935045::0::1::::<><><>0<>0<><>::
+shadow.gdshader::Shader::6685288506984632052::1773112989::0::1::::<><><>0<>0<><>::
 shadow.png::CompressedTexture2D::7592490143571257670::1772755016::1772944755::1::::<><><>0<>0<>a51af53e74d5ab7cc6820770fe740663<>res://.godot/imported/shadow.png-79413f3b05e213fc000c7fe5849496d0.s3tc.ctex::
 ::res://models/hair/::1773026565
 hair1.glb::PackedScene::4534682855217101012::1772755016::1772755022::1::::<><><>0<>0<>c0b2d096c0b8028ee36d6a872aa26d27<>res://.godot/imported/hair1.glb-616cd0e5a342048fbc372b8d24ad316c.scn::uid://cwmqjvf0stjd0::::res://models/hair/hair1_NDS Texture.png
@@ -105,11 +109,11 @@ hair36.glb::PackedScene::1946688193971337213::1773025790::1773025799::1::::<><><
 hair36_NDS Texture.png::CompressedTexture2D::8420685745164761570::1773025790::1773025799::1::::<><><>0<>0<>016024538a21778adb40d420b28defb9<>res://.godot/imported/hair36_NDS Texture.png-ee035ca3c1922f300331df781b80da32.s3tc.ctex::
 hair71.glb::PackedScene::1687317717095647557::1772987987::1772987988::1::::<><><>0<>0<>21f5c3e4b69f4755ed0b8a74c986377d<>res://.godot/imported/hair71.glb-8c48d394d46d33a7b4313e7de2a2de93.scn::uid://o4egs4n16rx3::::res://models/hair/hair71_NDS Texture.png
 hair71_NDS Texture.png::CompressedTexture2D::1042765339380956902::1772987988::1772987989::1::::<><><>0<>0<>bd1f33dacc0d662958ce54da19cc4e13<>res://.godot/imported/hair71_NDS Texture.png-c2bae27dbfb747dfd54a80621886458a.s3tc.ctex::
-::res://models/hats/::1773026565
+::res://models/hats/::1773107080
 hat1.glb::PackedScene::8351302386473364917::1773026503::1773026504::1::::<><><>0<>0<>8b1e98b2676b38fa2e6daf4838d7554b<>res://.godot/imported/hat1.glb-b0117894696bb21f8b798ae8b526cfdf.scn::uid://dee1s3dc5r7sp::::res://models/hats/hat1_NDS Texture.png
-hat1_NDS Texture.png::CompressedTexture2D::7449887198169771995::1773026504::1773026504::1::::<><><>0<>0<>1ab6fd26ff3225c8970498f0c36d3a31<>res://.godot/imported/hat1_NDS Texture.png-2ed78ac888f260eb9fba74eb36829313.s3tc.ctex::
-hat2.glb::PackedScene::1910320146487212488::1773025920::1773025920::1::::<><><>0<>0<>ec4a4fe00272d66b8d72396b247ffbd5<>res://.godot/imported/hat2.glb-1b8dde75af5b51c4d5f625da871cb788.scn::uid://cxtvaefwiw5kl::::res://models/hats/hat2_NDS Texture.png
-hat2_NDS Texture.png::CompressedTexture2D::6427683224064770823::1773025920::1773025921::1::::<><><>0<>0<>200889b64f5b7ab4eda0084daa904fa7<>res://.godot/imported/hat2_NDS Texture.png-aa898cafaec752ff14ca3e90ed2aec63.s3tc.ctex::
+hat1_NDS Texture.png::CompressedTexture2D::7449887198169771995::1773105321::1773105323::1::::<><><>0<>0<>1ab6fd26ff3225c8970498f0c36d3a31<>res://.godot/imported/hat1_NDS Texture.png-2ed78ac888f260eb9fba74eb36829313.s3tc.ctex::
+hat2.glb::PackedScene::8629406197407416403::1773092221::1773092245::1::::<><><>0<>0<>bc12705f06dbe14d7677066fbcaa62e4<>res://.godot/imported/hat2.glb-1b8dde75af5b51c4d5f625da871cb788.scn::
+hat2_NDS Texture.png::CompressedTexture2D::8585748877032445833::1773097796::1773097799::1::::<><><>0<>0<>3af7182a3e3945172aa4d4f207aebf9a<>res://.godot/imported/hat2_NDS Texture.png-aa898cafaec752ff14ca3e90ed2aec63.s3tc.ctex::
 ::res://models/heads/::1773009759
 head1.glb::PackedScene::6156967155371851926::1772830715::1772837216::1::::<><><>0<>0<>76c2232e6063d6a43961cc7b8290b3ee<>res://.godot/imported/head1.glb-ad20eed91fcfcf782e89080e12a91ab2.scn::
 head1_NDS Texture.png::CompressedTexture2D::5333717734189835189::1772830715::1772837215::1::::<><><>0<>0<>077263c09b609662e726aca464381431<>res://.godot/imported/head1_NDS Texture.png-9622e520e3163dea5bdb702d3049fafb.s3tc.ctex::
@@ -127,25 +131,25 @@ head7.glb::PackedScene::3421687653910074721::1772851702::1772851703::1::::<><><>
 head7_NDS Texture.png::CompressedTexture2D::6904943845540024984::1772851703::1772851703::1::::<><><>0<>0<>65fe40f8a0feb431e026e66a7691f1fa<>res://.godot/imported/head7_NDS Texture.png-7d32810dfa92d5f4a0d4dc2932e64f54.s3tc.ctex::
 head8.glb::PackedScene::7072914244831887443::1772852539::1772852540::1::::<><><>0<>0<>1484b0960f3f208c06de0485decfb1ea<>res://.godot/imported/head8.glb-5cd23acc8da282d14f17d6a840292382.scn::uid://bwbag71b4obxk::::res://models/heads/head8_NDS Texture.png
 head8_NDS Texture.png::CompressedTexture2D::3932652057244163452::1772852540::1772852541::1::::<><><>0<>0<>7c1f7072babe7b5a68208f9fb4eeb7c8<>res://.godot/imported/head8_NDS Texture.png-a5efabd76e853662e0847538d7468b50.s3tc.ctex::
-::res://other/::1773087948
-basic.gdshader::Shader::119624589422485846::1773086836::0::1::::<><><>0<>0<><>::
-body.gdshader::Shader::750791812191073835::1772981689::0::1::::<><><>0<>0<><>::
-hatshader.gdshader::Shader::5253925657847732104::1773087948::0::1::::<><><>0<>0<><>::
-main mii maker.gdshader::Shader::7970855473621712798::1772755016::0::1::::<><><>0<>0<><>::
+::res://other/::1773112989
+basic.gdshader::Shader::119624589422485846::1773112989::0::1::::<><><>0<>0<><>::
+body.gdshader::Shader::750791812191073835::1773112989::0::1::::<><><>0<>0<><>::
+hatshader.gdshader::Shader::5253925657847732104::1773112989::0::1::::<><><>0<>0<><>::
+main mii maker.gdshader::Shader::7970855473621712798::1773112989::0::1::::<><><>0<>0<><>::
 Nintendo-DS-BIOS.ttf::FontFile::9031550047450692816::1772755016::1772755022::1::::<><><>0<>0<>02c9858d3d4b974e3dd7017a0a1e2946<>res://.godot/imported/Nintendo-DS-BIOS.ttf-eec82a7d89df05f592d7faa78dd3db6b.fontdata::
-scroll.gdshader::Shader::408411745219882118::1773084545::0::1::::<><><>0<>0<><>::
-::res://scene/::1773088306
+scroll.gdshader::Shader::408411745219882118::1773112989::0::1::::<><><>0<>0<><>::
+::res://scene/::1773115668
 body.tscn::PackedScene::8876104759424973130::1773004574::0::1::::<><><>0<>0<><>::uid://kxxow05qu4tr::::res://other/body.gdshader<>uid://cg1yifaqm2xy5::::res://models/body/body.gdshader<>uid://dqtmwcmrkbqbr::::res://models/body/body.png<>uid://dgf4g6d7uwkha::::res://models/body/shadow.png<>uid://c2inywcrc0w17::::res://models/body/shadow.gdshader
 button_2.gd::GDScript::1784060216095511001::1773029709::0::1::::<>Button<><>0<>0<><>::
 camera_3d.gd::GDScript::7525794220491162014::1773029481::0::1::::<>Camera3D<><>0<>0<><>::
 editormusic.tscn::PackedScene::2038359016826647639::1772931603::0::1::::<><><>0<>0<><>::uid://blccflo2ryq7j::::res://sounds/music/03. Mii Edit.mp3
 fliphair.gd::GDScript::5112094895603049673::1772982914::0::1::::<>Button<><>0<>0<><>::
-main mii maker.tscn::PackedScene::1275264555793265986::1773087968::0::1::::<><><>0<>0<><>::uid://u5f5h8rbvpjq::::res://img/sprites/cag.png<>uid://cmqqdiwtpxf81::::res://img/sprites/lr.png<>uid://b66lkgxb7ib75::::res://img/sprites/sideboxbarthingamajig.png<>uid://mfv5khwccwuv::::res://code/button.gd<>uid://doee7onfpvr31::::res://img/buttons/head/1/non.png<>uid://d1w7kscvqfum7::::res://other/Nintendo-DS-BIOS.ttf<>uid://0cy70ex8hyi6::::res://img/buttons/head/1/sel.png<>uid://btosffdaudgbp::::res://code/color_rect (2).gd<>uid://dypwfb0q521v7::::res://scene/body.tscn<>uid://cvvo0uncr4rgy::::res://img/buttons/head/2/non.png<>uid://d0dxipleb7c8u::::res://code/body.gd<>uid://x13rcpmyctni::::res://img/sprites/Screenshot 2026-03-03 204434.png<>uid://durvamvwvr7u8::::res://img/buttons/head/2/sel.png<>uid://dtfve1d1guoj8::::res://img/buttons/head/3/non.png<>uid://baojwfdxgtram::::res://img/sprites/Screenshot 2026-03-03 203716.png<>uid://bpdepxhpgnim3::::res://img/buttons/head/3/sel.png<>uid://b54cehc2g1hh6::::res://img/buttons/head/4/non.png<>uid://ddwufd5alqmig::::res://img/buttons/head/4/sel.png<>uid://dosarlgt3wclr::::res://img/buttons/head/5/non.png<>uid://j0coefe1pju8::::res://img/buttons/head/5/sel.png<>uid://bq56t3hhll3xk::::res://img/sprites/miibg.png<>uid://dytovb0d7xqqi::::res://img/buttons/head/6/non.png<>uid://blccflo2ryq7j::::res://sounds/music/03. Mii Edit.mp3<>uid://cbm6y2c6n267c::::res://img/buttons/head/6/sel.png<>uid://ctgcqj65qf5o::::res://img/buttons/head/7/non.png<>uid://bs26afjte6e2a::::res://scene/textbox.gd<>uid://bcfropkm5pd35::::res://img/buttons/head/7/sel.png<>uid://dhpe14mdtqpuw::::res://img/sprites/boy.png<>uid://cc1ocv21o06jf::::res://img/buttons/head/8/non.png<>uid://dpr44v7tdber2::::res://img/buttons/head/8/sel.png<>uid://c4dmptq71htqk::::res://img/sprites/boyblue.png<>uid://ctawwauccekov::::res://sounds/sfx/click (4).wav<>uid://5ousac81mr7h::::res://sounds/sfx/holddown.wav<>uid://ce3lprgmii1qb::::res://scene/fliphair.gd<>uid://bcypkukdhk6km::::res://sounds/sfx/start rotate.wav<>uid://do30ysahs5roo::::res://img/buttons/skin/costume1.png<>uid://s60x2i6vaiam::::res://img/buttons/skin/costume2.png<>uid://cboixjff4f1gg::::res://scene/skin.gd<>uid://xfeewiuanr23::::res://img/buttons/skin/costume3.png<>uid://b5b4qo4e5nr3s::::res://scene/miibgshader.gdshader<>uid://cmkn7rd2t1dyu::::res://img/buttons/skin/costume4.png<>uid://cw5tyirpfjpse::::res://img/buttons/skin/costume5.png<>uid://dbp3623gbadxq::::res://img/buttons/skin/costume6.png<>uid://fn1fegqh1546::::res://img/buttons/skin/costume7.png<>uid://bxylq7u51ptt::::res://img/buttons/skin/costume8.png<>uid://ckf8jxvr2qbkr::::res://img/buttons/skin/costume9.png<>uid://bhtxumgvhpspx::::res://img/buttons/skin/costume10.png<>uid://m15fe7ye7e4i::::res://img/buttons/skin/costume11.png<>uid://ccyfnjyc4aq75::::res://img/buttons/skin/costume12.png<>uid://74a00ht1ji7::::res://sounds/sfx/featureselect.wav
-miibgshader.gdshader::Shader::4495940516429431574::1773084545::0::1::::<><><>0<>0<><>::
-hat_1.tscn::PackedScene::6014949202599029607::1773088305::0::1::::<><><>0<>0<><>::uid://cb10kiw7wsvun::::res://scene/hat_1.gd<>uid://dee1s3dc5r7sp::::res://models/hats/hat1_NDS Texture.png<>uid://cg1yifaqm2xy5::::res://models/body/body.gdshader<>uid://ci1yb33utap0t::::res://scene/textures/NDS Texture.024.png
-hat_1.gd::GDScript::4898240271044562937::1773088306::0::1::::<>Node3D<><>0<>0<><>::
-skin.gd::GDScript::4872458789483346706::1773007448::0::1::::<>TextureButton<><>0<>0<><>::
-textbox.gd::GDScript::3707440572702891134::1772984142::0::1::::<>TextureRect<><>0<>0<><>::
+hat_1.tscn::PackedScene::6014949202599029607::1773101147::0::1::::<><><>0<>0<><>::uid://cg4bngrbdvw1e::::res://other/hatshader.gdshader<>uid://dee1s3dc5r7sp::::res://models/hats/hat1_NDS Texture.png<>uid://ci1yb33utap0t::::res://scene/textures/NDS Texture.024.png
+main mii maker.tscn::PackedScene::1275264555793265986::1773115668::0::1::::<><><>0<>0<><>::uid://u5f5h8rbvpjq::::res://img/sprites/cag.png<>uid://cmqqdiwtpxf81::::res://img/sprites/lr.png<>uid://b66lkgxb7ib75::::res://img/sprites/sideboxbarthingamajig.png<>uid://mfv5khwccwuv::::res://code/button.gd<>uid://doee7onfpvr31::::res://img/buttons/head/1/non.png<>uid://d1w7kscvqfum7::::res://other/Nintendo-DS-BIOS.ttf<>uid://0cy70ex8hyi6::::res://img/buttons/head/1/sel.png<>uid://btosffdaudgbp::::res://code/color_rect (2).gd<>uid://dypwfb0q521v7::::res://scene/body.tscn<>uid://cvvo0uncr4rgy::::res://img/buttons/head/2/non.png<>uid://d0dxipleb7c8u::::res://code/body.gd<>uid://x13rcpmyctni::::res://img/sprites/Screenshot 2026-03-03 204434.png<>uid://durvamvwvr7u8::::res://img/buttons/head/2/sel.png<>uid://dtfve1d1guoj8::::res://img/buttons/head/3/non.png<>uid://baojwfdxgtram::::res://img/sprites/Screenshot 2026-03-03 203716.png<>uid://bpdepxhpgnim3::::res://img/buttons/head/3/sel.png<>uid://b54cehc2g1hh6::::res://img/buttons/head/4/non.png<>uid://ddwufd5alqmig::::res://img/buttons/head/4/sel.png<>uid://dosarlgt3wclr::::res://img/buttons/head/5/non.png<>uid://j0coefe1pju8::::res://img/buttons/head/5/sel.png<>uid://bq56t3hhll3xk::::res://img/sprites/miibg.png<>uid://dytovb0d7xqqi::::res://img/buttons/head/6/non.png<>uid://blccflo2ryq7j::::res://sounds/music/03. Mii Edit.mp3<>uid://cbm6y2c6n267c::::res://img/buttons/head/6/sel.png<>uid://ctgcqj65qf5o::::res://img/buttons/head/7/non.png<>uid://bs26afjte6e2a::::res://scene/textbox.gd<>uid://bcfropkm5pd35::::res://img/buttons/head/7/sel.png<>uid://dhpe14mdtqpuw::::res://img/sprites/boy.png<>uid://cc1ocv21o06jf::::res://img/buttons/head/8/non.png<>uid://dpr44v7tdber2::::res://img/buttons/head/8/sel.png<>uid://c4dmptq71htqk::::res://img/sprites/boyblue.png<>uid://ctawwauccekov::::res://sounds/sfx/click (4).wav<>uid://5ousac81mr7h::::res://sounds/sfx/holddown.wav<>uid://drbumxvhhifsp::::res://img/sprites/button.png<>uid://ce3lprgmii1qb::::res://scene/fliphair.gd<>uid://bcypkukdhk6km::::res://sounds/sfx/start rotate.wav<>uid://do30ysahs5roo::::res://img/buttons/skin/costume1.png<>uid://ctaw52jioewjh::::res://img/sprites/buttonblue.png<>uid://s60x2i6vaiam::::res://img/buttons/skin/costume2.png<>uid://cboixjff4f1gg::::res://scene/skin.gd<>uid://xfeewiuanr23::::res://img/buttons/skin/costume3.png<>uid://b5b4qo4e5nr3s::::res://scene/miibgshader.gdshader<>uid://cmkn7rd2t1dyu::::res://img/buttons/skin/costume4.png<>uid://cw5tyirpfjpse::::res://img/buttons/skin/costume5.png<>uid://dbp3623gbadxq::::res://img/buttons/skin/costume6.png<>uid://fn1fegqh1546::::res://img/buttons/skin/costume7.png<>uid://bxylq7u51ptt::::res://img/buttons/skin/costume8.png<>uid://ckf8jxvr2qbkr::::res://img/buttons/skin/costume9.png<>uid://bhtxumgvhpspx::::res://img/buttons/skin/costume10.png<>uid://m15fe7ye7e4i::::res://img/buttons/skin/costume11.png<>uid://ccyfnjyc4aq75::::res://img/buttons/skin/costume12.png<>uid://cx7exm61hdmva::::res://img/buttons/back/nor.png<>uid://car6h68rvnt54::::res://img/buttons/back/sel.png<>uid://dghktdnli48fp::::res://scene/backbutton.gd<>uid://dr6th851w856r::::res://sounds/sfx/click (2).wav<>uid://dbtyru30l6fnd::::res://img/buttons/skin/SE_MII_EDIT_COLOR.wav<>uid://74a00ht1ji7::::res://sounds/sfx/featureselect.wav
+miibgshader.gdshader::Shader::4495940516429431574::1773112989::0::1::::<><><>0<>0<><>::
+backbutton.gd::GDScript::7595487035361939909::1773114307::0::1::::<>TextureButton<><>0<>0<><>::
+skin.gd::GDScript::4872458789483346706::1773088727::0::1::::<>TextureButton<><>0<>0<><>::
+textbox.gd::GDScript::3707440572702891134::1773115438::0::1::::<>TextureRect<><>0<>0<><>::
 title.tscn::PackedScene::8019342699872544257::1772904698::0::1::::<><><>0<>0<><>::uid://f23qm6wbc4ow::::res://other/scroll.gdshader<>uid://bkbm8vbsvxd35::::res://img/sprites/townhallbg.png<>uid://bk3krxj0a2s3j::::res://img/sprites/newmii.png<>uid://daln2npvwqqci::::res://code/color_rect.gd<>uid://jpip33fnihxc::::res://img/sprites/newmiibluebig.png<>uid://2epxh4sjil5w::::res://code/texture_button.gd<>uid://bgiqdjy5vb6px::::res://sounds/sfx/click.wav<>uid://cpoi040f7wcxa::::res://sounds/sfx/click (1).wav<>uid://d1sbqmxocxb2o::::res://img/sprites/tdc mii maker logo.png
 ::res://scene/textures/::1773088209
 NDS Texture.001.png::CompressedTexture2D::4933663195012095076::1772755016::1772755022::1::::<><><>0<>0<>e6a73216b4ad6847468e92c5ce66aa6c<>res://.godot/imported/NDS Texture.001.png-bbef51b7288eada2d2a1613421501337.ctex::
@@ -161,8 +165,9 @@ NDS Texture.png::CompressedTexture2D::4594356525903170579::1772755016::177275502
 ::res://sounds/::1772841158
 ::res://sounds/music/::1772841167
 03. Mii Edit.mp3::AudioStreamMP3::3162757682809184697::1772841167::1772841167::1::::<><><>0<>0<>81623fd848e0abc3db3ac951222d5073<>res://.godot/imported/03. Mii Edit.mp3-0f03b4b00dfe9d9d7d78f83fca774ae3.mp3str::
-::res://sounds/sfx/::1773023069
+::res://sounds/sfx/::1773114098
 click (1).wav::AudioStreamWAV::5855107253371351078::1772755016::1772841147::1::::<><><>0<>0<>6827c1e0c40230965d3294d6b7f6e864<>res://.godot/imported/click (1).wav-972e1f48dbe36648ec4efd9c106fb1de.sample::
+click (2).wav::AudioStreamWAV::8417636007548344271::1773114097::1773114098::1::::<><><>0<>0<>54716417a973d1ffe503f3ca3235983c<>res://.godot/imported/click (2).wav-3f961f69510da8094aea0c349dd68269.sample::
 click (4).wav::AudioStreamWAV::6107804488805388441::1772922125::1772922126::1::::<><><>0<>0<>bbe679978528818cbba780dbcbaf0759<>res://.godot/imported/click (4).wav-d4e9d9a92c35cfa1ef9006326a92d072.sample::
 click.wav::AudioStreamWAV::2825046107996410409::1772755016::1772841147::1::::<><><>0<>0<>db72329887035693369d859537e5cbc1<>res://.godot/imported/click.wav-9de65bf9c859c20b894d296cde03eb86.sample::
 featureselect.wav::AudioStreamWAV::67822232968475252::1773023037::1773023069::1::::<><><>0<>0<>d57101d73b0c41833ea0d919c380058c<>res://.godot/imported/featureselect.wav-18b63b7c67ecf84d35ba41d7df3442a3.sample::

@@ -1,9 +1,9 @@
-Button
+Label
 TextureButton
+Button
 AnimationPlayer
 ColorRect
 TextureRect
-Label
 Node
 Sprite3D
 AudioStreamPlayer

@@ -1,16 +1,14 @@
 [gd_scene format=4 uid="uid://crxxlm1ainbhn"]
 
-[ext_resource type="Script" uid="uid://cb10kiw7wsvun" path="res://scene/hat_1.gd" id="1_vtdls"]
+[ext_resource type="Shader" uid="uid://cg4bngrbdvw1e" path="res://other/hatshader.gdshader" id="1_aapen"]
 [ext_resource type="Texture2D" uid="uid://dee1s3dc5r7sp" path="res://models/hats/hat1_NDS Texture.png" id="2_f0mwe"]
-[ext_resource type="Shader" uid="uid://cg1yifaqm2xy5" path="res://models/body/body.gdshader" id="2_r1t1v"]
 [ext_resource type="Texture2D" uid="uid://ci1yb33utap0t" path="res://scene/textures/NDS Texture.024.png" id="3_20fb4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vtdls"]
 render_priority = 0
-shader = ExtResource("2_r1t1v")
+shader = ExtResource("1_aapen")
 shader_parameter/input_tex = ExtResource("3_20fb4")
 shader_parameter/favorite_color = Vector3(0.51, 0, 0)
-shader_parameter/skin_color = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a5up"]
 resource_name = "NDS Material.023"
@@ -54,7 +52,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tmax6")
 
 [node name="hat1" type="Node3D" unique_id=1979649421]
-script = ExtResource("1_vtdls")
 
 [node name="tomodachi-2026-03-07-23-52-50-905_010" type="MeshInstance3D" parent="." unique_id=613192657]
 transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, -1.3182176, 0, 0)

@@ -33,9 +33,11 @@
 [ext_resource type="Texture2D" uid="uid://c4dmptq71htqk" path="res://img/sprites/boyblue.png" id="21_uihqq"]
 [ext_resource type="AudioStream" uid="uid://ctawwauccekov" path="res://sounds/sfx/click (4).wav" id="22_uihqq"]
 [ext_resource type="AudioStream" uid="uid://5ousac81mr7h" path="res://sounds/sfx/holddown.wav" id="27_g5d0j"]
+[ext_resource type="Texture2D" uid="uid://drbumxvhhifsp" path="res://img/sprites/button.png" id="28_358o8"]
 [ext_resource type="Script" uid="uid://ce3lprgmii1qb" path="res://scene/fliphair.gd" id="28_ll1ax"]
 [ext_resource type="AudioStream" uid="uid://bcypkukdhk6km" path="res://sounds/sfx/start rotate.wav" id="28_uy706"]
 [ext_resource type="Texture2D" uid="uid://do30ysahs5roo" path="res://img/buttons/skin/costume1.png" id="29_0vrmu"]
+[ext_resource type="Texture2D" uid="uid://ctaw52jioewjh" path="res://img/sprites/buttonblue.png" id="29_2f1ux"]
 [ext_resource type="Texture2D" uid="uid://s60x2i6vaiam" path="res://img/buttons/skin/costume2.png" id="30_i3wkj"]
 [ext_resource type="Script" uid="uid://cboixjff4f1gg" path="res://scene/skin.gd" id="31_nxbce"]
 [ext_resource type="Texture2D" uid="uid://xfeewiuanr23" path="res://img/buttons/skin/costume3.png" id="31_w3v4y"]
@@ -49,6 +51,10 @@
 [ext_resource type="Texture2D" uid="uid://bhtxumgvhpspx" path="res://img/buttons/skin/costume10.png" id="39_02vuw"]
 [ext_resource type="Texture2D" uid="uid://m15fe7ye7e4i" path="res://img/buttons/skin/costume11.png" id="40_dtd5b"]
 [ext_resource type="Texture2D" uid="uid://ccyfnjyc4aq75" path="res://img/buttons/skin/costume12.png" id="41_ygtbx"]
+[ext_resource type="Texture2D" uid="uid://cx7exm61hdmva" path="res://img/buttons/back/nor.png" id="42_dtd5b"]
+[ext_resource type="Texture2D" uid="uid://car6h68rvnt54" path="res://img/buttons/back/sel.png" id="43_ygtbx"]
+[ext_resource type="Script" uid="uid://dghktdnli48fp" path="res://scene/backbutton.gd" id="44_wo034"]
+[ext_resource type="AudioStream" uid="uid://dr6th851w856r" path="res://sounds/sfx/click (2).wav" id="45_bdmbq"]
 [ext_resource type="AudioStream" uid="uid://dbtyru30l6fnd" path="res://img/buttons/skin/SE_MII_EDIT_COLOR.wav" id="51_02vuw"]
 [ext_resource type="AudioStream" uid="uid://74a00ht1ji7" path="res://sounds/sfx/featureselect.wav" id="51_b716q"]
 
@@ -296,6 +302,26 @@ stream = ExtResource("22_uihqq")
 position = Vector2(-473, 23)
 stream = ExtResource("27_g5d0j")
 
+[node name="backyes" type="TextureButton" parent="CanvasLayer/Control/textbox" unique_id=1130158974]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 354.0
+offset_right = 329.99997
+offset_bottom = 474.0
+texture_normal = ExtResource("28_358o8")
+texture_pressed = ExtResource("29_2f1ux")
+stretch_mode = 4
+
+[node name="backno" type="TextureButton" parent="CanvasLayer/Control/textbox" unique_id=1919413562]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 354.0
+offset_right = 724.0
+offset_bottom = 474.0
+texture_normal = ExtResource("28_358o8")
+texture_pressed = ExtResource("29_2f1ux")
+stretch_mode = 4
+
 [node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=487072783]
 visible = false
 layout_mode = 0
@@ -372,6 +398,25 @@ texture_normal = ExtResource("40_dtd5b")
 texture_pressed = ExtResource("41_ygtbx")
 stretch_mode = 4
 
+[node name="backbutton" type="TextureButton" parent="CanvasLayer/Control" unique_id=1758620436]
+visible = false
+layout_mode = 0
+offset_left = 543.0
+offset_top = 15.0
+offset_right = 604.0
+offset_bottom = 76.0
+texture_normal = ExtResource("42_dtd5b")
+texture_pressed = ExtResource("43_ygtbx")
+stretch_mode = 4
+script = ExtResource("44_wo034")
+
+[node name="Holddown" type="AudioStreamPlayer" parent="CanvasLayer/Control/backbutton" unique_id=1994495013]
+stream = ExtResource("27_g5d0j")
+
+[node name="Click(2)" type="AudioStreamPlayer2D" parent="CanvasLayer/Control" unique_id=208126847]
+position = Vector2(-227, 218)
+stream = ExtResource("45_bdmbq")
+
 [node name="body2" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.0898316, -1.9347057, -5.220093)
 visible = false
@@ -420,6 +465,7 @@ volume_db = 11.101
 [connection signal="pressed" from="CanvasLayer/Control/headbuttons/head1/head8" to="CanvasLayer/Control/headbuttons/head1" method="_on_head_8_pressed"]
 [connection signal="button_down" from="CanvasLayer/Control/textbox/TextureButton" to="CanvasLayer/Control/ColorRect" method="_on_texture_button_button_down"]
 [connection signal="pressed" from="CanvasLayer/Control/textbox/TextureButton" to="CanvasLayer/Control/textbox" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/textbox/backno" to="CanvasLayer/Control/textbox" method="_on_backno_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/skin1" to="CanvasLayer/Control/skin1" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/skin1/skin2" to="CanvasLayer/Control/skin1" method="_on_skin_2_pressed"]
@@ -427,3 +473,6 @@ volume_db = 11.101
 [connection signal="pressed" from="CanvasLayer/Control/skin1/skin6" to="CanvasLayer/Control/skin1" method="_on_skin_6_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/skin1/skin4" to="CanvasLayer/Control/skin1" method="_on_skin_4_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/skin1/skin5" to="CanvasLayer/Control/skin1" method="_on_skin_5_pressed"]
+[connection signal="button_down" from="CanvasLayer/Control/backbutton" to="CanvasLayer/Control/textbox" method="_on_backbutton_button_down"]
+[connection signal="pressed" from="CanvasLayer/Control/backbutton" to="CanvasLayer/Control/textbox" method="_on_backbutton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/backbutton" to="CanvasLayer/Control/backbutton" method="_on_pressed"]
