@@ -29,6 +29,11 @@ window/size/maximize_disabled=true
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[editor]
+
+movie_writer/video_quality=1.0
+movie_writer/movie_file="C:/Users/tythe/OneDrive/Documents/tomodachi-collection-editor-main/test.ogv"
+
 [input]
 
 "mii spin"={

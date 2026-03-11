@@ -57,8 +57,11 @@
 [ext_resource type="Texture2D" uid="uid://car6h68rvnt54" path="res://img/buttons/back/sel.png" id="43_ygtbx"]
 [ext_resource type="Script" uid="uid://dghktdnli48fp" path="res://scene/backbutton.gd" id="44_wo034"]
 [ext_resource type="AudioStream" uid="uid://dr6th851w856r" path="res://sounds/sfx/click (2).wav" id="45_bdmbq"]
+[ext_resource type="Texture2D" uid="uid://duwrrvyc2llhn" path="res://img/buttons/tabs/headtab.png" id="50_43sgu"]
+[ext_resource type="Texture2D" uid="uid://dv7frmayfu17s" path="res://img/buttons/tabs/headtab1.png" id="51_0f222"]
 [ext_resource type="AudioStream" uid="uid://dbtyru30l6fnd" path="res://img/buttons/skin/SE_MII_EDIT_COLOR.wav" id="51_02vuw"]
 [ext_resource type="AudioStream" uid="uid://74a00ht1ji7" path="res://sounds/sfx/featureselect.wav" id="51_b716q"]
+[ext_resource type="Script" uid="uid://cxx8ubdddae8x" path="res://scene/tabs.gd" id="52_0f222"]
 
 [sub_resource type="Animation" id="Animation_q8tej"]
 length = 0.001
@@ -141,10 +144,11 @@ position = Vector2(576, 324)
 texture = ExtResource("3_dc348")
 
 [node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1880613906]
+visible = false
 layout_mode = 0
-offset_left = 806.0
+offset_left = 848.0
 offset_top = 30.0
-offset_right = 974.0
+offset_right = 1016.0
 offset_bottom = 61.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_xhayd")
@@ -173,9 +177,9 @@ libraries/ = SubResource("AnimationLibrary_uy706")
 [node name="head1" type="TextureButton" parent="CanvasLayer/Control/headbuttons" unique_id=969359174]
 visible = false
 offset_left = 201.0
-offset_top = 83.0
+offset_top = 91.0
 offset_right = 337.5
-offset_bottom = 200.0
+offset_bottom = 208.0
 focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource("4_h7hth")
@@ -315,11 +319,11 @@ texture_pressed = ExtResource("29_pewo3")
 stretch_mode = 4
 
 [node name="Click(4)" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/textbox/TextureButton/TextureButton" unique_id=1923357484]
-position = Vector2(-479, -8)
+position = Vector2(-872, -32)
 stream = ExtResource("22_uihqq")
 
 [node name="Holddown" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/textbox/TextureButton/TextureButton" unique_id=1274909598]
-position = Vector2(-473, 23)
+position = Vector2(-866, -1)
 stream = ExtResource("27_g5d0j")
 
 [node name="backyes" type="TextureButton" parent="CanvasLayer/Control/textbox" unique_id=1130158974]
@@ -332,6 +336,19 @@ texture_normal = ExtResource("28_358o8")
 texture_pressed = ExtResource("29_2f1ux")
 stretch_mode = 4
 
+[node name="text" type="Label" parent="CanvasLayer/Control/textbox/backyes" unique_id=1598666256]
+layout_mode = 0
+offset_right = 312.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_xhayd")
+theme_override_font_sizes/font_size = 60
+text = "Yes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="backno" type="TextureButton" parent="CanvasLayer/Control/textbox" unique_id=1919413562]
 layout_mode = 0
 offset_left = 419.0
@@ -341,6 +358,19 @@ offset_bottom = 539.0
 texture_normal = ExtResource("28_358o8")
 texture_pressed = ExtResource("29_2f1ux")
 stretch_mode = 4
+
+[node name="text" type="Label" parent="CanvasLayer/Control/textbox/backno" unique_id=813147244]
+layout_mode = 0
+offset_right = 312.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_xhayd")
+theme_override_font_sizes/font_size = 60
+text = "No"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=487072783]
 visible = false
@@ -421,10 +451,10 @@ stretch_mode = 4
 [node name="backbutton" type="TextureButton" parent="CanvasLayer/Control" unique_id=1758620436]
 visible = false
 layout_mode = 0
-offset_left = 543.0
-offset_top = 15.0
-offset_right = 604.0
-offset_bottom = 76.0
+offset_left = 618.0
+offset_top = 13.0
+offset_right = 693.0
+offset_bottom = 88.0
 texture_normal = ExtResource("42_dtd5b")
 texture_pressed = ExtResource("43_ygtbx")
 stretch_mode = 4
@@ -437,8 +467,90 @@ stream = ExtResource("27_g5d0j")
 position = Vector2(-227, 218)
 stream = ExtResource("45_bdmbq")
 
+[node name="headtab1" type="TextureButton" parent="CanvasLayer/Control" unique_id=99093012]
+visible = false
+layout_mode = 0
+offset_right = 127.0
+offset_bottom = 85.0
+scale = Vector2(0.8633154, 0.8633154)
+toggle_mode = true
+texture_normal = ExtResource("50_43sgu")
+texture_pressed = ExtResource("51_0f222")
+stretch_mode = 4
+script = ExtResource("52_0f222")
+
+[node name="headtab2" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=1979441182]
+layout_mode = 0
+offset_top = 84.0
+offset_right = 127.0
+offset_bottom = 172.0
+toggle_mode = true
+texture_normal = ExtResource("50_43sgu")
+texture_pressed = ExtResource("51_0f222")
+stretch_mode = 4
+
+[node name="headtab7" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=113089123]
+layout_mode = 0
+offset_top = 168.0
+offset_right = 127.0
+offset_bottom = 253.0
+toggle_mode = true
+texture_normal = ExtResource("50_43sgu")
+texture_pressed = ExtResource("51_0f222")
+stretch_mode = 4
+
+[node name="headtab3" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=362639681]
+layout_mode = 0
+offset_top = 252.0
+offset_right = 127.0
+offset_bottom = 340.0
+toggle_mode = true
+texture_normal = ExtResource("50_43sgu")
+texture_pressed = ExtResource("51_0f222")
+stretch_mode = 4
+
+[node name="headtab4" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=1931795632]
+layout_mode = 0
+offset_top = 337.0
+offset_right = 127.0
+offset_bottom = 425.0
+toggle_mode = true
+texture_normal = ExtResource("50_43sgu")
+texture_pressed = ExtResource("51_0f222")
+stretch_mode = 4
+
+[node name="headtab5" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=903185271]
+layout_mode = 0
+offset_top = 421.0
+offset_right = 127.0
+offset_bottom = 506.0
+toggle_mode = true
+texture_normal = ExtResource("50_43sgu")
+texture_pressed = ExtResource("51_0f222")
+stretch_mode = 4
+
+[node name="headtab6" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=1482228801]
+layout_mode = 0
+offset_top = 505.0
+offset_right = 127.0
+offset_bottom = 593.0
+toggle_mode = true
+texture_normal = ExtResource("50_43sgu")
+texture_pressed = ExtResource("51_0f222")
+stretch_mode = 4
+
+[node name="headtab8" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=2122981886]
+layout_mode = 0
+offset_top = 588.6374
+offset_right = 127.0
+offset_bottom = 676.6374
+toggle_mode = true
+texture_normal = ExtResource("50_43sgu")
+texture_pressed = ExtResource("51_0f222")
+stretch_mode = 4
+
 [node name="body" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]
-transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.0898316, -1.9347057, -5.220093)
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 1.2226679, -1.9347057, -5.220093)
 visible = false
 script = ExtResource("7_wbx7f")
 
@@ -497,3 +609,9 @@ volume_db = 11.101
 [connection signal="button_down" from="CanvasLayer/Control/backbutton" to="CanvasLayer/Control/textbox" method="_on_backbutton_button_down"]
 [connection signal="pressed" from="CanvasLayer/Control/backbutton" to="CanvasLayer/Control/textbox" method="_on_backbutton_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/backbutton" to="CanvasLayer/Control/backbutton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headtab1" to="CanvasLayer/Control/headtab1" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headtab1/headtab2" to="CanvasLayer/Control/headtab1" method="_on_headtab_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headtab1/headtab7" to="CanvasLayer/Control/headtab1/headtab7" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headtab1/headtab3" to="CanvasLayer/Control/headtab1/headtab7" method="_on_headtab_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headtab1/headtab5" to="CanvasLayer/Control/headtab1/headtab5" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/headtab1/headtab6" to="CanvasLayer/Control/headtab1/headtab5" method="_on_headtab_2_pressed"]

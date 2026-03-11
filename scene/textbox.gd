@@ -10,6 +10,7 @@ extends TextureRect
 @onready var skinbuttons = $"../skin1"
 @onready var yes = $backyes
 @onready var no = $backno
+@onready var tabs = $"../headtab1"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -46,6 +47,7 @@ func _on_texture_button_pressed() -> void:
 	bartext.visible = true
 	skinbuttons.visible = true
 	back.visible = true
+	tabs.visible = true
 
 func _on_backbutton_pressed() -> void:
 	colorrect.play("fade in")
@@ -63,6 +65,7 @@ func _on_backbutton_pressed() -> void:
 	back.visible = false
 	yes.visible = true
 	no.visible = true
+	tabs.visible = false
 
 
 func _on_backbutton_button_down() -> void:
@@ -80,6 +83,8 @@ func _on_backno_pressed() -> void:
 	bartext.visible = true
 	skinbuttons.visible = true
 	back.visible = true
+	tabs.visible = true
+	
 	
 
 
