@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dypwfb0q521v7"]
 
 [ext_resource type="Shader" uid="uid://kxxow05qu4tr" path="res://other/body.gdshader" id="1_jfl4r"]
-[ext_resource type="Shader" uid="uid://cg1yifaqm2xy5" path="res://models/body/body.gdshader" id="1_k3nkw"]
+[ext_resource type="Shader" uid="uid://bv6q83r0vbu1j" path="res://models/body/body.gdshader" id="1_k3nkw"]
 [ext_resource type="Texture2D" uid="uid://dqtmwcmrkbqbr" path="res://models/body/male/body.png" id="1_w6pjy"]
 [ext_resource type="Texture2D" uid="uid://dgf4g6d7uwkha" path="res://models/body/male/shadow.png" id="2_k3nkw"]
 [ext_resource type="Shader" uid="uid://c2inywcrc0w17" path="res://models/body/shadow.gdshader" id="4_yw7q4"]
@@ -13,7 +13,7 @@ shader_parameter/light_direction = Vector3(0.245, -0.08, -0.4)
 shader_parameter/light_intensity = 1.0
 shader_parameter/ambient = 0.3
 shader_parameter/input_tex = ExtResource("1_w6pjy")
-shader_parameter/favorite_color = Color(0.7585011, 0.26202145, 0.2094886, 1)
+shader_parameter/favorite_color = Color(0.7294118, 0.25490198, 0.1882353, 1)
 shader_parameter/skin_color = Color(1, 0.85750026, 0.7059139, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhlna"]

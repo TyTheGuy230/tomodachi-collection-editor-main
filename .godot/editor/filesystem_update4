@@ -1,9 +1,12 @@
+res://code/button.gd
 res://scene/main mii maker.tscn
 res://other/scroll.gdshader
 res://other/body.gdshader
-res://models/body/body.gdshader
 res://models/body/shadow.gdshader
 res://scene/miibgshader.gdshader
 res://other/hatshader.gdshader
 res://other/basic.gdshader
 res://other/main mii maker.gdshader
+res://models/body/body.gdshader
+res://scene/body.tscn
+res://scene/body_2.tscn

@@ -1,25 +1,50 @@
 [gd_scene format=3 uid="uid://ch2lcm50mtest"]
 
 [ext_resource type="PackedScene" uid="uid://bpawcevob5u8d" path="res://models/body/female/body2.glb" id="1_1t2b8"]
-[ext_resource type="Shader" uid="uid://cg1yifaqm2xy5" path="res://models/body/body.gdshader" id="2_77wcq"]
+[ext_resource type="Shader" uid="uid://kxxow05qu4tr" path="res://other/body.gdshader" id="2_p2v8k"]
 [ext_resource type="Texture2D" uid="uid://djmdyha0n7t3s" path="res://models/body/female/body2_body.png" id="3_snvu3"]
+[ext_resource type="Shader" uid="uid://c2inywcrc0w17" path="res://models/body/shadow.gdshader" id="4_1ghxm"]
+[ext_resource type="Texture2D" uid="uid://dgf4g6d7uwkha" path="res://models/body/male/shadow.png" id="5_75v8h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p2v8k"]
 render_priority = 0
-shader = ExtResource("2_77wcq")
+shader = ExtResource("2_p2v8k")
+shader_parameter/light_direction = Vector3(0.245, -0.08, -0.4)
+shader_parameter/light_intensity = 1.0050000477375
+shader_parameter/ambient = 0.3
 shader_parameter/input_tex = ExtResource("3_snvu3")
-shader_parameter/favorite_color = Vector3(0.51, 0, 0)
-shader_parameter/skin_color = Vector3(0, 0, 0)
+shader_parameter/favorite_color = Color(0.7294118, 0.25490198, 0.1882353, 1)
+shader_parameter/skin_color = Color(1, 0.85882354, 0.7294118, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1ghxm"]
 render_priority = 0
-shader = ExtResource("2_77wcq")
+shader = ExtResource("2_p2v8k")
+shader_parameter/light_direction = Vector3(0.245, -0.08, -0.4)
+shader_parameter/light_intensity = 0.954000045315
+shader_parameter/ambient = 0.3
 shader_parameter/input_tex = ExtResource("3_snvu3")
-shader_parameter/favorite_color = Vector3(0, 0, 0)
-shader_parameter/skin_color = Vector3(0, 0, 0)
+shader_parameter/favorite_color = Color(0, 0, 0, 1)
+shader_parameter/skin_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1q217"]
+render_priority = 0
+shader = ExtResource("4_1ghxm")
+shader_parameter/input_tex = ExtResource("5_75v8h")
 
 [node name="body2" unique_id=1247999464 instance=ExtResource("1_1t2b8")]
 
-[node name="body_001" parent="body/Skeleton3D" parent_id_path=PackedInt32Array(1502882954) index="0" unique_id=1120875555]
+[node name="Skeleton3D" parent="body" parent_id_path=PackedInt32Array(2104316803) index="0" unique_id=1502882954]
+bones/1/position = Vector3(-0.00024414061, 0.8554687, -8.356581e-12)
+bones/2/rotation = Quaternion(3.7539827e-08, 6.1317156e-15, 1, -7.2650717e-22)
+bones/3/rotation = Quaternion(0.0046801767, -0.05014143, -0.9939471, 0.09763743)
+bones/5/rotation = Quaternion(0.09757739, 0.993953, 0.050118536, 0.004922905)
+bones/10/rotation = Quaternion(1, 8.651604e-08, 1.1059457e-08, 0.0002440811)
+bones/11/rotation = Quaternion(7.0073587e-15, -4.68177e-08, 3.1856028e-15, 1)
+bones/12/rotation = Quaternion(0.0002440811, -6.271532e-12, 4.7764236e-16, 1)
+bones/14/rotation = Quaternion(1.4800565e-15, 1.2811576e-08, 2.646978e-23, 1)
+bones/15/rotation = Quaternion(-1.4800565e-15, 1.2862659e-22, -9.18205e-40, 1)
+
+[node name="body_001" parent="body/Skeleton3D" index="0" unique_id=1120875555]
 material_override = SubResource("ShaderMaterial_p2v8k")
 surface_material_override/0 = SubResource("ShaderMaterial_1ghxm")
+surface_material_override/1 = SubResource("ShaderMaterial_1q217")
