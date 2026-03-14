@@ -62,6 +62,20 @@
 [ext_resource type="AudioStream" uid="uid://dbtyru30l6fnd" path="res://img/buttons/skin/SE_MII_EDIT_COLOR.wav" id="51_02vuw"]
 [ext_resource type="AudioStream" uid="uid://74a00ht1ji7" path="res://sounds/sfx/featureselect.wav" id="51_b716q"]
 [ext_resource type="Script" uid="uid://cxx8ubdddae8x" path="res://scene/tabs.gd" id="52_0f222"]
+[ext_resource type="Texture2D" uid="uid://dkau3m2gdp2r1" path="res://img/buttons/tabs/hairtab.png" id="53_50ksn"]
+[ext_resource type="Texture2D" uid="uid://cr21a57bb04l5" path="res://img/buttons/tabs/hairtab1.png" id="54_he6kj"]
+[ext_resource type="Texture2D" uid="uid://cccfq5aqroe0k" path="res://img/buttons/tabs/eyebrowtab.png" id="55_dfv7c"]
+[ext_resource type="Texture2D" uid="uid://nnjdryfcfqin" path="res://img/buttons/tabs/eyebrowtab1.png" id="56_gqye5"]
+[ext_resource type="Texture2D" uid="uid://cmjwimey3xvgb" path="res://img/buttons/tabs/eye.png" id="57_otxsr"]
+[ext_resource type="Texture2D" uid="uid://xi05afc7ca1l" path="res://img/buttons/tabs/eye1.png" id="58_0y0pg"]
+[ext_resource type="Texture2D" uid="uid://m31rva4eqn3e" path="res://img/buttons/tabs/nosetab.png" id="59_grboo"]
+[ext_resource type="Texture2D" uid="uid://cq1x0hplwro54" path="res://img/buttons/tabs/nosetabpng.png" id="60_ob62k"]
+[ext_resource type="Texture2D" uid="uid://clahvv6ghshde" path="res://img/buttons/tabs/mouthtab.png" id="61_je5jd"]
+[ext_resource type="Texture2D" uid="uid://b7tgk10orxsmt" path="res://img/buttons/tabs/mouthtab1.png" id="62_72cgb"]
+[ext_resource type="Texture2D" uid="uid://b8kipbvgut5kh" path="res://img/buttons/tabs/etctab.png" id="63_iif8c"]
+[ext_resource type="Texture2D" uid="uid://rspvidcgwvb1" path="res://img/buttons/tabs/etctab1.png" id="64_6pifc"]
+[ext_resource type="Texture2D" uid="uid://cpvy4pif1u7wx" path="res://img/buttons/tabs/bodytab.png" id="65_1vpr2"]
+[ext_resource type="Texture2D" uid="uid://w1ajq14erfkv" path="res://img/buttons/tabs/bodytab1.png" id="66_gl4im"]
 
 [sub_resource type="Animation" id="Animation_q8tej"]
 length = 0.001
@@ -175,7 +189,6 @@ libraries/ = SubResource("AnimationLibrary_uy706")
 [node name="headbuttons" type="Node" parent="CanvasLayer/Control" unique_id=506148943]
 
 [node name="head1" type="TextureButton" parent="CanvasLayer/Control/headbuttons" unique_id=969359174]
-visible = false
 offset_left = 201.0
 offset_top = 91.0
 offset_right = 337.5
@@ -189,8 +202,8 @@ script = ExtResource("4_ef6gu")
 
 [node name="head2" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=994757829]
 layout_mode = 0
-offset_left = 141.0
-offset_right = 277.5
+offset_left = 136.0
+offset_right = 272.5
 offset_bottom = 117.0
 focus_mode = 0
 toggle_mode = true
@@ -200,9 +213,9 @@ stretch_mode = 0
 
 [node name="head3" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=720016688]
 layout_mode = 0
-offset_top = 122.0
+offset_top = 117.0
 offset_right = 136.5
-offset_bottom = 239.0
+offset_bottom = 234.0
 focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource("9_jjdbl")
@@ -211,10 +224,10 @@ stretch_mode = 0
 
 [node name="head4" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=1294572615]
 layout_mode = 0
-offset_left = 142.0
-offset_top = 122.0
-offset_right = 278.5
-offset_bottom = 239.0
+offset_left = 137.0
+offset_top = 117.0
+offset_right = 273.5
+offset_bottom = 234.0
 focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource("11_pk360")
@@ -223,9 +236,9 @@ stretch_mode = 0
 
 [node name="head5" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=1887949141]
 layout_mode = 0
-offset_top = 244.0
+offset_top = 234.0
 offset_right = 136.5
-offset_bottom = 361.0
+offset_bottom = 351.0
 focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource("13_84s06")
@@ -234,10 +247,10 @@ stretch_mode = 0
 
 [node name="head6" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=2094510408]
 layout_mode = 0
-offset_left = 142.0
-offset_top = 244.0
-offset_right = 278.5
-offset_bottom = 361.0
+offset_left = 137.0
+offset_top = 234.0
+offset_right = 273.5
+offset_bottom = 351.0
 focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource("15_spqrk")
@@ -246,9 +259,9 @@ stretch_mode = 0
 
 [node name="head7" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=2005969005]
 layout_mode = 0
-offset_top = 366.0
+offset_top = 351.0
 offset_right = 136.5
-offset_bottom = 483.0
+offset_bottom = 468.0
 focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource("18_egxde")
@@ -257,10 +270,10 @@ stretch_mode = 0
 
 [node name="head8" type="TextureButton" parent="CanvasLayer/Control/headbuttons/head1" unique_id=130479266]
 layout_mode = 0
-offset_left = 142.0
-offset_top = 366.0
-offset_right = 278.5
-offset_bottom = 483.0
+offset_left = 137.0
+offset_top = 351.0
+offset_right = 273.5
+offset_bottom = 468.0
 focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource("20_ytv4n")
@@ -472,7 +485,7 @@ visible = false
 layout_mode = 0
 offset_right = 127.0
 offset_bottom = 85.0
-scale = Vector2(0.8633154, 0.8633154)
+scale = Vector2(0.8170664, 0.8170664)
 toggle_mode = true
 texture_normal = ExtResource("50_43sgu")
 texture_pressed = ExtResource("51_0f222")
@@ -481,72 +494,72 @@ script = ExtResource("52_0f222")
 
 [node name="headtab2" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=1979441182]
 layout_mode = 0
-offset_top = 84.0
+offset_top = 89.86865
 offset_right = 127.0
-offset_bottom = 172.0
+offset_bottom = 177.86865
 toggle_mode = true
-texture_normal = ExtResource("50_43sgu")
-texture_pressed = ExtResource("51_0f222")
+texture_normal = ExtResource("53_50ksn")
+texture_pressed = ExtResource("54_he6kj")
 stretch_mode = 4
 
 [node name="headtab7" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=113089123]
 layout_mode = 0
-offset_top = 168.0
+offset_top = 178.56364
 offset_right = 127.0
-offset_bottom = 253.0
+offset_bottom = 263.56366
 toggle_mode = true
-texture_normal = ExtResource("50_43sgu")
-texture_pressed = ExtResource("51_0f222")
+texture_normal = ExtResource("55_dfv7c")
+texture_pressed = ExtResource("56_gqye5")
 stretch_mode = 4
 
 [node name="headtab3" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=362639681]
 layout_mode = 0
-offset_top = 252.0
+offset_top = 268.43234
 offset_right = 127.0
-offset_bottom = 340.0
+offset_bottom = 356.43234
 toggle_mode = true
-texture_normal = ExtResource("50_43sgu")
-texture_pressed = ExtResource("51_0f222")
+texture_normal = ExtResource("57_otxsr")
+texture_pressed = ExtResource("58_0y0pg")
 stretch_mode = 4
 
 [node name="headtab4" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=1931795632]
 layout_mode = 0
-offset_top = 337.0
+offset_top = 356.95343
 offset_right = 127.0
-offset_bottom = 425.0
+offset_bottom = 444.95343
 toggle_mode = true
-texture_normal = ExtResource("50_43sgu")
-texture_pressed = ExtResource("51_0f222")
+texture_normal = ExtResource("59_grboo")
+texture_pressed = ExtResource("60_ob62k")
 stretch_mode = 4
 
 [node name="headtab5" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=903185271]
 layout_mode = 0
-offset_top = 421.0
+offset_top = 445.64856
 offset_right = 127.0
-offset_bottom = 506.0
+offset_bottom = 530.64844
 toggle_mode = true
-texture_normal = ExtResource("50_43sgu")
-texture_pressed = ExtResource("51_0f222")
+texture_normal = ExtResource("61_je5jd")
+texture_pressed = ExtResource("62_72cgb")
 stretch_mode = 4
 
 [node name="headtab6" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=1482228801]
 layout_mode = 0
-offset_top = 505.0
+offset_top = 534.0484
 offset_right = 127.0
-offset_bottom = 593.0
+offset_bottom = 622.0484
 toggle_mode = true
-texture_normal = ExtResource("50_43sgu")
-texture_pressed = ExtResource("51_0f222")
+texture_normal = ExtResource("63_iif8c")
+texture_pressed = ExtResource("64_6pifc")
 stretch_mode = 4
 
 [node name="headtab8" type="TextureButton" parent="CanvasLayer/Control/headtab1" unique_id=2122981886]
 layout_mode = 0
-offset_top = 588.6374
+offset_top = 622.38086
 offset_right = 127.0
-offset_bottom = 676.6374
+offset_bottom = 710.38086
 toggle_mode = true
-texture_normal = ExtResource("50_43sgu")
-texture_pressed = ExtResource("51_0f222")
+texture_normal = ExtResource("65_1vpr2")
+texture_pressed = ExtResource("66_gl4im")
 stretch_mode = 4
 
 [node name="body" parent="." unique_id=1773623481 instance=ExtResource("6_wbx7f")]

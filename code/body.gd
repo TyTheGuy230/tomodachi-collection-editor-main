@@ -5,6 +5,8 @@ extends Node3D
 @export var hair_id = 1
 @export var hat_id = 1
 @export var hairflip = false
+@export var eyeb_id = 1
+@export var eyeb_pos := Vector3(0,0,0)
 @export var rotation_speed = 3
 @export var gender_id = 1
 var target_rotation: float = 0.0
@@ -13,6 +15,7 @@ var current_head
 var current_skin
 var current_hair
 var current_hat
+var current_eyeb
 var attachment = BoneAttachment3D.new()
 var rotating = false
 var start_rotation = 0.0
@@ -42,12 +45,23 @@ var hair_paths = {
 	11: "res://models/hair/hair11.glb",
 	12: "res://models/hair/hair12.glb",
 	13: "res://models/hair/hair13.glb",
+	14: "res://models/hair/hair14.glb",
+	15: "res://models/hair/hair15.glb",
+	16: "res://models/hair/hair16.glb",
+	17: "res://models/hair/hair17.glb",
+	18: "res://models/hair/hair18.glb",
+	19: "res://models/hair/hair19.glb",
+	20: "res://models/hair/hair20.glb",
 	22: "res://models/hair/hair22.glb",
+	23: "res://models/hair/hair23.glb",
+	24: "res://models/hair/hair24.glb",
 	35: "res://models/hair/hair35.glb",
 	36: "res://models/hair/hair36.glb",
 	45: "res://models/hair/hair45.glb",
 	71: "res://models/hair/hair71.glb",
 }
+
+
 
 var hat_paths = {
 	1: "res://models/hats/hat1.glb",
@@ -59,7 +73,9 @@ var gender_paths = {
 	2: "res://scene/body2.tscn"
 }
 
-
+var eyeb_paths = {
+	1: "res://models/eyebrow/eyebrow1.glb",
+}
 
 var skin_tones = {
 	1: Color("fcdbbaff"),
@@ -93,6 +109,7 @@ func _ready() -> void:
 	load_hair()
 	set_skin(skin_id)
 	load_hat()
+	load_eyeb()
 	
 
 	
@@ -229,6 +246,18 @@ func load_hair():
 		current_hair.scale.y = -1
 	else:
 		current_hair.scale.y = 1
+
+func _input(event):	
+	
+	moveeyeb(event)
+	
+	if event.is_action_pressed("switchhairs"):
+		hair_id += 1
+		current_hair.queue_free()
+		var hair_scene = load(hair_paths[hair_id])
+		current_hair = hair_scene.instantiate()
+		attachment.add_child(current_hair)
+		apply_shader(current_hair, 1, 0, true)
 		
 func load_hat():
 
@@ -249,6 +278,22 @@ func load_hat():
 		hat_id = 1
 	else:
 		current_hat.visible = false
+		
+func load_eyeb():
+
+	if current_eyeb:
+		current_eyeb.queue_free()
+
+	var eyeb_scene = load(eyeb_paths[eyeb_id])
+	current_eyeb = eyeb_scene.instantiate()
+	
+	attachment.add_child(current_eyeb)
+	current_eyeb.position = eyeb_pos
+	
+func moveeyeb(event):
+	if event.is_action_pressed("eyebrowup"):
+		eyeb_pos.x += 0.1
+		current_eyeb.position = eyeb_pos
 		
 func load_gender():
 
@@ -276,3 +321,7 @@ func set_hair(id):
 	hair_id = id
 	load_hair()
 	load_hat()
+	
+func set_eyeb(id):
+	eyeb_id = id
+	load_eyeb()

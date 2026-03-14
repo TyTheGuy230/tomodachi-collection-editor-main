@@ -9,6 +9,13 @@
 [ext_resource type="AudioStream" uid="uid://bgiqdjy5vb6px" path="res://sounds/sfx/click.wav" id="6_kwewl"]
 [ext_resource type="AudioStream" uid="uid://cpoi040f7wcxa" path="res://sounds/sfx/click (1).wav" id="7_mtnbf"]
 [ext_resource type="Texture2D" uid="uid://d1sbqmxocxb2o" path="res://img/sprites/tdc mii maker logo.png" id="8_7jaon"]
+[ext_resource type="FontFile" uid="uid://d1w7kscvqfum7" path="res://other/Nintendo-DS-BIOS.ttf" id="9_5tkpx"]
+[ext_resource type="Texture2D" uid="uid://cqj3jgxntorbc" path="res://img/sprites/miilist.png" id="10_1oobv"]
+[ext_resource type="Texture2D" uid="uid://p505l7wlxhps" path="res://img/sprites/miilistbluebig.png" id="11_fh87k"]
+[ext_resource type="Texture2D" uid="uid://c1eec4awjwk2p" path="res://img/sprites/posemode.png" id="12_8xtvp"]
+[ext_resource type="Texture2D" uid="uid://18eq37tvvnyk" path="res://img/sprites/posemodebluebig.png" id="13_kwewl"]
+[ext_resource type="Texture2D" uid="uid://mn0e3b06hhc" path="res://img/sprites/settings.png" id="14_mtnbf"]
+[ext_resource type="Texture2D" uid="uid://0dek0kr6525h" path="res://img/sprites/settingsbluebig.png" id="15_7jaon"]
 
 [sub_resource type="GDScript" id="GDScript_6627o"]
 script/source = "extends Node3D
@@ -90,6 +97,7 @@ offset_bottom = 648.0
 texture = ExtResource("2_glyem")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=134154320]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 15
@@ -104,19 +112,14 @@ libraries/ = SubResource("AnimationLibrary_1oobv")
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control" unique_id=386822119]
 layout_mode = 0
-offset_left = 132.0
-offset_top = 398.0
-offset_right = 384.2
-offset_bottom = 592.0
+offset_left = 29.0
+offset_top = 428.0
+offset_right = 281.2
+offset_bottom = 622.0
 texture_normal = ExtResource("3_1oobv")
 texture_pressed = ExtResource("4_fh87k")
 stretch_mode = 0
 script = ExtResource("5_8xtvp")
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/TextureButton" unique_id=1932421632]
-layout_mode = 0
-offset_right = 249.0
-offset_bottom = 194.0
 
 [node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton" unique_id=697315855]
 stream = ExtResource("6_kwewl")
@@ -124,10 +127,113 @@ stream = ExtResource("6_kwewl")
 [node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton" unique_id=681475839]
 stream = ExtResource("7_mtnbf")
 
+[node name="Label2" type="Label" parent="CanvasLayer/Control/TextureButton" unique_id=314584686]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 87.0
+offset_right = 241.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_5tkpx")
+theme_override_font_sizes/font_size = 70
+text = "New Mii"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/TextureButton" unique_id=934401982]
+layout_mode = 0
+offset_left = 277.0
+offset_right = 529.2
+offset_bottom = 194.0
+texture_normal = ExtResource("10_1oobv")
+texture_pressed = ExtResource("11_fh87k")
+stretch_mode = 0
+
+[node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton" unique_id=1702205992]
+stream = ExtResource("6_kwewl")
+
+[node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton" unique_id=1200862045]
+stream = ExtResource("7_mtnbf")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/TextureButton/TextureButton" unique_id=96730689]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 87.0
+offset_right = 241.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_5tkpx")
+theme_override_font_sizes/font_size = 70
+text = "Mii List"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control/TextureButton" unique_id=858508854]
+layout_mode = 0
+offset_left = 554.0
+offset_right = 806.19995
+offset_bottom = 194.0
+texture_normal = ExtResource("12_8xtvp")
+texture_pressed = ExtResource("13_kwewl")
+stretch_mode = 0
+
+[node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton3" unique_id=1471646560]
+stream = ExtResource("6_kwewl")
+
+[node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton3" unique_id=60060316]
+stream = ExtResource("7_mtnbf")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/TextureButton/TextureButton3" unique_id=697349361]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 126.0
+offset_right = 241.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_5tkpx")
+theme_override_font_sizes/font_size = 58
+text = "Pose Mode"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/Control/TextureButton" unique_id=1995204074]
+layout_mode = 0
+offset_left = 834.0
+offset_right = 1086.2
+offset_bottom = 194.0
+texture_normal = ExtResource("14_mtnbf")
+texture_pressed = ExtResource("15_7jaon")
+stretch_mode = 0
+
+[node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton2" unique_id=1628306977]
+stream = ExtResource("6_kwewl")
+
+[node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton2" unique_id=361202552]
+stream = ExtResource("7_mtnbf")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/TextureButton/TextureButton2" unique_id=1962616461]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 126.0
+offset_right = 241.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_5tkpx")
+theme_override_font_sizes/font_size = 58
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TdcMiiMakerLogo" type="Sprite2D" parent="CanvasLayer/Control" unique_id=959316762]
-position = Vector2(583.99994, 216)
+position = Vector2(614, 207.99997)
 scale = Vector2(1.2361963, 1.2361963)
 texture = ExtResource("8_7jaon")
 
 [connection signal="button_down" from="CanvasLayer/Control/TextureButton" to="CanvasLayer/Control/TextureButton" method="_on_button_down"]
 [connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="CanvasLayer/Control/TextureButton" method="_on_pressed"]
+[connection signal="button_down" from="CanvasLayer/Control/TextureButton/TextureButton" to="CanvasLayer/Control/TextureButton/TextureButton" method="_on_button_down"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton/TextureButton" to="CanvasLayer/Control/TextureButton/TextureButton" method="_on_pressed"]
+[connection signal="button_down" from="CanvasLayer/Control/TextureButton/TextureButton3" to="CanvasLayer/Control/TextureButton/TextureButton3" method="_on_button_down"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton/TextureButton3" to="CanvasLayer/Control/TextureButton/TextureButton3" method="_on_pressed"]
+[connection signal="button_down" from="CanvasLayer/Control/TextureButton/TextureButton2" to="CanvasLayer/Control/TextureButton/TextureButton2" method="_on_button_down"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton/TextureButton2" to="CanvasLayer/Control/TextureButton/TextureButton2" method="_on_pressed"]
