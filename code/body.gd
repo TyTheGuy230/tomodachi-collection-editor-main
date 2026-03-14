@@ -31,6 +31,19 @@ var head_paths = {
 	8: "res://models/heads/head8.glb"
 }
 
+var head_base_eyeb_pos = {
+	1: Vector3(0.69, -0.06, 0),
+	2: Vector3(0.69, -0.06, 0),
+	3: Vector3(0.76, -0.06, 0),
+	4: Vector3(0.69, -0.06, 0),
+	5: Vector3(0.69, -0.06, 0),
+	6: Vector3(0.69, -0.06, 0),
+	7: Vector3(0.76, -0.06, 0),
+	8: Vector3(0.76, -0.06, 0)
+}
+
+var eyeb_offset = Vector3(0, 0, 0)
+
 var hair_paths = {
 	1: "res://models/hair/hair1.glb",
 	2: "res://models/hair/hair2.glb",
@@ -288,12 +301,23 @@ func load_eyeb():
 	current_eyeb = eyeb_scene.instantiate()
 	
 	attachment.add_child(current_eyeb)
+	
+	var base_pos = head_base_eyeb_pos.get(head_id, Vector3.ZERO)
+	eyeb_pos = base_pos + eyeb_offset
 	current_eyeb.position = eyeb_pos
 	
+	
 func moveeyeb(event):
+	if not current_eyeb:
+		return
+		
 	if event.is_action_pressed("eyebrowup"):
 		eyeb_pos.x += 0.1
 		current_eyeb.position = eyeb_pos
+		current_eyeb.transform.origin = eyeb_pos
+		
+	var base_pos = head_base_eyeb_pos.get(head_id, Vector3.ZERO)
+	current_eyeb.position = base_pos + eyeb_offset
 		
 func load_gender():
 
@@ -313,8 +337,16 @@ func set_skin(id):
 
 
 func set_head(id):
+	var old_offset = eyeb_offset
+	
 	head_id = id
 	load_head()
+	load_eyeb()
+	
+	var base_pos = head_base_eyeb_pos.get(head_id, Vector3.ZERO)
+	eyeb_offset = old_offset
+	load_eyeb()
+	current_eyeb.position = base_pos + eyeb_offset
 	
 	
 func set_hair(id):

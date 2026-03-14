@@ -1,11 +1,1 @@
-res://scene/title.tscn
-res://other/scroll.gdshader
-res://other/body.gdshader
-res://models/body/body.gdshader
-res://models/body/shadow.gdshader
-res://scene/miibgshader.gdshader
-res://other/hatshader.gdshader
-res://other/basic.gdshader
-res://other/main mii maker.gdshader
-res://scene/main mii maker.tscn
 res://code/body.gd
