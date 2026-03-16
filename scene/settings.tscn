@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://drijyq7cw4oaq"]
+
+[ext_resource type="Texture2D" uid="uid://cx7exm61hdmva" path="res://img/buttons/back/nor.png" id="1_bdort"]
+[ext_resource type="Shader" uid="uid://f23qm6wbc4ow" path="res://other/scroll.gdshader" id="1_w7d3e"]
+[ext_resource type="Texture2D" uid="uid://car6h68rvnt54" path="res://img/buttons/back/sel.png" id="2_h3kf0"]
+[ext_resource type="Texture2D" uid="uid://bkbm8vbsvxd35" path="res://img/sprites/townhallbg.png" id="2_qawrq"]
+[ext_resource type="Script" uid="uid://daln2npvwqqci" path="res://code/color_rect.gd" id="3_i0u53"]
+[ext_resource type="AudioStream" uid="uid://5ousac81mr7h" path="res://sounds/sfx/holddown.wav" id="3_w6q7o"]
+[ext_resource type="Texture2D" uid="uid://5lh5acdorht4" path="res://img/sprites/largewhitebutton.png" id="7_65vpt"]
+[ext_resource type="Texture2D" uid="uid://daxayhhcofly2" path="res://img/sprites/bigbluebutton.png" id="8_dmpxh"]
+[ext_resource type="FontFile" uid="uid://d1w7kscvqfum7" path="res://other/Nintendo-DS-BIOS.ttf" id="9_66dxd"]
+[ext_resource type="Texture2D" uid="uid://cf77hetyk8msp" path="res://img/sprites/tomodachi collection logo.png" id="10_w6q7o"]
+[ext_resource type="Texture2D" uid="uid://55mh5boqrmi8" path="res://img/sprites/kuruma de ds icon.png" id="11_65vpt"]
+
+[sub_resource type="GDScript" id="GDScript_6627o"]
+script/source = "extends Node3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpexm"]
+shader = ExtResource("1_w7d3e")
+
+[sub_resource type="Animation" id="Animation_5tkpx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_glyem"]
+resource_name = "fade out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1oobv"]
+_data = {
+&"RESET": SubResource("Animation_5tkpx"),
+&"fade out": SubResource("Animation_glyem")
+}
+
+[node name="Node3D" type="Node3D" unique_id=358027893]
+script = SubResource("GDScript_6627o")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1397103010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0041942, 0, 120.60327)
+fov = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=334940137]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1652977540]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=849366002]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_kpexm")
+layout_mode = 0
+offset_right = 1728.0
+offset_bottom = 648.0
+texture = ExtResource("2_qawrq")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=134154320]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_i0u53")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/ColorRect" unique_id=933336639]
+libraries/ = SubResource("AnimationLibrary_1oobv")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control" unique_id=892547661]
+visible = false
+layout_mode = 0
+offset_left = 215.0
+offset_top = 130.0
+offset_right = 944.5249
+offset_bottom = 267.0
+texture_normal = ExtResource("7_65vpt")
+texture_pressed = ExtResource("8_dmpxh")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/TextureButton" unique_id=1807877789]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 7.0
+offset_right = 712.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_66dxd")
+theme_override_font_sizes/font_size = 80
+text = "Themes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tdc" type="TextureButton" parent="CanvasLayer/Control" unique_id=121143686]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 280.0
+offset_right = 528.0
+offset_bottom = 400.0
+texture_normal = ExtResource("10_w6q7o")
+stretch_mode = 4
+
+[node name="kuruma" type="TextureButton" parent="CanvasLayer/Control" unique_id=1577661176]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 278.0
+offset_right = 712.0
+offset_bottom = 398.0
+texture_normal = ExtResource("11_65vpt")
+stretch_mode = 4
+
+[node name="backbutton" type="TextureButton" parent="CanvasLayer/Control/kuruma" unique_id=173640084]
+z_index = 1
+layout_mode = 0
+offset_left = -573.0
+offset_top = -267.0
+offset_right = -498.0
+offset_bottom = -192.0
+texture_normal = ExtResource("1_bdort")
+texture_pressed = ExtResource("2_h3kf0")
+stretch_mode = 4
+
+[node name="Holddown" type="AudioStreamPlayer" parent="CanvasLayer/Control/kuruma/backbutton" unique_id=740289121]
+stream = ExtResource("3_w6q7o")
+
+[connection signal="pressed" from="CanvasLayer/Control/kuruma/backbutton" to="CanvasLayer/Control/kuruma/backbutton" method="_on_pressed"]

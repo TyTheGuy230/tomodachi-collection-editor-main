@@ -1,5 +1,6 @@
 extends Node3D
 @onready var skeleton = $body/Skeleton3D
+@onready var rotation_speed = 3
 @export var head_id = 1
 @export var skin_id = 1
 @export var hair_id = 1
@@ -7,7 +8,6 @@ extends Node3D
 @export var hairflip = false
 @export var eyeb_id = 1
 @export var eyeb_pos := Vector3(0,0,0)
-@export var rotation_speed = 3
 @export var gender_id = 1
 var target_rotation: float = 0.0
 var current_gender
@@ -65,9 +65,11 @@ var hair_paths = {
 	18: "res://models/hair/hair18.glb",
 	19: "res://models/hair/hair19.glb",
 	20: "res://models/hair/hair20.glb",
+	21: "res://models/hair/hair21.glb",
 	22: "res://models/hair/hair22.glb",
 	23: "res://models/hair/hair23.glb",
 	24: "res://models/hair/hair24.glb",
+	27: "res://models/hair/hair27.glb",
 	35: "res://models/hair/hair35.glb",
 	36: "res://models/hair/hair36.glb",
 	45: "res://models/hair/hair45.glb",
@@ -312,9 +314,7 @@ func moveeyeb(event):
 		return
 		
 	if event.is_action_pressed("eyebrowup"):
-		eyeb_pos.x += 0.1
-		current_eyeb.position = eyeb_pos
-		current_eyeb.transform.origin = eyeb_pos
+		eyeb_offset.x += 0.05
 		
 	var base_pos = head_base_eyeb_pos.get(head_id, Vector3.ZERO)
 	current_eyeb.position = base_pos + eyeb_offset

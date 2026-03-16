@@ -16,14 +16,21 @@
 [ext_resource type="Texture2D" uid="uid://18eq37tvvnyk" path="res://img/sprites/posemodebluebig.png" id="13_kwewl"]
 [ext_resource type="Texture2D" uid="uid://mn0e3b06hhc" path="res://img/sprites/settings.png" id="14_mtnbf"]
 [ext_resource type="Texture2D" uid="uid://0dek0kr6525h" path="res://img/sprites/settingsbluebig.png" id="15_7jaon"]
+[ext_resource type="Texture2D" uid="uid://d3i0aunlr14ho" path="res://img/sprites/kurumabg.png" id="17_7jaon"]
 
 [sub_resource type="GDScript" id="GDScript_6627o"]
 script/source = "extends Node3D
+@export var ds_theme = 1
+@onready var tdc_bg = $CanvasLayer/Control/TextureRect
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	
+	if ds_theme == 2:
+		tdc_bg.visible = false
+	else:
+		tdc_bg.visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -59,7 +66,7 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.13333334),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -73,6 +80,7 @@ _data = {
 
 [node name="Node3D" type="Node3D" unique_id=358027893]
 script = SubResource("GDScript_6627o")
+ds_theme = 2
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1397103010]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0041942, 0, 120.60327)
@@ -96,6 +104,11 @@ offset_right = 1728.0
 offset_bottom = 648.0
 texture = ExtResource("2_glyem")
 
+[node name="TdcMiiMakerLogo" type="Sprite2D" parent="CanvasLayer/Control" unique_id=109182620]
+position = Vector2(583.79443, 209.50002)
+scale = Vector2(1.2546011, 1.2546012)
+texture = ExtResource("8_7jaon")
+
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=134154320]
 visible = false
 z_index = 1
@@ -118,7 +131,7 @@ offset_right = 281.2
 offset_bottom = 622.0
 texture_normal = ExtResource("3_1oobv")
 texture_pressed = ExtResource("4_fh87k")
-stretch_mode = 0
+stretch_mode = 4
 script = ExtResource("5_8xtvp")
 
 [node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton" unique_id=697315855]
@@ -140,22 +153,23 @@ text = "New Mii"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/TextureButton" unique_id=934401982]
+[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/Control" unique_id=934401982]
 layout_mode = 0
-offset_left = 277.0
-offset_right = 529.2
-offset_bottom = 194.0
+offset_left = 306.0
+offset_top = 428.0
+offset_right = 558.2
+offset_bottom = 622.0
 texture_normal = ExtResource("10_1oobv")
 texture_pressed = ExtResource("11_fh87k")
-stretch_mode = 0
+stretch_mode = 4
 
-[node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton" unique_id=1702205992]
+[node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton2" unique_id=1702205992]
 stream = ExtResource("6_kwewl")
 
-[node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton" unique_id=1200862045]
+[node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton2" unique_id=1200862045]
 stream = ExtResource("7_mtnbf")
 
-[node name="Label2" type="Label" parent="CanvasLayer/Control/TextureButton/TextureButton" unique_id=96730689]
+[node name="Label2" type="Label" parent="CanvasLayer/Control/TextureButton2" unique_id=96730689]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 87.0
@@ -168,22 +182,23 @@ text = "Mii List"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control/TextureButton" unique_id=858508854]
+[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control" unique_id=858508854]
 layout_mode = 0
-offset_left = 554.0
-offset_right = 806.19995
-offset_bottom = 194.0
+offset_left = 583.0
+offset_top = 428.0
+offset_right = 835.19995
+offset_bottom = 622.0
 texture_normal = ExtResource("12_8xtvp")
 texture_pressed = ExtResource("13_kwewl")
-stretch_mode = 0
+stretch_mode = 4
 
-[node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton3" unique_id=1471646560]
+[node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton3" unique_id=1471646560]
 stream = ExtResource("6_kwewl")
 
-[node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton3" unique_id=60060316]
+[node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton3" unique_id=60060316]
 stream = ExtResource("7_mtnbf")
 
-[node name="Label2" type="Label" parent="CanvasLayer/Control/TextureButton/TextureButton3" unique_id=697349361]
+[node name="Label2" type="Label" parent="CanvasLayer/Control/TextureButton3" unique_id=697349361]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 126.0
@@ -196,22 +211,23 @@ text = "Pose Mode"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/Control/TextureButton" unique_id=1995204074]
+[node name="TextureButton4" type="TextureButton" parent="CanvasLayer/Control" unique_id=1995204074]
 layout_mode = 0
-offset_left = 834.0
-offset_right = 1086.2
-offset_bottom = 194.0
+offset_left = 863.0
+offset_top = 428.0
+offset_right = 1115.2
+offset_bottom = 622.0
 texture_normal = ExtResource("14_mtnbf")
 texture_pressed = ExtResource("15_7jaon")
-stretch_mode = 0
+stretch_mode = 4
 
-[node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton2" unique_id=1628306977]
+[node name="Click" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton4" unique_id=1628306977]
 stream = ExtResource("6_kwewl")
 
-[node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton/TextureButton2" unique_id=361202552]
+[node name="Click(1)" type="AudioStreamPlayer" parent="CanvasLayer/Control/TextureButton4" unique_id=361202552]
 stream = ExtResource("7_mtnbf")
 
-[node name="Label2" type="Label" parent="CanvasLayer/Control/TextureButton/TextureButton2" unique_id=1962616461]
+[node name="Label2" type="Label" parent="CanvasLayer/Control/TextureButton4" unique_id=1962616461]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 126.0
@@ -224,16 +240,15 @@ text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TdcMiiMakerLogo" type="Sprite2D" parent="CanvasLayer/Control" unique_id=959316762]
-position = Vector2(614, 207.99997)
-scale = Vector2(1.2361963, 1.2361963)
-texture = ExtResource("8_7jaon")
+[node name="Kurumabg" type="Sprite2D" parent="." unique_id=493478987]
+position = Vector2(576, 324)
+texture = ExtResource("17_7jaon")
 
 [connection signal="button_down" from="CanvasLayer/Control/TextureButton" to="CanvasLayer/Control/TextureButton" method="_on_button_down"]
 [connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="CanvasLayer/Control/TextureButton" method="_on_pressed"]
-[connection signal="button_down" from="CanvasLayer/Control/TextureButton/TextureButton" to="CanvasLayer/Control/TextureButton/TextureButton" method="_on_button_down"]
-[connection signal="pressed" from="CanvasLayer/Control/TextureButton/TextureButton" to="CanvasLayer/Control/TextureButton/TextureButton" method="_on_pressed"]
-[connection signal="button_down" from="CanvasLayer/Control/TextureButton/TextureButton3" to="CanvasLayer/Control/TextureButton/TextureButton3" method="_on_button_down"]
-[connection signal="pressed" from="CanvasLayer/Control/TextureButton/TextureButton3" to="CanvasLayer/Control/TextureButton/TextureButton3" method="_on_pressed"]
-[connection signal="button_down" from="CanvasLayer/Control/TextureButton/TextureButton2" to="CanvasLayer/Control/TextureButton/TextureButton2" method="_on_button_down"]
-[connection signal="pressed" from="CanvasLayer/Control/TextureButton/TextureButton2" to="CanvasLayer/Control/TextureButton/TextureButton2" method="_on_pressed"]
+[connection signal="button_down" from="CanvasLayer/Control/TextureButton2" to="CanvasLayer/Control/TextureButton2" method="_on_button_down"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton2" to="CanvasLayer/Control/TextureButton2" method="_on_pressed"]
+[connection signal="button_down" from="CanvasLayer/Control/TextureButton3" to="CanvasLayer/Control/TextureButton3" method="_on_button_down"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton3" to="CanvasLayer/Control/TextureButton3" method="_on_pressed"]
+[connection signal="button_down" from="CanvasLayer/Control/TextureButton4" to="CanvasLayer/Control/TextureButton4" method="_on_button_down"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton4" to="CanvasLayer/Control/TextureButton4" method="_on_pressed"]

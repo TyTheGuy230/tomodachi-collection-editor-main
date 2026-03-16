@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://dpr44v7tdber2" path="res://img/buttons/head/8/sel.png" id="21_quh5e"]
 [ext_resource type="Texture2D" uid="uid://c4dmptq71htqk" path="res://img/sprites/boyblue.png" id="21_uihqq"]
 [ext_resource type="AudioStream" uid="uid://ctawwauccekov" path="res://sounds/sfx/click (4).wav" id="22_uihqq"]
+[ext_resource type="Script" uid="uid://d32f0gycgu03s" path="res://scene/texture_button.gd" id="26_gqye5"]
 [ext_resource type="AudioStream" uid="uid://5ousac81mr7h" path="res://sounds/sfx/holddown.wav" id="27_g5d0j"]
 [ext_resource type="Texture2D" uid="uid://b3ghe2ymp6cb3" path="res://img/sprites/gender2.png" id="28_2f1ux"]
 [ext_resource type="Texture2D" uid="uid://drbumxvhhifsp" path="res://img/sprites/button.png" id="28_358o8"]
@@ -189,6 +190,7 @@ libraries/ = SubResource("AnimationLibrary_uy706")
 [node name="headbuttons" type="Node" parent="CanvasLayer/Control" unique_id=506148943]
 
 [node name="head1" type="TextureButton" parent="CanvasLayer/Control/headbuttons" unique_id=969359174]
+visible = false
 offset_left = 201.0
 offset_top = 91.0
 offset_right = 337.5
@@ -312,6 +314,7 @@ focus_mode = 0
 texture_normal = ExtResource("20_uy706")
 texture_pressed = ExtResource("21_uihqq")
 stretch_mode = 4
+script = ExtResource("26_gqye5")
 
 [node name="Click(4)" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/textbox/TextureButton" unique_id=1601001635]
 position = Vector2(-479, -8)
@@ -398,10 +401,11 @@ script = ExtResource("28_ll1ax")
 [node name="skin1" type="TextureButton" parent="CanvasLayer/Control" unique_id=1174122721]
 visible = false
 layout_mode = 0
-offset_left = 518.0
-offset_top = 83.0
-offset_right = 571.0
-offset_bottom = 136.0
+offset_left = 490.99997
+offset_top = 95.0
+offset_right = 544.0
+offset_bottom = 148.0
+scale = Vector2(0.940342, 0.940342)
 focus_mode = 0
 texture_normal = ExtResource("29_0vrmu")
 texture_pressed = ExtResource("30_i3wkj")
