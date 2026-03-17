@@ -9,6 +9,8 @@ extends Node3D
 @export var eyeb_id = 1
 @export var eyeb_pos := Vector3(0,0,0)
 @export var gender_id = 1
+@export var current_ani = 1
+var animations = ["Ewait00", "pick up", "pose1", "pose2"]
 var target_rotation: float = 0.0
 var current_gender
 var current_head
@@ -19,6 +21,7 @@ var current_eyeb
 var attachment = BoneAttachment3D.new()
 var rotating = false
 var start_rotation = 0.0
+@onready var ani = $AnimationPlayer
 
 var head_paths = {
 	1: "res://models/heads/head1.glb",
@@ -69,7 +72,12 @@ var hair_paths = {
 	22: "res://models/hair/hair22.glb",
 	23: "res://models/hair/hair23.glb",
 	24: "res://models/hair/hair24.glb",
+	25: "res://models/hair/hair25.glb",
+	26: "res://models/hair/hair26.glb",
 	27: "res://models/hair/hair27.glb",
+	28: "res://models/hair/hair28.glb",
+	29: "res://models/hair/hair29.glb",
+	30: "res://models/hair/hair30.glb",
 	35: "res://models/hair/hair35.glb",
 	36: "res://models/hair/hair36.glb",
 	45: "res://models/hair/hair45.glb",
@@ -315,9 +323,23 @@ func moveeyeb(event):
 		
 	if event.is_action_pressed("eyebrowup"):
 		eyeb_offset.x += 0.05
+	if event.is_action_pressed("eyebrowdown"):
+		eyeb_offset.x -= 0.05
 		
 	var base_pos = head_base_eyeb_pos.get(head_id, Vector3.ZERO)
 	current_eyeb.position = base_pos + eyeb_offset
+	
+
+	
+func changeani(event):
+	
+		if event.is_action_pressed("switch_animation"):
+			current_ani += 1
+		
+		if current_ani >= animations.size():
+			current_ani = 0
+		
+			ani.play(animations[current_ani])
 		
 func load_gender():
 
