@@ -62,6 +62,7 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	parts.head_id = 1
+	parts.current_head.position.x = 10000.0
 	parts.current_hair.position.x = 0.0
 	parts.current_hat.position.x = 0.0
 	parts.load_head()

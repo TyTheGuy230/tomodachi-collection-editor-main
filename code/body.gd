@@ -32,6 +32,17 @@ var head_paths = {
 	8: "res://models/heads/head8.glb"
 }
 
+var head_pos = {
+	1: Vector3(0, 0, 0),
+	2: Vector3(0, 0, 0),
+	3: Vector3(0.1, 0, 0),
+	4: Vector3(0, 0, 0),
+	5: Vector3(0, 0, 0),
+	6: Vector3(0, 0, 0),
+	7: Vector3(0.05, 0, 0),
+	8: Vector3(0.1, 0, 0)
+}
+
 var head_base_eyeb_pos = {
 	1: Vector3(0.69, -0.06, 0),
 	2: Vector3(0.69, -0.06, 0),
@@ -255,6 +266,10 @@ func load_head():
 	
 	attachment.add_child(current_head)
 	apply_shader(current_head, 0, 0, true)
+
+	var pos = head_pos.get(head_id, Vector3.ZERO)
+	current_head.position = pos
+	
 	
 	
 func load_hair():
