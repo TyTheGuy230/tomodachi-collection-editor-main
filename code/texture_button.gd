@@ -7,19 +7,7 @@ extends TextureButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	if node3d.ds_theme == 2:
-		newmii.texture_normal = preload("res://img/sprites/newmiikuruma.png")
-		newmii.texture_pressed = preload("res://img/sprites/newmiikurumayellow.png")
-		newmiitext.visible = false
-		newmii.scale = Vector2(0.8, 0.8)
-		newmii.position = Vector2(95, 440)
-	else: 
-		newmii.texture_normal = preload("res://img/sprites/newmii.png")
-		newmii.texture_pressed = preload("res://img/sprites/newmiibluebig.png")
-		newmiitext.visible = true
-		newmii.scale = Vector2(1, 1)
-		newmii.position = Vector2(30, 428)
+	pass
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

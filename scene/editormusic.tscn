@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://4bnqflh0d3mh"]
 
 [ext_resource type="AudioStream" uid="uid://blccflo2ryq7j" path="res://sounds/music/03. Mii Edit.mp3" id="1_xp1fd"]
+[ext_resource type="Script" uid="uid://hljxw4undb0d" path="res://scene/editormusic.gd" id="1_xprvg"]
+[ext_resource type="AudioStream" uid="uid://bbkmn2nbt3mmm" path="res://sounds/music/01. Title Screen.mp3" id="3_rkuh4"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1901478337]
+script = ExtResource("1_xprvg")
 
 [node name="03_MiiEdit" type="AudioStreamPlayer2D" parent="." unique_id=1604919159]
 position = Vector2(474, 155)
 stream = ExtResource("1_xp1fd")
 autoplay = true
+
+[node name="01_TitleScreen" type="AudioStreamPlayer2D" parent="." unique_id=1728631347]
+position = Vector2(698, 137)
+stream = ExtResource("3_rkuh4")

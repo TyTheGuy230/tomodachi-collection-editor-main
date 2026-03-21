@@ -18,26 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://0dek0kr6525h" path="res://img/sprites/settingsbluebig.png" id="15_7jaon"]
 [ext_resource type="Texture2D" uid="uid://d3i0aunlr14ho" path="res://img/sprites/kurumabg.png" id="17_7jaon"]
 
-[sub_resource type="GDScript" id="GDScript_6627o"]
-script/source = "extends Node3D
-@export var ds_theme = 1
-@onready var tdc_bg = $CanvasLayer/Control/TextureRect
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	
-	if ds_theme == 2:
-		tdc_bg.visible = false
-	else:
-		tdc_bg.visible = true
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kpexm"]
 shader = ExtResource("1_5tkpx")
 
@@ -79,8 +59,6 @@ _data = {
 }
 
 [node name="Node3D" type="Node3D" unique_id=358027893]
-script = SubResource("GDScript_6627o")
-ds_theme = 2
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1397103010]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0041942, 0, 120.60327)
@@ -243,6 +221,8 @@ vertical_alignment = 1
 [node name="Kurumabg" type="Sprite2D" parent="." unique_id=493478987]
 position = Vector2(576, 324)
 texture = ExtResource("17_7jaon")
+
+[node name="theme" type="Node" parent="." unique_id=1459139026]
 
 [connection signal="button_down" from="CanvasLayer/Control/TextureButton" to="CanvasLayer/Control/TextureButton" method="_on_button_down"]
 [connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="CanvasLayer/Control/TextureButton" method="_on_pressed"]

@@ -9,8 +9,6 @@ extends Node3D
 @export var eyeb_id = 1
 @export var eyeb_pos := Vector3(0,0,0)
 @export var gender_id = 1
-@export var current_ani = 1
-var animations = ["Ewait00", "pick up", "pose1", "pose2"]
 var target_rotation: float = 0.0
 var current_gender
 var current_head
@@ -78,8 +76,13 @@ var hair_paths = {
 	28: "res://models/hair/hair28.glb",
 	29: "res://models/hair/hair29.glb",
 	30: "res://models/hair/hair30.glb",
+	31: "res://models/hair/hair31.glb",
+	32: "res://models/hair/hair32.glb",
+	33: "res://models/hair/hair33.glb",
 	35: "res://models/hair/hair35.glb",
+	34: "res://models/hair/hair34.glb",
 	36: "res://models/hair/hair36.glb",
+	37: "res://models/hair/hair37.glb",
 	45: "res://models/hair/hair45.glb",
 	71: "res://models/hair/hair71.glb",
 }
@@ -331,16 +334,7 @@ func moveeyeb(event):
 	
 
 	
-func changeani(event):
 	
-		if event.is_action_pressed("switch_animation"):
-			current_ani += 1
-		
-		if current_ani >= animations.size():
-			current_ani = 0
-		
-			ani.play(animations[current_ani])
-		
 func load_gender():
 
 	if current_gender:

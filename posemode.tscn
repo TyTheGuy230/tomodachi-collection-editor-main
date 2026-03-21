@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bjdls0jc8svry"]
+
+[ext_resource type="PackedScene" uid="uid://dypwfb0q521v7" path="res://scene/body.tscn" id="1_i03ph"]
+[ext_resource type="Script" uid="uid://d0dxipleb7c8u" path="res://code/body.gd" id="2_7fubr"]
+[ext_resource type="AudioStream" uid="uid://bcypkukdhk6km" path="res://sounds/sfx/start rotate.wav" id="3_7fubr"]
+
+[node name="Node3D" type="Node3D" unique_id=1271431604]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=825962646]
+transform = Transform3D(1, 0, 0, 0, 0.92767996, 0.3733764, 0, -0.3733764, 0.92767996, 0, 2.5222664, 4.4317613)
+
+[node name="body" parent="." unique_id=785641589 instance=ExtResource("1_i03ph")]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0.037266016, -0.7604871, 0.024751186)
+script = ExtResource("2_7fubr")
+
+[node name="StartRotate" type="AudioStreamPlayer3D" parent="." unique_id=1506873974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.435178, 1.3186823, -1.5706787)
+stream = ExtResource("3_7fubr")

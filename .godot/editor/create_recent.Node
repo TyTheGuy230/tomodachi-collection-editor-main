@@ -1,10 +1,11 @@
+Camera3D
+Node
 TextureButton
 Label
 Button
 AnimationPlayer
 ColorRect
 TextureRect
-Node
 Sprite3D
 AudioStreamPlayer
 Node3D
