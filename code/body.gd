@@ -8,6 +8,8 @@ extends Node3D
 @export var hairflip = false
 @export var eyeb_id = 1
 @export var eyeb_pos := Vector3(0,0,0)
+@export var eye_id = 1
+@export var eye_pos := Vector3(0,0,0)
 @export var gender_id = 1
 var target_rotation: float = 0.0
 var current_gender
@@ -16,6 +18,7 @@ var current_skin
 var current_hair
 var current_hat
 var current_eyeb
+var current_eye
 var attachment = BoneAttachment3D.new()
 var rotating = false
 var start_rotation = 0.0
@@ -35,12 +38,12 @@ var head_paths = {
 var head_pos = {
 	1: Vector3(0, 0, 0),
 	2: Vector3(0, 0, 0),
-	3: Vector3(0.1, 0, 0),
+	3: Vector3(0.080, 0, 0),
 	4: Vector3(0, 0, 0),
 	5: Vector3(0, 0, 0),
 	6: Vector3(0, 0, 0),
-	7: Vector3(0.05, 0, 0),
-	8: Vector3(0.1, 0, 0)
+	7: Vector3(0.06, 0, 0),
+	8: Vector3(0.079, 0, 0)
 }
 
 var head_base_eyeb_pos = {
@@ -54,7 +57,19 @@ var head_base_eyeb_pos = {
 	8: Vector3(0.76, -0.06, 0)
 }
 
+var head_base_eye_pos = {
+	1: Vector3(0.60, -0.06, 0),
+	2: Vector3(0.60, -0.06, 0),
+	3: Vector3(0.67, -0.06, 0),
+	4: Vector3(0.60, -0.06, 0),
+	5: Vector3(0.60, -0.06, 0),
+	6: Vector3(0.60, -0.06, 0),
+	7: Vector3(0.67, -0.06, 0),
+	8: Vector3(0.67, -0.06, 0)
+}
+
 var eyeb_offset = Vector3(0, 0, 0)
+var eye_offset = Vector3(0, 0, 0)
 
 var hair_paths = {
 	1: "res://models/hair/hair1.glb",
@@ -95,6 +110,7 @@ var hair_paths = {
 	36: "res://models/hair/hair36.glb",
 	37: "res://models/hair/hair37.glb",
 	45: "res://models/hair/hair45.glb",
+	65: "res://models/hair/hair65.glb",
 	71: "res://models/hair/hair71.glb",
 }
 
@@ -112,6 +128,10 @@ var gender_paths = {
 
 var eyeb_paths = {
 	1: "res://models/eyebrow/eyebrow1.glb",
+}
+
+var eye_paths = {
+	1: "res://models/eyes/eye1.glb",
 }
 
 var skin_tones = {
@@ -147,6 +167,7 @@ func _ready() -> void:
 	set_skin(skin_id)
 	load_hat()
 	load_eyeb()
+	load_eye()
 	
 
 	
@@ -290,7 +311,7 @@ func load_hair():
 
 func _input(event):	
 	
-	moveeyeb(event)
+	moveparts(event)
 	
 	if event.is_action_pressed("switchhairs"):
 		hair_id += 1
@@ -334,18 +355,33 @@ func load_eyeb():
 	eyeb_pos = base_pos + eyeb_offset
 	current_eyeb.position = eyeb_pos
 	
+func load_eye():
+
+	if current_eye:
+		current_eye.queue_free()
+
+	var eye_scene = load(eye_paths[eye_id])
+	current_eye = eye_scene.instantiate()
 	
-func moveeyeb(event):
+	attachment.add_child(current_eye)
+	
+	var base_pos = head_base_eye_pos.get(head_id, Vector3.ZERO)
+	eye_pos = base_pos + eye_offset
+	current_eye.position = eye_pos
+	
+	
+func moveparts(event): #dont remove
 	if not current_eyeb:
 		return
 		
-	if event.is_action_pressed("eyebrowup"):
-		eyeb_offset.x += 0.05
-	if event.is_action_pressed("eyebrowdown"):
-		eyeb_offset.x -= 0.05
+	if not current_eye:
+		return
 		
-	var base_pos = head_base_eyeb_pos.get(head_id, Vector3.ZERO)
-	current_eyeb.position = base_pos + eyeb_offset
+	var base_pos_eyeb = head_base_eyeb_pos.get(head_id, Vector3.ZERO)
+	current_eyeb.position = base_pos_eyeb + eyeb_offset
+	
+	var base_pos_eye = head_base_eye_pos.get(head_id, Vector3.ZERO)
+	current_eye.position = base_pos_eye + eye_offset
 	
 
 	
@@ -373,11 +409,17 @@ func set_head(id):
 	head_id = id
 	load_head()
 	load_eyeb()
+	load_eye()
 	
-	var base_pos = head_base_eyeb_pos.get(head_id, Vector3.ZERO)
+	var base_pos_eyeb = head_base_eyeb_pos.get(head_id, Vector3.ZERO)
 	eyeb_offset = old_offset
 	load_eyeb()
-	current_eyeb.position = base_pos + eyeb_offset
+	current_eyeb.position = base_pos_eyeb + eyeb_offset
+	
+	var base_pos_eye = head_base_eye_pos.get(head_id, Vector3.ZERO)
+	eye_offset = old_offset
+	load_eye()
+	current_eye.position = base_pos_eye + eye_offset
 	
 	
 func set_hair(id):
@@ -388,3 +430,7 @@ func set_hair(id):
 func set_eyeb(id):
 	eyeb_id = id
 	load_eyeb()
+	
+func set_eye(id):
+	eye_id = id
+	load_eye()

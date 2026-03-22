@@ -59,7 +59,7 @@ func _on_backbutton_pressed() -> void:
 	textboxtext.text = "Are you sure you want to quit?"
 	textboxtext.vertical_alignment = 1
 	buttons.visible = false
-	body.visible = false
+	body.visible = true
 	bartext.visible = false
 	skinbuttons.visible = false
 	back.visible = false
